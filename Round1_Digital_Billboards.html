@@ -1,0 +1,2313 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_0ab38323557675b48704f213c5b3f3c0 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="
+    position:fixed;
+    bottom:30px;
+    left:30px;
+    z-index:9999;
+    background:white;
+    border:2px solid #ccc;
+    border-radius:8px;
+    padding:10px 12px;
+    font-family:Arial, sans-serif;
+    font-size:13px;
+    box-shadow:0 1px 6px rgba(0,0,0,.2);
+">
+    <div style="font-weight:700; margin-bottom:6px;">Legend</div>
+    <div style="margin-bottom:4px;"><span style="display:inline-block;width:12px;height:12px;background:#2563eb;border-radius:50%;margin-right:6px;"></span>Farias</div><div style="margin-bottom:4px;"><span style="display:inline-block;width:12px;height:12px;background:#f59e0b;border-radius:50%;margin-right:6px;"></span>Carillo</div><div style="margin-bottom:4px;"><span style="display:inline-block;width:12px;height:12px;background:#7c3aed;border-radius:50%;margin-right:6px;"></span>Ransom</div><div style="margin-bottom:4px;"><span style="display:inline-block;width:12px;height:12px;background:#059669;border-radius:50%;margin-right:6px;"></span>Nguyen</div><div style="margin-bottom:4px;"><span style="display:inline-block;width:12px;height:12px;background:#374151;border-radius:50%;margin-right:6px;"></span>Full Caucus</div><div style="margin-bottom:4px;"><span style="display:inline-block;width:12px;height:12px;background:#dc2626;border-radius:50%;margin-right:6px;"></span>Co Chairs</div><div style="margin-bottom:4px;"><span style="display:inline-block;width:12px;height:12px;background:#db2777;border-radius:50%;margin-right:6px;"></span>Top 10</div>
+</div>
+    
+            <div class="folium-map" id="map_0ab38323557675b48704f213c5b3f3c0" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_0ab38323557675b48704f213c5b3f3c0 = L.map(
+                "map_0ab38323557675b48704f213c5b3f3c0",
+                {
+                    center: [37.72898575, -121.25817120454545],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_0ab38323557675b48704f213c5b3f3c0);
+
+            
+
+        
+    
+            var tile_layer_8e7f417ee1d54f6d5206e4f84b1937e6 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_8e7f417ee1d54f6d5206e4f84b1937e6.addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var circle_marker_6acba44de232986be0803f24f867582c = L.circleMarker(
+                [37.7075, -122.16163],
+                {"bubblingMouseEvents": true, "color": "#555", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#555", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            circle_marker_6acba44de232986be0803f24f867582c.bindTooltip(
+                `<div>
+                     2 placements share this exact coordinate
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7a6978d286e0d4d46a3ad89d18d81269 = L.circleMarker(
+                [37.70753, -122.16167],
+                {"bubblingMouseEvents": true, "color": "#555", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#555", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            circle_marker_7a6978d286e0d4d46a3ad89d18d81269.bindTooltip(
+                `<div>
+                     2 placements share this exact coordinate
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3ad29ed462384eca3b75b2c7ae8cfb70 = L.circleMarker(
+                [37.6838, -122.12861],
+                {"bubblingMouseEvents": true, "color": "#555", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#555", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            circle_marker_3ad29ed462384eca3b75b2c7ae8cfb70.bindTooltip(
+                `<div>
+                     2 placements share this exact coordinate
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_60a92eeedec73f885796f81dd17c88e0 = L.circleMarker(
+                [38.0034, -121.83454],
+                {"bubblingMouseEvents": true, "color": "#555", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#555", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            circle_marker_60a92eeedec73f885796f81dd17c88e0.bindTooltip(
+                `<div>
+                     2 placements share this exact coordinate
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_26f7ce95af95fb43eca372473f79de50 = L.circleMarker(
+                [37.99734, -121.79001],
+                {"bubblingMouseEvents": true, "color": "#555", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#555", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            circle_marker_26f7ce95af95fb43eca372473f79de50.bindTooltip(
+                `<div>
+                     2 placements share this exact coordinate
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4dd80fb7c2c20dd8750952e2a0e28b71 = L.circleMarker(
+                [38.00418, -121.84028],
+                {"bubblingMouseEvents": true, "color": "#555", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#555", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            circle_marker_4dd80fb7c2c20dd8750952e2a0e28b71.bindTooltip(
+                `<div>
+                     2 placements share this exact coordinate
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dae8805cbfd3452cfbbb13fafda5b316 = L.circleMarker(
+                [37.98774, -122.06743],
+                {"bubblingMouseEvents": true, "color": "#555", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#555", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            circle_marker_dae8805cbfd3452cfbbb13fafda5b316.bindTooltip(
+                `<div>
+                     2 placements share this exact coordinate
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_21fd7b158c0e9334e5451a611178f8a6 = L.circleMarker(
+                [38.00915, -121.85783],
+                {"bubblingMouseEvents": true, "color": "#555", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#555", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            circle_marker_21fd7b158c0e9334e5451a611178f8a6.bindTooltip(
+                `<div>
+                     2 placements share this exact coordinate
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_eb11bc26d2eabce9e45a75a1b74a3325 = L.circleMarker(
+                [38.5856, -121.5023],
+                {"bubblingMouseEvents": true, "color": "#555", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#555", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            circle_marker_eb11bc26d2eabce9e45a75a1b74a3325.bindTooltip(
+                `<div>
+                     2 placements share this exact coordinate
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b9f1105260dd168e40f8fefc45f1767b = L.circleMarker(
+                [38.4555, -121.4107],
+                {"bubblingMouseEvents": true, "color": "#555", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#555", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            circle_marker_b9f1105260dd168e40f8fefc45f1767b.bindTooltip(
+                `<div>
+                     2 placements share this exact coordinate
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_46a1c0e840769a95d77c2aa676741f58 = L.circleMarker(
+                [38.6358, -121.2068],
+                {"bubblingMouseEvents": true, "color": "#555", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#555", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            circle_marker_46a1c0e840769a95d77c2aa676741f58.bindTooltip(
+                `<div>
+                     2 placements share this exact coordinate
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9fde0e64356975981df8ad6be9752eee = L.circleMarker(
+                [38.5703, -121.514],
+                {"bubblingMouseEvents": true, "color": "#555", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#555", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            circle_marker_9fde0e64356975981df8ad6be9752eee.bindTooltip(
+                `<div>
+                     2 placements share this exact coordinate
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5a863d8ef6bafe21ca8d2a6b725957d7 = L.circleMarker(
+                [38.6215, -121.2354],
+                {"bubblingMouseEvents": true, "color": "#555", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#555", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            circle_marker_5a863d8ef6bafe21ca8d2a6b725957d7.bindTooltip(
+                `<div>
+                     2 placements share this exact coordinate
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_480622e368ff3b8fc7fbc593f9f091bf = L.marker(
+                [37.69419, -122.05146],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_0c6c53f32c224af8c83386f59abe94b3 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:34px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [92, 34],
+  "iconAnchor": [46, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_fb9c3abd8ed99d9aaf228d74a45e1d67 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_ef73adf79c4d3641ee841189663afc37 = $(`<div id="html_ef73adf79c4d3641ee841189663afc37" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Latitude: 37.694190<br>Longitude: -122.051460</div>`)[0];
+                popup_fb9c3abd8ed99d9aaf228d74a45e1d67.setContent(html_ef73adf79c4d3641ee841189663afc37);
+            
+        
+
+        marker_480622e368ff3b8fc7fbc593f9f091bf.bindPopup(popup_fb9c3abd8ed99d9aaf228d74a45e1d67)
+        ;
+
+        
+    
+    
+            marker_480622e368ff3b8fc7fbc593f9f091bf.bindTooltip(
+                `<div>
+                     Farias
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_480622e368ff3b8fc7fbc593f9f091bf.setIcon(div_icon_0c6c53f32c224af8c83386f59abe94b3);
+            
+    
+            var marker_880be0e78579afee073bf4a0f6f728e4 = L.marker(
+                [37.7075, -122.16133],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_dfc9cc62ce35df6538c5c84c7171f1ff = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:34px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [92, 34],
+  "iconAnchor": [46, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_26610f8fed1b7c42374abe5477fa2505 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_a116ede4a2b169876490448bfe1068e5 = $(`<div id="html_a116ede4a2b169876490448bfe1068e5" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Latitude: 37.707500<br>Longitude: -122.161630</div>`)[0];
+                popup_26610f8fed1b7c42374abe5477fa2505.setContent(html_a116ede4a2b169876490448bfe1068e5);
+            
+        
+
+        marker_880be0e78579afee073bf4a0f6f728e4.bindPopup(popup_26610f8fed1b7c42374abe5477fa2505)
+        ;
+
+        
+    
+    
+            marker_880be0e78579afee073bf4a0f6f728e4.bindTooltip(
+                `<div>
+                     Farias
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_880be0e78579afee073bf4a0f6f728e4.setIcon(div_icon_dfc9cc62ce35df6538c5c84c7171f1ff);
+            
+    
+            var marker_6dae6169b4b93cceebeb15141fe6c321 = L.marker(
+                [37.7075, -122.16193],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_d2f7a7b58bfe5e8ae8590cc63e44cad5 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:34px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [92, 34],
+  "iconAnchor": [46, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_7730ce3969859546ac229c2a703ee4a4 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_08df66bf9e1eec77e7a705afff76b5a2 = $(`<div id="html_08df66bf9e1eec77e7a705afff76b5a2" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Latitude: 37.707500<br>Longitude: -122.161630</div>`)[0];
+                popup_7730ce3969859546ac229c2a703ee4a4.setContent(html_08df66bf9e1eec77e7a705afff76b5a2);
+            
+        
+
+        marker_6dae6169b4b93cceebeb15141fe6c321.bindPopup(popup_7730ce3969859546ac229c2a703ee4a4)
+        ;
+
+        
+    
+    
+            marker_6dae6169b4b93cceebeb15141fe6c321.bindTooltip(
+                `<div>
+                     Farias
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6dae6169b4b93cceebeb15141fe6c321.setIcon(div_icon_d2f7a7b58bfe5e8ae8590cc63e44cad5);
+            
+    
+            var marker_9f722bca3f517a992ae46054ab69b6ff = L.marker(
+                [37.70753, -122.16137],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_6ced341018415bff3a9400774f9dcf9d = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:34px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [92, 34],
+  "iconAnchor": [46, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_55422dc2c37ef1b0a2c7f82095927cdc = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_f6ae1b55aa887ebedf5e0e351254679f = $(`<div id="html_f6ae1b55aa887ebedf5e0e351254679f" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Latitude: 37.707530<br>Longitude: -122.161670</div>`)[0];
+                popup_55422dc2c37ef1b0a2c7f82095927cdc.setContent(html_f6ae1b55aa887ebedf5e0e351254679f);
+            
+        
+
+        marker_9f722bca3f517a992ae46054ab69b6ff.bindPopup(popup_55422dc2c37ef1b0a2c7f82095927cdc)
+        ;
+
+        
+    
+    
+            marker_9f722bca3f517a992ae46054ab69b6ff.bindTooltip(
+                `<div>
+                     Farias
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9f722bca3f517a992ae46054ab69b6ff.setIcon(div_icon_6ced341018415bff3a9400774f9dcf9d);
+            
+    
+            var marker_49984d3ec1f92ec83b34e1212187ca3a = L.marker(
+                [37.70753, -122.16197],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_7e7dc29fa6b2910434e856b6a473f285 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:34px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [92, 34],
+  "iconAnchor": [46, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_f88911bd9febcf2e547b92bfad010965 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_4e7208b274e693686a209b9ed99815c7 = $(`<div id="html_4e7208b274e693686a209b9ed99815c7" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Latitude: 37.707530<br>Longitude: -122.161670</div>`)[0];
+                popup_f88911bd9febcf2e547b92bfad010965.setContent(html_4e7208b274e693686a209b9ed99815c7);
+            
+        
+
+        marker_49984d3ec1f92ec83b34e1212187ca3a.bindPopup(popup_f88911bd9febcf2e547b92bfad010965)
+        ;
+
+        
+    
+    
+            marker_49984d3ec1f92ec83b34e1212187ca3a.bindTooltip(
+                `<div>
+                     Farias
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_49984d3ec1f92ec83b34e1212187ca3a.setIcon(div_icon_7e7dc29fa6b2910434e856b6a473f285);
+            
+    
+            var marker_fcac4cf8c22d237d9d78e8617acfcfc9 = L.marker(
+                [37.6838, -122.12831],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_9afec65d94dc83f744712f0924ba0e15 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:34px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [92, 34],
+  "iconAnchor": [46, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_4adcc539d6b6f810b4a8366be77fc75a = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_7b6f55b36920643c8e09fa1be039534a = $(`<div id="html_7b6f55b36920643c8e09fa1be039534a" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Latitude: 37.683800<br>Longitude: -122.128610</div>`)[0];
+                popup_4adcc539d6b6f810b4a8366be77fc75a.setContent(html_7b6f55b36920643c8e09fa1be039534a);
+            
+        
+
+        marker_fcac4cf8c22d237d9d78e8617acfcfc9.bindPopup(popup_4adcc539d6b6f810b4a8366be77fc75a)
+        ;
+
+        
+    
+    
+            marker_fcac4cf8c22d237d9d78e8617acfcfc9.bindTooltip(
+                `<div>
+                     Farias
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fcac4cf8c22d237d9d78e8617acfcfc9.setIcon(div_icon_9afec65d94dc83f744712f0924ba0e15);
+            
+    
+            var marker_e9ca8da72ee710320fec7def07130cac = L.marker(
+                [37.6838, -122.12890999999999],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_1101c31e973ee08d439d3b0cee8e2284 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:34px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [92, 34],
+  "iconAnchor": [46, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_cbde99b435e335fedab531b5a46df1ee = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_78906c46e0708a07e1b8089f53952330 = $(`<div id="html_78906c46e0708a07e1b8089f53952330" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Latitude: 37.683800<br>Longitude: -122.128610</div>`)[0];
+                popup_cbde99b435e335fedab531b5a46df1ee.setContent(html_78906c46e0708a07e1b8089f53952330);
+            
+        
+
+        marker_e9ca8da72ee710320fec7def07130cac.bindPopup(popup_cbde99b435e335fedab531b5a46df1ee)
+        ;
+
+        
+    
+    
+            marker_e9ca8da72ee710320fec7def07130cac.bindTooltip(
+                `<div>
+                     Farias
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e9ca8da72ee710320fec7def07130cac.setIcon(div_icon_1101c31e973ee08d439d3b0cee8e2284);
+            
+    
+            var marker_54a62ea2aef72a5fd5d6ae2ed4260020 = L.marker(
+                [38.018313, -122.095123],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_bae3e9bae36fb037951318fd8a42997a = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:34px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [92, 34],
+  "iconAnchor": [46, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_edaab830a03767d064b04fdfed343b8f = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_5a05c7bd412a8005d9330b960651ce25 = $(`<div id="html_5a05c7bd412a8005d9330b960651ce25" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Latitude: 38.018313<br>Longitude: -122.095123</div>`)[0];
+                popup_edaab830a03767d064b04fdfed343b8f.setContent(html_5a05c7bd412a8005d9330b960651ce25);
+            
+        
+
+        marker_54a62ea2aef72a5fd5d6ae2ed4260020.bindPopup(popup_edaab830a03767d064b04fdfed343b8f)
+        ;
+
+        
+    
+    
+            marker_54a62ea2aef72a5fd5d6ae2ed4260020.bindTooltip(
+                `<div>
+                     Farias
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_54a62ea2aef72a5fd5d6ae2ed4260020.setIcon(div_icon_bae3e9bae36fb037951318fd8a42997a);
+            
+    
+            var marker_9296be59f6b84e35e9d8d26c93b3ac55 = L.marker(
+                [38.0034, -121.83424000000001],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_63a19956c66cdb6a38e6dbfef90cc7ed = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:34px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [92, 34],
+  "iconAnchor": [46, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_08df06e5a1e55c8101c21ec61b99a5b8 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_3726e76ae5a45ba83c90a814bcd3d7fa = $(`<div id="html_3726e76ae5a45ba83c90a814bcd3d7fa" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Latitude: 38.003400<br>Longitude: -121.834540</div>`)[0];
+                popup_08df06e5a1e55c8101c21ec61b99a5b8.setContent(html_3726e76ae5a45ba83c90a814bcd3d7fa);
+            
+        
+
+        marker_9296be59f6b84e35e9d8d26c93b3ac55.bindPopup(popup_08df06e5a1e55c8101c21ec61b99a5b8)
+        ;
+
+        
+    
+    
+            marker_9296be59f6b84e35e9d8d26c93b3ac55.bindTooltip(
+                `<div>
+                     Farias
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9296be59f6b84e35e9d8d26c93b3ac55.setIcon(div_icon_63a19956c66cdb6a38e6dbfef90cc7ed);
+            
+    
+            var marker_050f6b52883e1f25353723d0aa29c054 = L.marker(
+                [38.0034, -121.83484],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_913a4e0cdacffc83beb821ed9189e9fb = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:34px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [92, 34],
+  "iconAnchor": [46, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_eed2e0841fad7cdb72b85c873376e249 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_dd710a323098077109f76d6f41d76504 = $(`<div id="html_dd710a323098077109f76d6f41d76504" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Latitude: 38.003400<br>Longitude: -121.834540</div>`)[0];
+                popup_eed2e0841fad7cdb72b85c873376e249.setContent(html_dd710a323098077109f76d6f41d76504);
+            
+        
+
+        marker_050f6b52883e1f25353723d0aa29c054.bindPopup(popup_eed2e0841fad7cdb72b85c873376e249)
+        ;
+
+        
+    
+    
+            marker_050f6b52883e1f25353723d0aa29c054.bindTooltip(
+                `<div>
+                     Farias
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_050f6b52883e1f25353723d0aa29c054.setIcon(div_icon_913a4e0cdacffc83beb821ed9189e9fb);
+            
+    
+            var marker_8be39f71f5007ccc21f040f45078a715 = L.marker(
+                [37.99734, -121.78971],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_ff32eafdf6190d3bd45f8186746772f4 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:34px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [92, 34],
+  "iconAnchor": [46, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_2493bbc45a1f21fb1f419902a791f0a8 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_2d6f2d6c84500f4ada52701ea217047d = $(`<div id="html_2d6f2d6c84500f4ada52701ea217047d" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Latitude: 37.997340<br>Longitude: -121.790010</div>`)[0];
+                popup_2493bbc45a1f21fb1f419902a791f0a8.setContent(html_2d6f2d6c84500f4ada52701ea217047d);
+            
+        
+
+        marker_8be39f71f5007ccc21f040f45078a715.bindPopup(popup_2493bbc45a1f21fb1f419902a791f0a8)
+        ;
+
+        
+    
+    
+            marker_8be39f71f5007ccc21f040f45078a715.bindTooltip(
+                `<div>
+                     Farias
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8be39f71f5007ccc21f040f45078a715.setIcon(div_icon_ff32eafdf6190d3bd45f8186746772f4);
+            
+    
+            var marker_81bbcfd34a860b336bb9870ba60e73a8 = L.marker(
+                [37.99734, -121.79030999999999],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_18a3b5a92659544f46cd7e3c93d3ed77 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:34px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [92, 34],
+  "iconAnchor": [46, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_72a000ddb93528f86cbc59c590919949 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_f9c4cce691ae133bf569b03d678a8a60 = $(`<div id="html_f9c4cce691ae133bf569b03d678a8a60" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Latitude: 37.997340<br>Longitude: -121.790010</div>`)[0];
+                popup_72a000ddb93528f86cbc59c590919949.setContent(html_f9c4cce691ae133bf569b03d678a8a60);
+            
+        
+
+        marker_81bbcfd34a860b336bb9870ba60e73a8.bindPopup(popup_72a000ddb93528f86cbc59c590919949)
+        ;
+
+        
+    
+    
+            marker_81bbcfd34a860b336bb9870ba60e73a8.bindTooltip(
+                `<div>
+                     Farias
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_81bbcfd34a860b336bb9870ba60e73a8.setIcon(div_icon_18a3b5a92659544f46cd7e3c93d3ed77);
+            
+    
+            var marker_b5c1b2940de9f01d37e52ae0dacb379b = L.marker(
+                [38.00418, -121.83998000000001],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_83fdcf035d15668fd0f5ac69172e57d3 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:34px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [92, 34],
+  "iconAnchor": [46, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_734cc8751ec4e4b9266a418f64931901 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_c6c96d585a104a9d770fdcc6afa3ebd7 = $(`<div id="html_c6c96d585a104a9d770fdcc6afa3ebd7" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Latitude: 38.004180<br>Longitude: -121.840280</div>`)[0];
+                popup_734cc8751ec4e4b9266a418f64931901.setContent(html_c6c96d585a104a9d770fdcc6afa3ebd7);
+            
+        
+
+        marker_b5c1b2940de9f01d37e52ae0dacb379b.bindPopup(popup_734cc8751ec4e4b9266a418f64931901)
+        ;
+
+        
+    
+    
+            marker_b5c1b2940de9f01d37e52ae0dacb379b.bindTooltip(
+                `<div>
+                     Farias
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b5c1b2940de9f01d37e52ae0dacb379b.setIcon(div_icon_83fdcf035d15668fd0f5ac69172e57d3);
+            
+    
+            var marker_7ca4adba57d7c749d8d917950df9258e = L.marker(
+                [38.00418, -121.84058],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_6b57afdc441ac46bb41bdc3f95a9a015 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:34px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [92, 34],
+  "iconAnchor": [46, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_2a2522d13a582be300ebc334fcf2d191 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_c3c80383dffbdaa70e32b8c423438536 = $(`<div id="html_c3c80383dffbdaa70e32b8c423438536" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Latitude: 38.004180<br>Longitude: -121.840280</div>`)[0];
+                popup_2a2522d13a582be300ebc334fcf2d191.setContent(html_c3c80383dffbdaa70e32b8c423438536);
+            
+        
+
+        marker_7ca4adba57d7c749d8d917950df9258e.bindPopup(popup_2a2522d13a582be300ebc334fcf2d191)
+        ;
+
+        
+    
+    
+            marker_7ca4adba57d7c749d8d917950df9258e.bindTooltip(
+                `<div>
+                     Farias
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7ca4adba57d7c749d8d917950df9258e.setIcon(div_icon_6b57afdc441ac46bb41bdc3f95a9a015);
+            
+    
+            var marker_0745ab6770a14248950c3e6b23395af5 = L.marker(
+                [37.98774, -122.06713],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_c15c4b7e068d01899fc630a86d5fa4b8 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:34px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [92, 34],
+  "iconAnchor": [46, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_86335c55a6b7f929967429e5975d3c76 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_9380b88613828c0fac75bfc9edd3c723 = $(`<div id="html_9380b88613828c0fac75bfc9edd3c723" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Latitude: 37.987740<br>Longitude: -122.067430</div>`)[0];
+                popup_86335c55a6b7f929967429e5975d3c76.setContent(html_9380b88613828c0fac75bfc9edd3c723);
+            
+        
+
+        marker_0745ab6770a14248950c3e6b23395af5.bindPopup(popup_86335c55a6b7f929967429e5975d3c76)
+        ;
+
+        
+    
+    
+            marker_0745ab6770a14248950c3e6b23395af5.bindTooltip(
+                `<div>
+                     Farias
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0745ab6770a14248950c3e6b23395af5.setIcon(div_icon_c15c4b7e068d01899fc630a86d5fa4b8);
+            
+    
+            var marker_93de329b6e91de41c7949a81a506b321 = L.marker(
+                [37.98774, -122.06773],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_31372780aac6592e5e6a2237eab9dc1f = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:34px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [92, 34],
+  "iconAnchor": [46, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_b3799868a44ad58d0c331da0187e42da = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_2e41c98b213cdae5f8dc437ae6ba67c5 = $(`<div id="html_2e41c98b213cdae5f8dc437ae6ba67c5" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Latitude: 37.987740<br>Longitude: -122.067430</div>`)[0];
+                popup_b3799868a44ad58d0c331da0187e42da.setContent(html_2e41c98b213cdae5f8dc437ae6ba67c5);
+            
+        
+
+        marker_93de329b6e91de41c7949a81a506b321.bindPopup(popup_b3799868a44ad58d0c331da0187e42da)
+        ;
+
+        
+    
+    
+            marker_93de329b6e91de41c7949a81a506b321.bindTooltip(
+                `<div>
+                     Farias
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_93de329b6e91de41c7949a81a506b321.setIcon(div_icon_31372780aac6592e5e6a2237eab9dc1f);
+            
+    
+            var marker_f952e40e34c13c982e8fb88eddacf3ec = L.marker(
+                [38.03033, -122.11786],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_0c99c947d5a02f75b07e8bbfae970ae8 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:34px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [92, 34],
+  "iconAnchor": [46, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_28518df9a6deb5baefd7183d6678a8f9 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_097f3f886c2e574b6424119a9aa09849 = $(`<div id="html_097f3f886c2e574b6424119a9aa09849" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Latitude: 38.030330<br>Longitude: -122.117860</div>`)[0];
+                popup_28518df9a6deb5baefd7183d6678a8f9.setContent(html_097f3f886c2e574b6424119a9aa09849);
+            
+        
+
+        marker_f952e40e34c13c982e8fb88eddacf3ec.bindPopup(popup_28518df9a6deb5baefd7183d6678a8f9)
+        ;
+
+        
+    
+    
+            marker_f952e40e34c13c982e8fb88eddacf3ec.bindTooltip(
+                `<div>
+                     Farias
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f952e40e34c13c982e8fb88eddacf3ec.setIcon(div_icon_0c99c947d5a02f75b07e8bbfae970ae8);
+            
+    
+            var marker_95402962509eb172984fa62193337373 = L.marker(
+                [38.0304, -122.11787],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_112be092a7b74d7d932c225231568ba0 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:34px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [92, 34],
+  "iconAnchor": [46, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_a5423ed6c8075ad241f7a7fc68969e11 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_7641e91a4520634d89b457dce583b128 = $(`<div id="html_7641e91a4520634d89b457dce583b128" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Latitude: 38.030400<br>Longitude: -122.117870</div>`)[0];
+                popup_a5423ed6c8075ad241f7a7fc68969e11.setContent(html_7641e91a4520634d89b457dce583b128);
+            
+        
+
+        marker_95402962509eb172984fa62193337373.bindPopup(popup_a5423ed6c8075ad241f7a7fc68969e11)
+        ;
+
+        
+    
+    
+            marker_95402962509eb172984fa62193337373.bindTooltip(
+                `<div>
+                     Farias
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_95402962509eb172984fa62193337373.setIcon(div_icon_112be092a7b74d7d932c225231568ba0);
+            
+    
+            var marker_ef516de26ce77f01ddb8128488541cd2 = L.marker(
+                [38.00915, -121.85753000000001],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_f5daedf51a150e427838ab1896c3fae4 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:34px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [92, 34],
+  "iconAnchor": [46, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_28b4e58be6f3c0e03d1ed2ff56dee4a2 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_f22687839f5003cd2f8a7ce9976ae1b8 = $(`<div id="html_f22687839f5003cd2f8a7ce9976ae1b8" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Latitude: 38.009150<br>Longitude: -121.857830</div>`)[0];
+                popup_28b4e58be6f3c0e03d1ed2ff56dee4a2.setContent(html_f22687839f5003cd2f8a7ce9976ae1b8);
+            
+        
+
+        marker_ef516de26ce77f01ddb8128488541cd2.bindPopup(popup_28b4e58be6f3c0e03d1ed2ff56dee4a2)
+        ;
+
+        
+    
+    
+            marker_ef516de26ce77f01ddb8128488541cd2.bindTooltip(
+                `<div>
+                     Farias
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ef516de26ce77f01ddb8128488541cd2.setIcon(div_icon_f5daedf51a150e427838ab1896c3fae4);
+            
+    
+            var marker_7dbe8998410829e6e5dcd999685ad88a = L.marker(
+                [38.00915, -121.85813],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_158c3adf0c2eab6fa97a75a2df5389c7 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:34px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [92, 34],
+  "iconAnchor": [46, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_73f67430995618676379db7da840346d = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_ccb3ea15a10cdf24cd27ea3da4098bfc = $(`<div id="html_ccb3ea15a10cdf24cd27ea3da4098bfc" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Latitude: 38.009150<br>Longitude: -121.857830</div>`)[0];
+                popup_73f67430995618676379db7da840346d.setContent(html_ccb3ea15a10cdf24cd27ea3da4098bfc);
+            
+        
+
+        marker_7dbe8998410829e6e5dcd999685ad88a.bindPopup(popup_73f67430995618676379db7da840346d)
+        ;
+
+        
+    
+    
+            marker_7dbe8998410829e6e5dcd999685ad88a.bindTooltip(
+                `<div>
+                     Farias
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7dbe8998410829e6e5dcd999685ad88a.setIcon(div_icon_158c3adf0c2eab6fa97a75a2df5389c7);
+            
+    
+            var marker_4c1f89d3045ffa72fd6787336d788826 = L.marker(
+                [38.00786, -121.85449],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_c914c8ad7e1ae95c44633d849726eb95 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:34px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [92, 34],
+  "iconAnchor": [46, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_716d301b17df427b20298d8733c5a7ef = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_dff0562876bfef03b5acf750e03e3ade = $(`<div id="html_dff0562876bfef03b5acf750e03e3ade" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Latitude: 38.007860<br>Longitude: -121.854490</div>`)[0];
+                popup_716d301b17df427b20298d8733c5a7ef.setContent(html_dff0562876bfef03b5acf750e03e3ade);
+            
+        
+
+        marker_4c1f89d3045ffa72fd6787336d788826.bindPopup(popup_716d301b17df427b20298d8733c5a7ef)
+        ;
+
+        
+    
+    
+            marker_4c1f89d3045ffa72fd6787336d788826.bindTooltip(
+                `<div>
+                     Farias
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4c1f89d3045ffa72fd6787336d788826.setIcon(div_icon_c914c8ad7e1ae95c44633d849726eb95);
+            
+    
+            var marker_d7d43e0edcc0c58e217b66ba134489c3 = L.marker(
+                [34.5782, -118.1331],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_43048215284f12f359cfb863b4d63db7 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#f59e0b;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:34px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eCarillo\u003c/div\u003e\n    ",
+  "iconSize": [92, 34],
+  "iconAnchor": [46, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_58e322876037f48b94cfc9df969a3194 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_704d732e6292dce99dda11f15c39c407 = $(`<div id="html_704d732e6292dce99dda11f15c39c407" style="width: 100.0%; height: 100.0%;"><b>Carillo</b><br>Latitude: 34.578200<br>Longitude: -118.133100</div>`)[0];
+                popup_58e322876037f48b94cfc9df969a3194.setContent(html_704d732e6292dce99dda11f15c39c407);
+            
+        
+
+        marker_d7d43e0edcc0c58e217b66ba134489c3.bindPopup(popup_58e322876037f48b94cfc9df969a3194)
+        ;
+
+        
+    
+    
+            marker_d7d43e0edcc0c58e217b66ba134489c3.bindTooltip(
+                `<div>
+                     Carillo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d7d43e0edcc0c58e217b66ba134489c3.setIcon(div_icon_43048215284f12f359cfb863b4d63db7);
+            
+    
+            var marker_27e3c7cc463720fbef7ad7bbaae02b77 = L.marker(
+                [34.6558, -118.1528],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_b92ed9a5bfd9b46db89fb56b7990c937 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#f59e0b;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:34px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eCarillo\u003c/div\u003e\n    ",
+  "iconSize": [92, 34],
+  "iconAnchor": [46, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_e214f8d6d09e0c92adaa43fb4744d0e9 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_531581c1ac3c4119982c30e6ab0955ab = $(`<div id="html_531581c1ac3c4119982c30e6ab0955ab" style="width: 100.0%; height: 100.0%;"><b>Carillo</b><br>Latitude: 34.655800<br>Longitude: -118.152800</div>`)[0];
+                popup_e214f8d6d09e0c92adaa43fb4744d0e9.setContent(html_531581c1ac3c4119982c30e6ab0955ab);
+            
+        
+
+        marker_27e3c7cc463720fbef7ad7bbaae02b77.bindPopup(popup_e214f8d6d09e0c92adaa43fb4744d0e9)
+        ;
+
+        
+    
+    
+            marker_27e3c7cc463720fbef7ad7bbaae02b77.bindTooltip(
+                `<div>
+                     Carillo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_27e3c7cc463720fbef7ad7bbaae02b77.setIcon(div_icon_b92ed9a5bfd9b46db89fb56b7990c937);
+            
+    
+            var marker_cc8c7aed8e92b09ceb71954a5a40aae1 = L.marker(
+                [34.6896, -118.1649],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_c80fc6812460151b7240e541b8694d06 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#f59e0b;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:34px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eCarillo\u003c/div\u003e\n    ",
+  "iconSize": [92, 34],
+  "iconAnchor": [46, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_7902aaea913740e888fb2dc440c6077e = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_b67f70debb8d5925ccbdd35070a254ed = $(`<div id="html_b67f70debb8d5925ccbdd35070a254ed" style="width: 100.0%; height: 100.0%;"><b>Carillo</b><br>Latitude: 34.689600<br>Longitude: -118.164900</div>`)[0];
+                popup_7902aaea913740e888fb2dc440c6077e.setContent(html_b67f70debb8d5925ccbdd35070a254ed);
+            
+        
+
+        marker_cc8c7aed8e92b09ceb71954a5a40aae1.bindPopup(popup_7902aaea913740e888fb2dc440c6077e)
+        ;
+
+        
+    
+    
+            marker_cc8c7aed8e92b09ceb71954a5a40aae1.bindTooltip(
+                `<div>
+                     Carillo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cc8c7aed8e92b09ceb71954a5a40aae1.setIcon(div_icon_c80fc6812460151b7240e541b8694d06);
+            
+    
+            var marker_508d9a8e4fd2864e94fb6add9172336a = L.marker(
+                [38.5856, -121.50200000000001],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_baa4a50e26b3993f2d330a2298d6d191 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#374151;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:46px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFull Caucus 1\u003cbr\u003eFull Caucus 2\u003c/div\u003e\n    ",
+  "iconSize": [92, 46],
+  "iconAnchor": [46, 23],
+  "className": "empty",
+});
+        
+    
+        var popup_bd6614b9d97f53d21496f5912dea9fde = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_2459168805087bf376aa77052f91cdf6 = $(`<div id="html_2459168805087bf376aa77052f91cdf6" style="width: 100.0%; height: 100.0%;"><b>Full Caucus 1<br>Full Caucus 2</b><br>Latitude: 38.585600<br>Longitude: -121.502300</div>`)[0];
+                popup_bd6614b9d97f53d21496f5912dea9fde.setContent(html_2459168805087bf376aa77052f91cdf6);
+            
+        
+
+        marker_508d9a8e4fd2864e94fb6add9172336a.bindPopup(popup_bd6614b9d97f53d21496f5912dea9fde)
+        ;
+
+        
+    
+    
+            marker_508d9a8e4fd2864e94fb6add9172336a.bindTooltip(
+                `<div>
+                     Full Caucus 1 / Full Caucus 2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_508d9a8e4fd2864e94fb6add9172336a.setIcon(div_icon_baa4a50e26b3993f2d330a2298d6d191);
+            
+    
+            var marker_94cf0b2a44b8f7eb7658e1fef0b38ca5 = L.marker(
+                [38.6704, -121.5499],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_f9789655662459f13c6b252320237932 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#374151;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:46px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFull Caucus 3\u003cbr\u003eFull Caucus 4\u003c/div\u003e\n    ",
+  "iconSize": [92, 46],
+  "iconAnchor": [46, 23],
+  "className": "empty",
+});
+        
+    
+        var popup_f6df44081b0c6aeaba28d179c4da9247 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_40ef4efd5485e2d92531d3c0f13ef509 = $(`<div id="html_40ef4efd5485e2d92531d3c0f13ef509" style="width: 100.0%; height: 100.0%;"><b>Full Caucus 3<br>Full Caucus 4</b><br>Latitude: 38.670400<br>Longitude: -121.549900</div>`)[0];
+                popup_f6df44081b0c6aeaba28d179c4da9247.setContent(html_40ef4efd5485e2d92531d3c0f13ef509);
+            
+        
+
+        marker_94cf0b2a44b8f7eb7658e1fef0b38ca5.bindPopup(popup_f6df44081b0c6aeaba28d179c4da9247)
+        ;
+
+        
+    
+    
+            marker_94cf0b2a44b8f7eb7658e1fef0b38ca5.bindTooltip(
+                `<div>
+                     Full Caucus 3 / Full Caucus 4
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_94cf0b2a44b8f7eb7658e1fef0b38ca5.setIcon(div_icon_f9789655662459f13c6b252320237932);
+            
+    
+            var marker_92a34b08098e04df0f2270cb4003ce31 = L.marker(
+                [38.4555, -121.41040000000001],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_4edf4bfdfd941e47fe8ec199b41dac2b = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#dc2626;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:150px;\n        height:46px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:10px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eCo Chairs Affordability\u003cbr\u003eCo Chairs Opportunity\u003c/div\u003e\n    ",
+  "iconSize": [150, 46],
+  "iconAnchor": [75, 23],
+  "className": "empty",
+});
+        
+    
+        var popup_b7f765955e8362d84a287505cc4879bd = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_4699f37029a2ea658a73beef198dced5 = $(`<div id="html_4699f37029a2ea658a73beef198dced5" style="width: 100.0%; height: 100.0%;"><b>Co Chairs Affordability<br>Co Chairs Opportunity</b><br>Latitude: 38.455500<br>Longitude: -121.410700</div>`)[0];
+                popup_b7f765955e8362d84a287505cc4879bd.setContent(html_4699f37029a2ea658a73beef198dced5);
+            
+        
+
+        marker_92a34b08098e04df0f2270cb4003ce31.bindPopup(popup_b7f765955e8362d84a287505cc4879bd)
+        ;
+
+        
+    
+    
+            marker_92a34b08098e04df0f2270cb4003ce31.bindTooltip(
+                `<div>
+                     Co Chairs Affordability / Co Chairs Opportunity
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_92a34b08098e04df0f2270cb4003ce31.setIcon(div_icon_4edf4bfdfd941e47fe8ec199b41dac2b);
+            
+    
+            var marker_68e44d634478b4717762a0c97aa26c02 = L.marker(
+                [38.6358, -121.2065],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_d1f3d9f3953402f32ccacb1bbac7cfc2 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#db2777;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:150px;\n        height:46px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:10px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eTop 10 Affordability\u003cbr\u003eTop 10 Opportunity\u003c/div\u003e\n    ",
+  "iconSize": [150, 46],
+  "iconAnchor": [75, 23],
+  "className": "empty",
+});
+        
+    
+        var popup_0807c85d788610cd61bb844f0c8b6205 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_817bd413865ac1a8c1976a7b7fad5374 = $(`<div id="html_817bd413865ac1a8c1976a7b7fad5374" style="width: 100.0%; height: 100.0%;"><b>Top 10 Affordability<br>Top 10 Opportunity</b><br>Latitude: 38.635800<br>Longitude: -121.206800</div>`)[0];
+                popup_0807c85d788610cd61bb844f0c8b6205.setContent(html_817bd413865ac1a8c1976a7b7fad5374);
+            
+        
+
+        marker_68e44d634478b4717762a0c97aa26c02.bindPopup(popup_0807c85d788610cd61bb844f0c8b6205)
+        ;
+
+        
+    
+    
+            marker_68e44d634478b4717762a0c97aa26c02.bindTooltip(
+                `<div>
+                     Top 10 Affordability / Top 10 Opportunity
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_68e44d634478b4717762a0c97aa26c02.setIcon(div_icon_d1f3d9f3953402f32ccacb1bbac7cfc2);
+            
+    
+            var marker_016cfba2a76191b350988c6e8902bd99 = L.marker(
+                [38.5856, -121.5026],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_77335e9f9978b6d846167be3e8733f88 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#374151;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:46px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFull Caucus 5\u003cbr\u003eRivas\u003c/div\u003e\n    ",
+  "iconSize": [92, 46],
+  "iconAnchor": [46, 23],
+  "className": "empty",
+});
+        
+    
+        var popup_86d54f180a817a9f3c3c46d3de0e016d = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_b3118248e6eded4e155e65f6e1e49400 = $(`<div id="html_b3118248e6eded4e155e65f6e1e49400" style="width: 100.0%; height: 100.0%;"><b>Full Caucus 5<br>Rivas</b><br>Latitude: 38.585600<br>Longitude: -121.502300</div>`)[0];
+                popup_86d54f180a817a9f3c3c46d3de0e016d.setContent(html_b3118248e6eded4e155e65f6e1e49400);
+            
+        
+
+        marker_016cfba2a76191b350988c6e8902bd99.bindPopup(popup_86d54f180a817a9f3c3c46d3de0e016d)
+        ;
+
+        
+    
+    
+            marker_016cfba2a76191b350988c6e8902bd99.bindTooltip(
+                `<div>
+                     Full Caucus 5 / Rivas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_016cfba2a76191b350988c6e8902bd99.setIcon(div_icon_77335e9f9978b6d846167be3e8733f88);
+            
+    
+            var marker_bd2c75d7b8967d47411d116365b24917 = L.marker(
+                [38.5703, -121.5137],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_52ee7191336828abdb5af91bba8e2817 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#dc2626;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:150px;\n        height:46px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:10px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eCo Chairs Affordability\u003cbr\u003eCo Chairs Opportunity\u003c/div\u003e\n    ",
+  "iconSize": [150, 46],
+  "iconAnchor": [75, 23],
+  "className": "empty",
+});
+        
+    
+        var popup_375c71824f57c9f858b7293b52553fbe = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_a158b48f65e654d571afec47baad4956 = $(`<div id="html_a158b48f65e654d571afec47baad4956" style="width: 100.0%; height: 100.0%;"><b>Co Chairs Affordability<br>Co Chairs Opportunity</b><br>Latitude: 38.570300<br>Longitude: -121.514000</div>`)[0];
+                popup_375c71824f57c9f858b7293b52553fbe.setContent(html_a158b48f65e654d571afec47baad4956);
+            
+        
+
+        marker_bd2c75d7b8967d47411d116365b24917.bindPopup(popup_375c71824f57c9f858b7293b52553fbe)
+        ;
+
+        
+    
+    
+            marker_bd2c75d7b8967d47411d116365b24917.bindTooltip(
+                `<div>
+                     Co Chairs Affordability / Co Chairs Opportunity
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bd2c75d7b8967d47411d116365b24917.setIcon(div_icon_52ee7191336828abdb5af91bba8e2817);
+            
+    
+            var marker_51195648a2ee2cae8eaf162ee854039b = L.marker(
+                [38.5703, -121.51429999999999],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_0696ccbd777a7d80bc8deb3afb467316 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#db2777;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:150px;\n        height:46px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:10px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eTop 10 Affordability\u003cbr\u003eTop 10 Opportunity\u003c/div\u003e\n    ",
+  "iconSize": [150, 46],
+  "iconAnchor": [75, 23],
+  "className": "empty",
+});
+        
+    
+        var popup_958fa9c3ec722a045e72dee36ad595d9 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_8e7727122f66f8f91cc4810bb9ba53ad = $(`<div id="html_8e7727122f66f8f91cc4810bb9ba53ad" style="width: 100.0%; height: 100.0%;"><b>Top 10 Affordability<br>Top 10 Opportunity</b><br>Latitude: 38.570300<br>Longitude: -121.514000</div>`)[0];
+                popup_958fa9c3ec722a045e72dee36ad595d9.setContent(html_8e7727122f66f8f91cc4810bb9ba53ad);
+            
+        
+
+        marker_51195648a2ee2cae8eaf162ee854039b.bindPopup(popup_958fa9c3ec722a045e72dee36ad595d9)
+        ;
+
+        
+    
+    
+            marker_51195648a2ee2cae8eaf162ee854039b.bindTooltip(
+                `<div>
+                     Top 10 Affordability / Top 10 Opportunity
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_51195648a2ee2cae8eaf162ee854039b.setIcon(div_icon_0696ccbd777a7d80bc8deb3afb467316);
+            
+    
+            var marker_f2382bfdf0d31d6c65aeef3b47ec7313 = L.marker(
+                [38.4555, -121.411],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_5d1f74de55e2a3e83e814d9a0aa64db2 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#059669;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:34px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eNguyen\u003c/div\u003e\n    ",
+  "iconSize": [92, 34],
+  "iconAnchor": [46, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_57f6fbd49d44e32dda3ddbc92acc9cb8 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_40206eac890c31d78b99f1087cc5d841 = $(`<div id="html_40206eac890c31d78b99f1087cc5d841" style="width: 100.0%; height: 100.0%;"><b>Nguyen</b><br>Latitude: 38.455500<br>Longitude: -121.410700</div>`)[0];
+                popup_57f6fbd49d44e32dda3ddbc92acc9cb8.setContent(html_40206eac890c31d78b99f1087cc5d841);
+            
+        
+
+        marker_f2382bfdf0d31d6c65aeef3b47ec7313.bindPopup(popup_57f6fbd49d44e32dda3ddbc92acc9cb8)
+        ;
+
+        
+    
+    
+            marker_f2382bfdf0d31d6c65aeef3b47ec7313.bindTooltip(
+                `<div>
+                     Nguyen
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f2382bfdf0d31d6c65aeef3b47ec7313.setIcon(div_icon_5d1f74de55e2a3e83e814d9a0aa64db2);
+            
+    
+            var marker_1b830fbf3e5aa8ea9dca4cd2c63a3529 = L.marker(
+                [38.6262, -121.4127],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_8d05c576f8abc90f5076bf9684365fc5 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#dc2626;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:150px;\n        height:46px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:10px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eCo Chairs Affordability\u003cbr\u003eCo Chairs Opportunity\u003c/div\u003e\n    ",
+  "iconSize": [150, 46],
+  "iconAnchor": [75, 23],
+  "className": "empty",
+});
+        
+    
+        var popup_8615e37f7e0ea7e11f98268b900f7daf = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_d49498a725210b4577f44dded9418a02 = $(`<div id="html_d49498a725210b4577f44dded9418a02" style="width: 100.0%; height: 100.0%;"><b>Co Chairs Affordability<br>Co Chairs Opportunity</b><br>Latitude: 38.626200<br>Longitude: -121.412700</div>`)[0];
+                popup_8615e37f7e0ea7e11f98268b900f7daf.setContent(html_d49498a725210b4577f44dded9418a02);
+            
+        
+
+        marker_1b830fbf3e5aa8ea9dca4cd2c63a3529.bindPopup(popup_8615e37f7e0ea7e11f98268b900f7daf)
+        ;
+
+        
+    
+    
+            marker_1b830fbf3e5aa8ea9dca4cd2c63a3529.bindTooltip(
+                `<div>
+                     Co Chairs Affordability / Co Chairs Opportunity
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1b830fbf3e5aa8ea9dca4cd2c63a3529.setIcon(div_icon_8d05c576f8abc90f5076bf9684365fc5);
+            
+    
+            var marker_8b691c3f35cf9c2ce21567c7feaea116 = L.marker(
+                [38.6215, -121.2351],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_dbdbf8885e4ace41fa16510265709913 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#059669;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:34px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eNguyen\u003c/div\u003e\n    ",
+  "iconSize": [92, 34],
+  "iconAnchor": [46, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_87ffe3686ef2ffb7df12576ecfa6a7b0 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_771e377a0a7fb68f0d5ceb401744b0a8 = $(`<div id="html_771e377a0a7fb68f0d5ceb401744b0a8" style="width: 100.0%; height: 100.0%;"><b>Nguyen</b><br>Latitude: 38.621500<br>Longitude: -121.235400</div>`)[0];
+                popup_87ffe3686ef2ffb7df12576ecfa6a7b0.setContent(html_771e377a0a7fb68f0d5ceb401744b0a8);
+            
+        
+
+        marker_8b691c3f35cf9c2ce21567c7feaea116.bindPopup(popup_87ffe3686ef2ffb7df12576ecfa6a7b0)
+        ;
+
+        
+    
+    
+            marker_8b691c3f35cf9c2ce21567c7feaea116.bindTooltip(
+                `<div>
+                     Nguyen
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8b691c3f35cf9c2ce21567c7feaea116.setIcon(div_icon_dbdbf8885e4ace41fa16510265709913);
+            
+    
+            var marker_7a3ef54844582d87e450b5a570198b10 = L.marker(
+                [38.6215, -121.2357],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_6eb5216e35bd247df9b4890e46fe6c94 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#059669;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:34px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eNguyen\u003c/div\u003e\n    ",
+  "iconSize": [92, 34],
+  "iconAnchor": [46, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_6622644fdc3662f54a09f340b00bc20b = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_2b11951d1e61ac38ac49fa8e53bd26b2 = $(`<div id="html_2b11951d1e61ac38ac49fa8e53bd26b2" style="width: 100.0%; height: 100.0%;"><b>Nguyen</b><br>Latitude: 38.621500<br>Longitude: -121.235400</div>`)[0];
+                popup_6622644fdc3662f54a09f340b00bc20b.setContent(html_2b11951d1e61ac38ac49fa8e53bd26b2);
+            
+        
+
+        marker_7a3ef54844582d87e450b5a570198b10.bindPopup(popup_6622644fdc3662f54a09f340b00bc20b)
+        ;
+
+        
+    
+    
+            marker_7a3ef54844582d87e450b5a570198b10.bindTooltip(
+                `<div>
+                     Nguyen
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7a3ef54844582d87e450b5a570198b10.setIcon(div_icon_6eb5216e35bd247df9b4890e46fe6c94);
+            
+    
+            var marker_67529542b2a34a4e9993661f7f17a359 = L.marker(
+                [38.6358, -121.2071],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_41853ac57fc7b4dbd2bbfdd048d0adc1 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#059669;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:34px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eNguyen\u003c/div\u003e\n    ",
+  "iconSize": [92, 34],
+  "iconAnchor": [46, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_412db74b5693778b5fcbceafdcc61a5f = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_e95631ff79a5804004ab8eb6ad114b4e = $(`<div id="html_e95631ff79a5804004ab8eb6ad114b4e" style="width: 100.0%; height: 100.0%;"><b>Nguyen</b><br>Latitude: 38.635800<br>Longitude: -121.206800</div>`)[0];
+                popup_412db74b5693778b5fcbceafdcc61a5f.setContent(html_e95631ff79a5804004ab8eb6ad114b4e);
+            
+        
+
+        marker_67529542b2a34a4e9993661f7f17a359.bindPopup(popup_412db74b5693778b5fcbceafdcc61a5f)
+        ;
+
+        
+    
+    
+            marker_67529542b2a34a4e9993661f7f17a359.bindTooltip(
+                `<div>
+                     Nguyen
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_67529542b2a34a4e9993661f7f17a359.setIcon(div_icon_41853ac57fc7b4dbd2bbfdd048d0adc1);
+            
+    
+            var marker_fdef01239ba885ddb6c1d6c89a290ab3 = L.marker(
+                [38.5722, -121.3249],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_68e7bf19484c3e82b97349b9b4931e0f = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#059669;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:34px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eNguyen\u003c/div\u003e\n    ",
+  "iconSize": [92, 34],
+  "iconAnchor": [46, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_ebe84a6fd91421f907834f11d304b8c0 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_13bdd5c8053a05d8075b724affc0c1d2 = $(`<div id="html_13bdd5c8053a05d8075b724affc0c1d2" style="width: 100.0%; height: 100.0%;"><b>Nguyen</b><br>Latitude: 38.572200<br>Longitude: -121.324900</div>`)[0];
+                popup_ebe84a6fd91421f907834f11d304b8c0.setContent(html_13bdd5c8053a05d8075b724affc0c1d2);
+            
+        
+
+        marker_fdef01239ba885ddb6c1d6c89a290ab3.bindPopup(popup_ebe84a6fd91421f907834f11d304b8c0)
+        ;
+
+        
+    
+    
+            marker_fdef01239ba885ddb6c1d6c89a290ab3.bindTooltip(
+                `<div>
+                     Nguyen
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fdef01239ba885ddb6c1d6c89a290ab3.setIcon(div_icon_68e7bf19484c3e82b97349b9b4931e0f);
+            
+    
+            var marker_ceb39c1f2cac3baca98fd5277ec9d74a = L.marker(
+                [34.456, -117.3581],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_b4b8f9b13d1b4ed9cfd6af7fe729f15f = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#f59e0b;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:34px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eCarillo\u003c/div\u003e\n    ",
+  "iconSize": [92, 34],
+  "iconAnchor": [46, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_cc8adcb389b549a2dff06ea38127da74 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_d1aa18c650e005895273c1717acfaa63 = $(`<div id="html_d1aa18c650e005895273c1717acfaa63" style="width: 100.0%; height: 100.0%;"><b>Carillo</b><br>Latitude: 34.456000<br>Longitude: -117.358100</div>`)[0];
+                popup_cc8adcb389b549a2dff06ea38127da74.setContent(html_d1aa18c650e005895273c1717acfaa63);
+            
+        
+
+        marker_ceb39c1f2cac3baca98fd5277ec9d74a.bindPopup(popup_cc8adcb389b549a2dff06ea38127da74)
+        ;
+
+        
+    
+    
+            marker_ceb39c1f2cac3baca98fd5277ec9d74a.bindTooltip(
+                `<div>
+                     Carillo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ceb39c1f2cac3baca98fd5277ec9d74a.setIcon(div_icon_b4b8f9b13d1b4ed9cfd6af7fe729f15f);
+            
+    
+            var marker_86da9497a582aa4f03627da62990d38c = L.marker(
+                [34.4933, -117.3296],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_a1e934e70ed5f0aa2cd35977b3ebd987 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#f59e0b;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:34px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eCarillo\u003c/div\u003e\n    ",
+  "iconSize": [92, 34],
+  "iconAnchor": [46, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_904c3428a693ceb32cf1ff29ef87c065 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_b25e3655492617cdcc8b50a0644e2c2f = $(`<div id="html_b25e3655492617cdcc8b50a0644e2c2f" style="width: 100.0%; height: 100.0%;"><b>Carillo</b><br>Latitude: 34.493300<br>Longitude: -117.329600</div>`)[0];
+                popup_904c3428a693ceb32cf1ff29ef87c065.setContent(html_b25e3655492617cdcc8b50a0644e2c2f);
+            
+        
+
+        marker_86da9497a582aa4f03627da62990d38c.bindPopup(popup_904c3428a693ceb32cf1ff29ef87c065)
+        ;
+
+        
+    
+    
+            marker_86da9497a582aa4f03627da62990d38c.bindTooltip(
+                `<div>
+                     Carillo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_86da9497a582aa4f03627da62990d38c.setIcon(div_icon_a1e934e70ed5f0aa2cd35977b3ebd987);
+            
+    
+            var marker_8e72d4688ee091b59a52eb5dc0acd14e = L.marker(
+                [37.85897, -121.28174],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_b6aea3cf453aad50c181556b5ade2100 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#7c3aed;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:34px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eRansom\u003c/div\u003e\n    ",
+  "iconSize": [92, 34],
+  "iconAnchor": [46, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_602210011c2b9dfa6f40a1877c09c0c2 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_9bc922da0af3f6ba8a628b781dbc8055 = $(`<div id="html_9bc922da0af3f6ba8a628b781dbc8055" style="width: 100.0%; height: 100.0%;"><b>Ransom</b><br>Latitude: 37.858970<br>Longitude: -121.281740</div>`)[0];
+                popup_602210011c2b9dfa6f40a1877c09c0c2.setContent(html_9bc922da0af3f6ba8a628b781dbc8055);
+            
+        
+
+        marker_8e72d4688ee091b59a52eb5dc0acd14e.bindPopup(popup_602210011c2b9dfa6f40a1877c09c0c2)
+        ;
+
+        
+    
+    
+            marker_8e72d4688ee091b59a52eb5dc0acd14e.bindTooltip(
+                `<div>
+                     Ransom
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8e72d4688ee091b59a52eb5dc0acd14e.setIcon(div_icon_b6aea3cf453aad50c181556b5ade2100);
+            
+    
+            var marker_14e868da427d1ee0a92accf58c81a768 = L.marker(
+                [37.913, -121.2256],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_5b161c72bc1bca3a402563d68c80bd72 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#7c3aed;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:34px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eRansom\u003c/div\u003e\n    ",
+  "iconSize": [92, 34],
+  "iconAnchor": [46, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_16d1256b25737cf4d8a80a2082084c2a = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_11f1c7bf1685c61eda5c3ab53ee7a8ef = $(`<div id="html_11f1c7bf1685c61eda5c3ab53ee7a8ef" style="width: 100.0%; height: 100.0%;"><b>Ransom</b><br>Latitude: 37.913000<br>Longitude: -121.225600</div>`)[0];
+                popup_16d1256b25737cf4d8a80a2082084c2a.setContent(html_11f1c7bf1685c61eda5c3ab53ee7a8ef);
+            
+        
+
+        marker_14e868da427d1ee0a92accf58c81a768.bindPopup(popup_16d1256b25737cf4d8a80a2082084c2a)
+        ;
+
+        
+    
+    
+            marker_14e868da427d1ee0a92accf58c81a768.bindTooltip(
+                `<div>
+                     Ransom
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_14e868da427d1ee0a92accf58c81a768.setIcon(div_icon_5b161c72bc1bca3a402563d68c80bd72);
+            
+    
+            var marker_c2ab43b1e80454eefc4e2d31f6aa14e2 = L.marker(
+                [38.04678, -121.25817],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_d8cf7b2704c6ae280ce76733a251e1f6 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#7c3aed;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:34px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eRansom\u003c/div\u003e\n    ",
+  "iconSize": [92, 34],
+  "iconAnchor": [46, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_7ea602e9eab6c7bc8156e8fcb34ba844 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_cec340dabe9646c96a96483f9684f2f5 = $(`<div id="html_cec340dabe9646c96a96483f9684f2f5" style="width: 100.0%; height: 100.0%;"><b>Ransom</b><br>Latitude: 38.046780<br>Longitude: -121.258170</div>`)[0];
+                popup_7ea602e9eab6c7bc8156e8fcb34ba844.setContent(html_cec340dabe9646c96a96483f9684f2f5);
+            
+        
+
+        marker_c2ab43b1e80454eefc4e2d31f6aa14e2.bindPopup(popup_7ea602e9eab6c7bc8156e8fcb34ba844)
+        ;
+
+        
+    
+    
+            marker_c2ab43b1e80454eefc4e2d31f6aa14e2.bindTooltip(
+                `<div>
+                     Ransom
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c2ab43b1e80454eefc4e2d31f6aa14e2.setIcon(div_icon_d8cf7b2704c6ae280ce76733a251e1f6);
+            
+    
+            var marker_42d754c6f1dfdc2a96d1128b755f76d4 = L.marker(
+                [37.86857, -121.27765],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_e8b84b9e41ad7d76fa09cf273079d746 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#7c3aed;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:34px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eRansom\u003c/div\u003e\n    ",
+  "iconSize": [92, 34],
+  "iconAnchor": [46, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_90642e06aed0248f4f1f0af87d8267fe = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_8a61071a5399fc9270c0720064806b8a = $(`<div id="html_8a61071a5399fc9270c0720064806b8a" style="width: 100.0%; height: 100.0%;"><b>Ransom</b><br>Latitude: 37.868570<br>Longitude: -121.277650</div>`)[0];
+                popup_90642e06aed0248f4f1f0af87d8267fe.setContent(html_8a61071a5399fc9270c0720064806b8a);
+            
+        
+
+        marker_42d754c6f1dfdc2a96d1128b755f76d4.bindPopup(popup_90642e06aed0248f4f1f0af87d8267fe)
+        ;
+
+        
+    
+    
+            marker_42d754c6f1dfdc2a96d1128b755f76d4.bindTooltip(
+                `<div>
+                     Ransom
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_42d754c6f1dfdc2a96d1128b755f76d4.setIcon(div_icon_e8b84b9e41ad7d76fa09cf273079d746);
+            
+    
+            var marker_acbc76973bb31a22bc49d272ec005317 = L.marker(
+                [37.92658, -121.23117],
+                {
+}
+            ).addTo(map_0ab38323557675b48704f213c5b3f3c0);
+        
+    
+            var div_icon_ca559dc0d5e037c0e8a672f4ba05bc77 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#7c3aed;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:92px;\n        height:34px;\n        padding:4px 9px;\n        box-sizing:border-box;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        line-height:14px;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eRansom\u003c/div\u003e\n    ",
+  "iconSize": [92, 34],
+  "iconAnchor": [46, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_d05b3b1ab521dd48b849acf32ebd33f2 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_873ac8ebf91dd1aa49736994a5b921e3 = $(`<div id="html_873ac8ebf91dd1aa49736994a5b921e3" style="width: 100.0%; height: 100.0%;"><b>Ransom</b><br>Latitude: 37.926580<br>Longitude: -121.231170</div>`)[0];
+                popup_d05b3b1ab521dd48b849acf32ebd33f2.setContent(html_873ac8ebf91dd1aa49736994a5b921e3);
+            
+        
+
+        marker_acbc76973bb31a22bc49d272ec005317.bindPopup(popup_d05b3b1ab521dd48b849acf32ebd33f2)
+        ;
+
+        
+    
+    
+            marker_acbc76973bb31a22bc49d272ec005317.bindTooltip(
+                `<div>
+                     Ransom
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_acbc76973bb31a22bc49d272ec005317.setIcon(div_icon_ca559dc0d5e037c0e8a672f4ba05bc77);
+            
+    
+            map_0ab38323557675b48704f213c5b3f3c0.fitBounds(
+                [[34.456, -122.16167], [38.6704, -117.3296]],
+                {"padding": [40, 40]}
+            );
+        
+</script>
+</html>
