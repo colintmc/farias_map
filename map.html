@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_86c346805d382f8a2b4cc9f9ff65cf5b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_86c346805d382f8a2b4cc9f9ff65cf5b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_86c346805d382f8a2b4cc9f9ff65cf5b = L.map(
+                "map_86c346805d382f8a2b4cc9f9ff65cf5b",
+                {
+                    center: [37.90392252380953, -121.9962287142857],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_86c346805d382f8a2b4cc9f9ff65cf5b);
+
+            
+
+        
+    
+            var tile_layer_227bc53bdc895c131afa6cf50f51e920 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_227bc53bdc895c131afa6cf50f51e920.addTo(map_86c346805d382f8a2b4cc9f9ff65cf5b);
+        
+    
+            var circle_marker_9d4a38825bfff238959bef4b88e3f091 = L.circleMarker(
+                [37.7075, -122.16163],
+                {"bubblingMouseEvents": true, "color": "#555", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#555", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_86c346805d382f8a2b4cc9f9ff65cf5b);
+        
+    
+            circle_marker_9d4a38825bfff238959bef4b88e3f091.bindTooltip(
+                `<div>
+                     2 Farias markers share this coordinate
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8e6f2417be23083c83688295ab23cb96 = L.circleMarker(
+                [37.70753, -122.16167],
+                {"bubblingMouseEvents": true, "color": "#555", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#555", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_86c346805d382f8a2b4cc9f9ff65cf5b);
+        
+    
+            circle_marker_8e6f2417be23083c83688295ab23cb96.bindTooltip(
+                `<div>
+                     2 Farias markers share this coordinate
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c4fcb95a6fb71263fff9c045edbfa6f9 = L.circleMarker(
+                [37.6838, -122.12861],
+                {"bubblingMouseEvents": true, "color": "#555", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#555", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_86c346805d382f8a2b4cc9f9ff65cf5b);
+        
+    
+            circle_marker_c4fcb95a6fb71263fff9c045edbfa6f9.bindTooltip(
+                `<div>
+                     2 Farias markers share this coordinate
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b02ba1db678aa886f70c3ea29b1cff4d = L.circleMarker(
+                [38.0034, -121.83454],
+                {"bubblingMouseEvents": true, "color": "#555", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#555", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_86c346805d382f8a2b4cc9f9ff65cf5b);
+        
+    
+            circle_marker_b02ba1db678aa886f70c3ea29b1cff4d.bindTooltip(
+                `<div>
+                     2 Farias markers share this coordinate
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_803496c2955b9863d172112d91ccbe93 = L.circleMarker(
+                [37.99734, -121.79001],
+                {"bubblingMouseEvents": true, "color": "#555", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#555", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_86c346805d382f8a2b4cc9f9ff65cf5b);
+        
+    
+            circle_marker_803496c2955b9863d172112d91ccbe93.bindTooltip(
+                `<div>
+                     2 Farias markers share this coordinate
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6834458c01ebb78bfecb1aec9d14f97f = L.circleMarker(
+                [38.00418, -121.84028],
+                {"bubblingMouseEvents": true, "color": "#555", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#555", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_86c346805d382f8a2b4cc9f9ff65cf5b);
+        
+    
+            circle_marker_6834458c01ebb78bfecb1aec9d14f97f.bindTooltip(
+                `<div>
+                     2 Farias markers share this coordinate
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6ff6a3db82b5a8441900c2482e884ad5 = L.circleMarker(
+                [37.98774, -122.06743],
+                {"bubblingMouseEvents": true, "color": "#555", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#555", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_86c346805d382f8a2b4cc9f9ff65cf5b);
+        
+    
+            circle_marker_6ff6a3db82b5a8441900c2482e884ad5.bindTooltip(
+                `<div>
+                     2 Farias markers share this coordinate
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6c1c9d13cecfb62f2046bd8c10d3976d = L.circleMarker(
+                [38.00915, -121.85783],
+                {"bubblingMouseEvents": true, "color": "#555", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#555", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_86c346805d382f8a2b4cc9f9ff65cf5b);
+        
+    
+            circle_marker_6c1c9d13cecfb62f2046bd8c10d3976d.bindTooltip(
+                `<div>
+                     2 Farias markers share this coordinate
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_cde544d11d1173a50b4bc5f2b01927c0 = L.marker(
+                [37.69419, -122.05146],
+                {
+}
+            ).addTo(map_86c346805d382f8a2b4cc9f9ff65cf5b);
+        
+    
+            var div_icon_a9de1b91601646e5a88e9df06b221b40 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:58px;\n        height:34px;\n        line-height:30px;\n        padding:0 8px;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_f25c7618c95cdd423fcfeb6d8f55d3fb = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_cd45fb4fce06908ad69caee46caea6f3 = $(`<div id="html_cd45fb4fce06908ad69caee46caea6f3" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Location 1<br>Latitude: 37.694190<br>Longitude: -122.051460</div>`)[0];
+                popup_f25c7618c95cdd423fcfeb6d8f55d3fb.setContent(html_cd45fb4fce06908ad69caee46caea6f3);
+            
+        
+
+        marker_cde544d11d1173a50b4bc5f2b01927c0.bindPopup(popup_f25c7618c95cdd423fcfeb6d8f55d3fb)
+        ;
+
+        
+    
+    
+            marker_cde544d11d1173a50b4bc5f2b01927c0.bindTooltip(
+                `<div>
+                     Farias • Location 1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cde544d11d1173a50b4bc5f2b01927c0.setIcon(div_icon_a9de1b91601646e5a88e9df06b221b40);
+            
+    
+            var marker_303c46c6e9509ec03578665959f11f35 = L.marker(
+                [37.7075, -122.16135],
+                {
+}
+            ).addTo(map_86c346805d382f8a2b4cc9f9ff65cf5b);
+        
+    
+            var div_icon_4b47a3e78a2ff9ca9aba06df2f6c0c5e = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:58px;\n        height:34px;\n        line-height:30px;\n        padding:0 8px;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_1336656b8bfc0b900381dc0f455fc583 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c2eeed98751dcedd034d571b8bc9b5cd = $(`<div id="html_c2eeed98751dcedd034d571b8bc9b5cd" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Location 2<br>Latitude: 37.707500<br>Longitude: -122.161630</div>`)[0];
+                popup_1336656b8bfc0b900381dc0f455fc583.setContent(html_c2eeed98751dcedd034d571b8bc9b5cd);
+            
+        
+
+        marker_303c46c6e9509ec03578665959f11f35.bindPopup(popup_1336656b8bfc0b900381dc0f455fc583)
+        ;
+
+        
+    
+    
+            marker_303c46c6e9509ec03578665959f11f35.bindTooltip(
+                `<div>
+                     Farias • Location 2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_303c46c6e9509ec03578665959f11f35.setIcon(div_icon_4b47a3e78a2ff9ca9aba06df2f6c0c5e);
+            
+    
+            var marker_78cd9cd21d208ab69433f23b94bb8b79 = L.marker(
+                [37.7075, -122.16191],
+                {
+}
+            ).addTo(map_86c346805d382f8a2b4cc9f9ff65cf5b);
+        
+    
+            var div_icon_7ac97c6f87f4b072a0d4502e1506f3ae = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:58px;\n        height:34px;\n        line-height:30px;\n        padding:0 8px;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_33301cea75b65e6a819beb1f03079d7d = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_56b700281c1c7915ac216dfd73cdae21 = $(`<div id="html_56b700281c1c7915ac216dfd73cdae21" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Location 3<br>Latitude: 37.707500<br>Longitude: -122.161630</div>`)[0];
+                popup_33301cea75b65e6a819beb1f03079d7d.setContent(html_56b700281c1c7915ac216dfd73cdae21);
+            
+        
+
+        marker_78cd9cd21d208ab69433f23b94bb8b79.bindPopup(popup_33301cea75b65e6a819beb1f03079d7d)
+        ;
+
+        
+    
+    
+            marker_78cd9cd21d208ab69433f23b94bb8b79.bindTooltip(
+                `<div>
+                     Farias • Location 3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_78cd9cd21d208ab69433f23b94bb8b79.setIcon(div_icon_7ac97c6f87f4b072a0d4502e1506f3ae);
+            
+    
+            var marker_90cddb3866720b9622a3fdfc69b40854 = L.marker(
+                [37.70753, -122.16139],
+                {
+}
+            ).addTo(map_86c346805d382f8a2b4cc9f9ff65cf5b);
+        
+    
+            var div_icon_9bf8a0ab22a19b44ae082524710edd27 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:58px;\n        height:34px;\n        line-height:30px;\n        padding:0 8px;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_062ea6e749ff0e012993559e217a1f48 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_3f9be254013ba91339cfe8d2493bc52e = $(`<div id="html_3f9be254013ba91339cfe8d2493bc52e" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Location 4<br>Latitude: 37.707530<br>Longitude: -122.161670</div>`)[0];
+                popup_062ea6e749ff0e012993559e217a1f48.setContent(html_3f9be254013ba91339cfe8d2493bc52e);
+            
+        
+
+        marker_90cddb3866720b9622a3fdfc69b40854.bindPopup(popup_062ea6e749ff0e012993559e217a1f48)
+        ;
+
+        
+    
+    
+            marker_90cddb3866720b9622a3fdfc69b40854.bindTooltip(
+                `<div>
+                     Farias • Location 4
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_90cddb3866720b9622a3fdfc69b40854.setIcon(div_icon_9bf8a0ab22a19b44ae082524710edd27);
+            
+    
+            var marker_254a6d2547a211f3b30a3d9ea99adfec = L.marker(
+                [37.70753, -122.16195],
+                {
+}
+            ).addTo(map_86c346805d382f8a2b4cc9f9ff65cf5b);
+        
+    
+            var div_icon_9c938c4857628c070f66c1c409e035b8 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:58px;\n        height:34px;\n        line-height:30px;\n        padding:0 8px;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_74772dd562b03c6aec3f88dd02e6b4a5 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_d718c63d2465ad903ef1a2f137e55e5d = $(`<div id="html_d718c63d2465ad903ef1a2f137e55e5d" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Location 5<br>Latitude: 37.707530<br>Longitude: -122.161670</div>`)[0];
+                popup_74772dd562b03c6aec3f88dd02e6b4a5.setContent(html_d718c63d2465ad903ef1a2f137e55e5d);
+            
+        
+
+        marker_254a6d2547a211f3b30a3d9ea99adfec.bindPopup(popup_74772dd562b03c6aec3f88dd02e6b4a5)
+        ;
+
+        
+    
+    
+            marker_254a6d2547a211f3b30a3d9ea99adfec.bindTooltip(
+                `<div>
+                     Farias • Location 5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_254a6d2547a211f3b30a3d9ea99adfec.setIcon(div_icon_9c938c4857628c070f66c1c409e035b8);
+            
+    
+            var marker_736206321988a8e85e08d464cbf35c90 = L.marker(
+                [37.6838, -122.12832999999999],
+                {
+}
+            ).addTo(map_86c346805d382f8a2b4cc9f9ff65cf5b);
+        
+    
+            var div_icon_a3d019c659a716b0a26903133be53313 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:58px;\n        height:34px;\n        line-height:30px;\n        padding:0 8px;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_86031519319f9303fa8d6367615b9f20 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_9a45f13ace5581550e6f84d4f25f8e45 = $(`<div id="html_9a45f13ace5581550e6f84d4f25f8e45" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Location 6<br>Latitude: 37.683800<br>Longitude: -122.128610</div>`)[0];
+                popup_86031519319f9303fa8d6367615b9f20.setContent(html_9a45f13ace5581550e6f84d4f25f8e45);
+            
+        
+
+        marker_736206321988a8e85e08d464cbf35c90.bindPopup(popup_86031519319f9303fa8d6367615b9f20)
+        ;
+
+        
+    
+    
+            marker_736206321988a8e85e08d464cbf35c90.bindTooltip(
+                `<div>
+                     Farias • Location 6
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_736206321988a8e85e08d464cbf35c90.setIcon(div_icon_a3d019c659a716b0a26903133be53313);
+            
+    
+            var marker_5b68e34685bfc269b579e27bb813464b = L.marker(
+                [37.6838, -122.12889],
+                {
+}
+            ).addTo(map_86c346805d382f8a2b4cc9f9ff65cf5b);
+        
+    
+            var div_icon_c94f778c73f1186e9629b0c47d8c5dd2 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:58px;\n        height:34px;\n        line-height:30px;\n        padding:0 8px;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_eb5583a4f18f060c8147b4998212e593 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c2ed102c663289a5afacefcec1a37525 = $(`<div id="html_c2ed102c663289a5afacefcec1a37525" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Location 7<br>Latitude: 37.683800<br>Longitude: -122.128610</div>`)[0];
+                popup_eb5583a4f18f060c8147b4998212e593.setContent(html_c2ed102c663289a5afacefcec1a37525);
+            
+        
+
+        marker_5b68e34685bfc269b579e27bb813464b.bindPopup(popup_eb5583a4f18f060c8147b4998212e593)
+        ;
+
+        
+    
+    
+            marker_5b68e34685bfc269b579e27bb813464b.bindTooltip(
+                `<div>
+                     Farias • Location 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5b68e34685bfc269b579e27bb813464b.setIcon(div_icon_c94f778c73f1186e9629b0c47d8c5dd2);
+            
+    
+            var marker_b26814e821b25a096e7c99f92d04faf4 = L.marker(
+                [38.018313, -122.095123],
+                {
+}
+            ).addTo(map_86c346805d382f8a2b4cc9f9ff65cf5b);
+        
+    
+            var div_icon_9fac6b1804dcbe1e51e244d7491af556 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:58px;\n        height:34px;\n        line-height:30px;\n        padding:0 8px;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_868877d8852b7d47e995918251a44110 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_9ae715345c10606129c1439fef7c994a = $(`<div id="html_9ae715345c10606129c1439fef7c994a" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Location 8<br>Latitude: 38.018313<br>Longitude: -122.095123</div>`)[0];
+                popup_868877d8852b7d47e995918251a44110.setContent(html_9ae715345c10606129c1439fef7c994a);
+            
+        
+
+        marker_b26814e821b25a096e7c99f92d04faf4.bindPopup(popup_868877d8852b7d47e995918251a44110)
+        ;
+
+        
+    
+    
+            marker_b26814e821b25a096e7c99f92d04faf4.bindTooltip(
+                `<div>
+                     Farias • Location 8
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b26814e821b25a096e7c99f92d04faf4.setIcon(div_icon_9fac6b1804dcbe1e51e244d7491af556);
+            
+    
+            var marker_a62b6dab29c261da3068436816820b25 = L.marker(
+                [38.0034, -121.83426],
+                {
+}
+            ).addTo(map_86c346805d382f8a2b4cc9f9ff65cf5b);
+        
+    
+            var div_icon_b1637ea7f8535c8090de10aa1089dfa3 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:58px;\n        height:34px;\n        line-height:30px;\n        padding:0 8px;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_79efd10820e4e7f5addf89aceef7753f = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_6dbbaaf3d6a83a95ba5cff1a70ef93b7 = $(`<div id="html_6dbbaaf3d6a83a95ba5cff1a70ef93b7" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Location 9<br>Latitude: 38.003400<br>Longitude: -121.834540</div>`)[0];
+                popup_79efd10820e4e7f5addf89aceef7753f.setContent(html_6dbbaaf3d6a83a95ba5cff1a70ef93b7);
+            
+        
+
+        marker_a62b6dab29c261da3068436816820b25.bindPopup(popup_79efd10820e4e7f5addf89aceef7753f)
+        ;
+
+        
+    
+    
+            marker_a62b6dab29c261da3068436816820b25.bindTooltip(
+                `<div>
+                     Farias • Location 9
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a62b6dab29c261da3068436816820b25.setIcon(div_icon_b1637ea7f8535c8090de10aa1089dfa3);
+            
+    
+            var marker_77f9a0426081a2be0377e3c98b0d5e1f = L.marker(
+                [38.0034, -121.83482000000001],
+                {
+}
+            ).addTo(map_86c346805d382f8a2b4cc9f9ff65cf5b);
+        
+    
+            var div_icon_50be9d4e7dcc633a4415dfe058237242 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:58px;\n        height:34px;\n        line-height:30px;\n        padding:0 8px;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_64dff83564120e07bd45a4c694d5ce1d = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_14773e1a82cd202528cfcf46d160b208 = $(`<div id="html_14773e1a82cd202528cfcf46d160b208" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Location 10<br>Latitude: 38.003400<br>Longitude: -121.834540</div>`)[0];
+                popup_64dff83564120e07bd45a4c694d5ce1d.setContent(html_14773e1a82cd202528cfcf46d160b208);
+            
+        
+
+        marker_77f9a0426081a2be0377e3c98b0d5e1f.bindPopup(popup_64dff83564120e07bd45a4c694d5ce1d)
+        ;
+
+        
+    
+    
+            marker_77f9a0426081a2be0377e3c98b0d5e1f.bindTooltip(
+                `<div>
+                     Farias • Location 10
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_77f9a0426081a2be0377e3c98b0d5e1f.setIcon(div_icon_50be9d4e7dcc633a4415dfe058237242);
+            
+    
+            var marker_58ee8349ec5caf6ee9e9ddf5b553ab67 = L.marker(
+                [37.99734, -121.78972999999999],
+                {
+}
+            ).addTo(map_86c346805d382f8a2b4cc9f9ff65cf5b);
+        
+    
+            var div_icon_ff34446a0d8aaef586e8f865ad7aedba = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:58px;\n        height:34px;\n        line-height:30px;\n        padding:0 8px;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_b236c2149ca915998035ec112574951d = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_3122425dde4f586ad162c6e3fb8b51a8 = $(`<div id="html_3122425dde4f586ad162c6e3fb8b51a8" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Location 11<br>Latitude: 37.997340<br>Longitude: -121.790010</div>`)[0];
+                popup_b236c2149ca915998035ec112574951d.setContent(html_3122425dde4f586ad162c6e3fb8b51a8);
+            
+        
+
+        marker_58ee8349ec5caf6ee9e9ddf5b553ab67.bindPopup(popup_b236c2149ca915998035ec112574951d)
+        ;
+
+        
+    
+    
+            marker_58ee8349ec5caf6ee9e9ddf5b553ab67.bindTooltip(
+                `<div>
+                     Farias • Location 11
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_58ee8349ec5caf6ee9e9ddf5b553ab67.setIcon(div_icon_ff34446a0d8aaef586e8f865ad7aedba);
+            
+    
+            var marker_07f5bb5d8cc7cbf51890524e126e6412 = L.marker(
+                [37.99734, -121.79029],
+                {
+}
+            ).addTo(map_86c346805d382f8a2b4cc9f9ff65cf5b);
+        
+    
+            var div_icon_722b0d799f626b6eb5e4da2772896666 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:58px;\n        height:34px;\n        line-height:30px;\n        padding:0 8px;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_772564287c3e800cd4b075520ec262db = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_e91210b9ded0b01964fe89d19de4190d = $(`<div id="html_e91210b9ded0b01964fe89d19de4190d" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Location 12<br>Latitude: 37.997340<br>Longitude: -121.790010</div>`)[0];
+                popup_772564287c3e800cd4b075520ec262db.setContent(html_e91210b9ded0b01964fe89d19de4190d);
+            
+        
+
+        marker_07f5bb5d8cc7cbf51890524e126e6412.bindPopup(popup_772564287c3e800cd4b075520ec262db)
+        ;
+
+        
+    
+    
+            marker_07f5bb5d8cc7cbf51890524e126e6412.bindTooltip(
+                `<div>
+                     Farias • Location 12
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_07f5bb5d8cc7cbf51890524e126e6412.setIcon(div_icon_722b0d799f626b6eb5e4da2772896666);
+            
+    
+            var marker_a5c72f7e8ac62250b99b44b7cc352dd6 = L.marker(
+                [38.00418, -121.84],
+                {
+}
+            ).addTo(map_86c346805d382f8a2b4cc9f9ff65cf5b);
+        
+    
+            var div_icon_5660005a70ead2d70c1b8068695c98d2 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:58px;\n        height:34px;\n        line-height:30px;\n        padding:0 8px;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_aab1718563a60487fa280b84650d0e1f = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_ea018c5e229b55936319636ef3bd4d9f = $(`<div id="html_ea018c5e229b55936319636ef3bd4d9f" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Location 13<br>Latitude: 38.004180<br>Longitude: -121.840280</div>`)[0];
+                popup_aab1718563a60487fa280b84650d0e1f.setContent(html_ea018c5e229b55936319636ef3bd4d9f);
+            
+        
+
+        marker_a5c72f7e8ac62250b99b44b7cc352dd6.bindPopup(popup_aab1718563a60487fa280b84650d0e1f)
+        ;
+
+        
+    
+    
+            marker_a5c72f7e8ac62250b99b44b7cc352dd6.bindTooltip(
+                `<div>
+                     Farias • Location 13
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a5c72f7e8ac62250b99b44b7cc352dd6.setIcon(div_icon_5660005a70ead2d70c1b8068695c98d2);
+            
+    
+            var marker_1a9b04b479e3ce87dff7d9fbe0724808 = L.marker(
+                [38.00418, -121.84056000000001],
+                {
+}
+            ).addTo(map_86c346805d382f8a2b4cc9f9ff65cf5b);
+        
+    
+            var div_icon_f2bf6867bcaa856064e72fcc3804a75b = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:58px;\n        height:34px;\n        line-height:30px;\n        padding:0 8px;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_d1e998a5790cbc2a26895b9b894ad056 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_e65ddfff48fc51f84a5957afe1156790 = $(`<div id="html_e65ddfff48fc51f84a5957afe1156790" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Location 14<br>Latitude: 38.004180<br>Longitude: -121.840280</div>`)[0];
+                popup_d1e998a5790cbc2a26895b9b894ad056.setContent(html_e65ddfff48fc51f84a5957afe1156790);
+            
+        
+
+        marker_1a9b04b479e3ce87dff7d9fbe0724808.bindPopup(popup_d1e998a5790cbc2a26895b9b894ad056)
+        ;
+
+        
+    
+    
+            marker_1a9b04b479e3ce87dff7d9fbe0724808.bindTooltip(
+                `<div>
+                     Farias • Location 14
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1a9b04b479e3ce87dff7d9fbe0724808.setIcon(div_icon_f2bf6867bcaa856064e72fcc3804a75b);
+            
+    
+            var marker_fc945b5c6d5004bec5eb8d8d2446f671 = L.marker(
+                [37.98774, -122.06715],
+                {
+}
+            ).addTo(map_86c346805d382f8a2b4cc9f9ff65cf5b);
+        
+    
+            var div_icon_ed206bb46b6fddd4ee39859911857739 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:58px;\n        height:34px;\n        line-height:30px;\n        padding:0 8px;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_389696408669d13216c097cbd5b3ca5e = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_d6daffd22484fee6987a628372981593 = $(`<div id="html_d6daffd22484fee6987a628372981593" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Location 15<br>Latitude: 37.987740<br>Longitude: -122.067430</div>`)[0];
+                popup_389696408669d13216c097cbd5b3ca5e.setContent(html_d6daffd22484fee6987a628372981593);
+            
+        
+
+        marker_fc945b5c6d5004bec5eb8d8d2446f671.bindPopup(popup_389696408669d13216c097cbd5b3ca5e)
+        ;
+
+        
+    
+    
+            marker_fc945b5c6d5004bec5eb8d8d2446f671.bindTooltip(
+                `<div>
+                     Farias • Location 15
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fc945b5c6d5004bec5eb8d8d2446f671.setIcon(div_icon_ed206bb46b6fddd4ee39859911857739);
+            
+    
+            var marker_e019259dba3782ae3c6ff62d447d041d = L.marker(
+                [37.98774, -122.06771],
+                {
+}
+            ).addTo(map_86c346805d382f8a2b4cc9f9ff65cf5b);
+        
+    
+            var div_icon_71f664ad5260d1863776936c70a7dcf9 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:58px;\n        height:34px;\n        line-height:30px;\n        padding:0 8px;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_10c80a4631bf3e46c4f8a3cf16b7ad6c = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_1bd179bb131a3b3ffd0191858633d132 = $(`<div id="html_1bd179bb131a3b3ffd0191858633d132" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Location 16<br>Latitude: 37.987740<br>Longitude: -122.067430</div>`)[0];
+                popup_10c80a4631bf3e46c4f8a3cf16b7ad6c.setContent(html_1bd179bb131a3b3ffd0191858633d132);
+            
+        
+
+        marker_e019259dba3782ae3c6ff62d447d041d.bindPopup(popup_10c80a4631bf3e46c4f8a3cf16b7ad6c)
+        ;
+
+        
+    
+    
+            marker_e019259dba3782ae3c6ff62d447d041d.bindTooltip(
+                `<div>
+                     Farias • Location 16
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e019259dba3782ae3c6ff62d447d041d.setIcon(div_icon_71f664ad5260d1863776936c70a7dcf9);
+            
+    
+            var marker_afb899bc1ff44774f9dff8a7f110b64a = L.marker(
+                [38.03033, -122.11786],
+                {
+}
+            ).addTo(map_86c346805d382f8a2b4cc9f9ff65cf5b);
+        
+    
+            var div_icon_201dfd8a7c1dcb9b6dd228cef5c28084 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:58px;\n        height:34px;\n        line-height:30px;\n        padding:0 8px;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_2d4b49dec4ac93ef4c8f64d9654ef9d4 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_055fb0c9758493f346db688de4df6054 = $(`<div id="html_055fb0c9758493f346db688de4df6054" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Location 17<br>Latitude: 38.030330<br>Longitude: -122.117860</div>`)[0];
+                popup_2d4b49dec4ac93ef4c8f64d9654ef9d4.setContent(html_055fb0c9758493f346db688de4df6054);
+            
+        
+
+        marker_afb899bc1ff44774f9dff8a7f110b64a.bindPopup(popup_2d4b49dec4ac93ef4c8f64d9654ef9d4)
+        ;
+
+        
+    
+    
+            marker_afb899bc1ff44774f9dff8a7f110b64a.bindTooltip(
+                `<div>
+                     Farias • Location 17
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_afb899bc1ff44774f9dff8a7f110b64a.setIcon(div_icon_201dfd8a7c1dcb9b6dd228cef5c28084);
+            
+    
+            var marker_312979e931ced129e434fd28ba9dca93 = L.marker(
+                [38.0304, -122.11787],
+                {
+}
+            ).addTo(map_86c346805d382f8a2b4cc9f9ff65cf5b);
+        
+    
+            var div_icon_84213bcffe6cf8dd7ec59750f15e9977 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:58px;\n        height:34px;\n        line-height:30px;\n        padding:0 8px;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_cc38ea4ad249dbee2f7610ce02df251c = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_35706b84947aebc6830a6da7489700e1 = $(`<div id="html_35706b84947aebc6830a6da7489700e1" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Location 18<br>Latitude: 38.030400<br>Longitude: -122.117870</div>`)[0];
+                popup_cc38ea4ad249dbee2f7610ce02df251c.setContent(html_35706b84947aebc6830a6da7489700e1);
+            
+        
+
+        marker_312979e931ced129e434fd28ba9dca93.bindPopup(popup_cc38ea4ad249dbee2f7610ce02df251c)
+        ;
+
+        
+    
+    
+            marker_312979e931ced129e434fd28ba9dca93.bindTooltip(
+                `<div>
+                     Farias • Location 18
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_312979e931ced129e434fd28ba9dca93.setIcon(div_icon_84213bcffe6cf8dd7ec59750f15e9977);
+            
+    
+            var marker_3b48ca82dbf3bffc48e6a7b9b83e52dc = L.marker(
+                [38.00915, -121.85755],
+                {
+}
+            ).addTo(map_86c346805d382f8a2b4cc9f9ff65cf5b);
+        
+    
+            var div_icon_0c57887d3147a16fc2af7d0d6c4af4eb = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:58px;\n        height:34px;\n        line-height:30px;\n        padding:0 8px;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_5eda3ffa84f9f505e2f46e63e71cdc14 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_9941981d4a887cb2306909c1355cb7e0 = $(`<div id="html_9941981d4a887cb2306909c1355cb7e0" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Location 19<br>Latitude: 38.009150<br>Longitude: -121.857830</div>`)[0];
+                popup_5eda3ffa84f9f505e2f46e63e71cdc14.setContent(html_9941981d4a887cb2306909c1355cb7e0);
+            
+        
+
+        marker_3b48ca82dbf3bffc48e6a7b9b83e52dc.bindPopup(popup_5eda3ffa84f9f505e2f46e63e71cdc14)
+        ;
+
+        
+    
+    
+            marker_3b48ca82dbf3bffc48e6a7b9b83e52dc.bindTooltip(
+                `<div>
+                     Farias • Location 19
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3b48ca82dbf3bffc48e6a7b9b83e52dc.setIcon(div_icon_0c57887d3147a16fc2af7d0d6c4af4eb);
+            
+    
+            var marker_9ca87246e47fea3bee13ccbd81903149 = L.marker(
+                [38.00915, -121.85811000000001],
+                {
+}
+            ).addTo(map_86c346805d382f8a2b4cc9f9ff65cf5b);
+        
+    
+            var div_icon_82c3a24bad1fd2948740a674cc20a97f = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:58px;\n        height:34px;\n        line-height:30px;\n        padding:0 8px;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_4ae9eb1f295baa5ab26421db8037b5c5 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_14a8d7f99fc9074a797dbe21b4353ef7 = $(`<div id="html_14a8d7f99fc9074a797dbe21b4353ef7" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Location 20<br>Latitude: 38.009150<br>Longitude: -121.857830</div>`)[0];
+                popup_4ae9eb1f295baa5ab26421db8037b5c5.setContent(html_14a8d7f99fc9074a797dbe21b4353ef7);
+            
+        
+
+        marker_9ca87246e47fea3bee13ccbd81903149.bindPopup(popup_4ae9eb1f295baa5ab26421db8037b5c5)
+        ;
+
+        
+    
+    
+            marker_9ca87246e47fea3bee13ccbd81903149.bindTooltip(
+                `<div>
+                     Farias • Location 20
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9ca87246e47fea3bee13ccbd81903149.setIcon(div_icon_82c3a24bad1fd2948740a674cc20a97f);
+            
+    
+            var marker_135395ce4e116f7a75d7f95a0955574a = L.marker(
+                [38.00786, -121.85449],
+                {
+}
+            ).addTo(map_86c346805d382f8a2b4cc9f9ff65cf5b);
+        
+    
+            var div_icon_6403e79aab8b66167e1de22f2dfb4d3a = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background-color:#2563eb;\n        color:white;\n        border:2px solid white;\n        border-radius:18px;\n        min-width:58px;\n        height:34px;\n        line-height:30px;\n        padding:0 8px;\n        text-align:center;\n        font-size:12px;\n        font-weight:700;\n        font-family:Arial, sans-serif;\n        white-space:nowrap;\n        box-shadow:0 1px 4px rgba(0,0,0,.45);\n    \"\u003eFarias\u003c/div\u003e\n    ",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_2e8621382f831b4e238ad5bf3407d8b5 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_d45443b16a20936c084a840161923a4c = $(`<div id="html_d45443b16a20936c084a840161923a4c" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Location 21<br>Latitude: 38.007860<br>Longitude: -121.854490</div>`)[0];
+                popup_2e8621382f831b4e238ad5bf3407d8b5.setContent(html_d45443b16a20936c084a840161923a4c);
+            
+        
+
+        marker_135395ce4e116f7a75d7f95a0955574a.bindPopup(popup_2e8621382f831b4e238ad5bf3407d8b5)
+        ;
+
+        
+    
+    
+            marker_135395ce4e116f7a75d7f95a0955574a.bindTooltip(
+                `<div>
+                     Farias • Location 21
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_135395ce4e116f7a75d7f95a0955574a.setIcon(div_icon_6403e79aab8b66167e1de22f2dfb4d3a);
+            
+    
+            map_86c346805d382f8a2b4cc9f9ff65cf5b.fitBounds(
+                [[37.6838, -122.16167], [38.0304, -121.79001]],
+                {"padding": [30, 30]}
+            );
+        
+</script>
+</html>
