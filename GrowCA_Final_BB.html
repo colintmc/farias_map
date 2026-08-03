@@ -1,0 +1,4771 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_328a9fcd368407b7ae60165255adde1d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+<div style="position:fixed;bottom:28px;left:28px;z-index:9999;background:white;border:2px solid #bbb;border-radius:9px;padding:11px 13px;font-family:Arial,sans-serif;font-size:13px;box-shadow:0 1px 8px rgba(0,0,0,.22);max-width:235px;">
+<div style="font-weight:700;margin-bottom:7px;">Media Map</div>
+<div style="margin-bottom:5px;"><span style="display:inline-block;width:12px;height:12px;background:#2563eb;border-radius:50%;margin-right:7px;"></span>Bulletin</div>
+<div style="margin-bottom:8px;"><span style="display:inline-block;width:12px;height:12px;background:#dc2626;border-radius:50%;margin-right:7px;"></span>Digital</div>
+<div style="font-size:11px;line-height:14px;color:#444;">Zoom in to expand clusters. Hover for creative + media type. Click for exact coordinates. Use the layer control at top right to hide either media type.</div>
+</div>
+    
+            <div class="folium-map" id="map_328a9fcd368407b7ae60165255adde1d" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_328a9fcd368407b7ae60165255adde1d = L.map(
+                "map_328a9fcd368407b7ae60165255adde1d",
+                {
+                    center: [36.40763846078431, -120.34088355882353],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_328a9fcd368407b7ae60165255adde1d);
+
+            
+
+        
+    
+            var tile_layer_f086ef9094abf969cda7dc61f4c41f39 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_f086ef9094abf969cda7dc61f4c41f39.addTo(map_328a9fcd368407b7ae60165255adde1d);
+        
+    
+            var feature_group_6f68a544b94fce6c34f862334ed023e2 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a = L.markerClusterGroup(
+                {
+  "disableClusteringAtZoom": 12,
+  "spiderfyOnMaxZoom": true,
+  "showCoverageOnHover": false,
+}
+            );
+        
+    
+            var marker_4a5344024a89c8fb634ddb30b1c7f992 = L.marker(
+                [32.59427, -117.07461],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_67391f0d04d42268b6a8e9b746d1618e = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eAlvarez\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_777fa6a557ecb9071a2f33f6073a5276 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_1d94ba77b7981b28458b94346f74f18c = $(`<div id="html_1d94ba77b7981b28458b94346f74f18c" style="width: 100.0%; height: 100.0%;"><b>Alvarez</b><br>Media Type: Bulletin<br>Latitude: 32.594270<br>Longitude: -117.074610</div>`)[0];
+                popup_777fa6a557ecb9071a2f33f6073a5276.setContent(html_1d94ba77b7981b28458b94346f74f18c);
+            
+        
+
+        marker_4a5344024a89c8fb634ddb30b1c7f992.bindPopup(popup_777fa6a557ecb9071a2f33f6073a5276)
+        ;
+
+        
+    
+    
+            marker_4a5344024a89c8fb634ddb30b1c7f992.bindTooltip(
+                `<div>
+                     Alvarez • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4a5344024a89c8fb634ddb30b1c7f992.setIcon(div_icon_67391f0d04d42268b6a8e9b746d1618e);
+            
+    
+            var marker_72b9a09993daa1125e79e4b8d2169ef1 = L.marker(
+                [32.59428, -117.07461],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_2366fc3a9ab89f8430a2b172c1365396 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eAlvarez\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_1b6198e2836cb9549bbab36d8b4409a3 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_becc9376670ad7de3e8de0268d52dcd7 = $(`<div id="html_becc9376670ad7de3e8de0268d52dcd7" style="width: 100.0%; height: 100.0%;"><b>Alvarez</b><br>Media Type: Bulletin<br>Latitude: 32.594280<br>Longitude: -117.074610</div>`)[0];
+                popup_1b6198e2836cb9549bbab36d8b4409a3.setContent(html_becc9376670ad7de3e8de0268d52dcd7);
+            
+        
+
+        marker_72b9a09993daa1125e79e4b8d2169ef1.bindPopup(popup_1b6198e2836cb9549bbab36d8b4409a3)
+        ;
+
+        
+    
+    
+            marker_72b9a09993daa1125e79e4b8d2169ef1.bindTooltip(
+                `<div>
+                     Alvarez • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_72b9a09993daa1125e79e4b8d2169ef1.setIcon(div_icon_2366fc3a9ab89f8430a2b172c1365396);
+            
+    
+            var marker_daa3317fa0f2aa744793abe61d50b64a = L.marker(
+                [32.71507, -117.11916],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_77b4e02800fe9014f4f07648fb082417 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eAlvarez\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_26bbe458d10f988ff8728e6828e33cf7 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_d7fa9b3f77233e91a0d1b265e7511746 = $(`<div id="html_d7fa9b3f77233e91a0d1b265e7511746" style="width: 100.0%; height: 100.0%;"><b>Alvarez</b><br>Media Type: Bulletin<br>Latitude: 32.715070<br>Longitude: -117.119160</div>`)[0];
+                popup_26bbe458d10f988ff8728e6828e33cf7.setContent(html_d7fa9b3f77233e91a0d1b265e7511746);
+            
+        
+
+        marker_daa3317fa0f2aa744793abe61d50b64a.bindPopup(popup_26bbe458d10f988ff8728e6828e33cf7)
+        ;
+
+        
+    
+    
+            marker_daa3317fa0f2aa744793abe61d50b64a.bindTooltip(
+                `<div>
+                     Alvarez • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_daa3317fa0f2aa744793abe61d50b64a.setIcon(div_icon_77b4e02800fe9014f4f07648fb082417);
+            
+    
+            var marker_eb0b6a6daeb8c8d2ae97412b3e2e532d = L.marker(
+                [32.70626, -117.13365],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_33be4b9ee145f63072746ddd56727af6 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eAlvarez\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_7051b78aaa7a06d5738e79455ee1d13d = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_5682f464251f1ff15d4abbf18fef1e11 = $(`<div id="html_5682f464251f1ff15d4abbf18fef1e11" style="width: 100.0%; height: 100.0%;"><b>Alvarez</b><br>Media Type: Bulletin<br>Latitude: 32.706260<br>Longitude: -117.133650</div>`)[0];
+                popup_7051b78aaa7a06d5738e79455ee1d13d.setContent(html_5682f464251f1ff15d4abbf18fef1e11);
+            
+        
+
+        marker_eb0b6a6daeb8c8d2ae97412b3e2e532d.bindPopup(popup_7051b78aaa7a06d5738e79455ee1d13d)
+        ;
+
+        
+    
+    
+            marker_eb0b6a6daeb8c8d2ae97412b3e2e532d.bindTooltip(
+                `<div>
+                     Alvarez • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_eb0b6a6daeb8c8d2ae97412b3e2e532d.setIcon(div_icon_33be4b9ee145f63072746ddd56727af6);
+            
+    
+            var marker_a1866c2824f554f53b2e3cc7ca418707 = L.marker(
+                [32.70723, -117.14713],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_fb4b2c0926e7c18ba7ae392bc640b3b5 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eAlvarez\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_fcb5360d2833739de189b0508cbff63a = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_b9a2aadec64dc5c90ac2b4fcdeaeb03b = $(`<div id="html_b9a2aadec64dc5c90ac2b4fcdeaeb03b" style="width: 100.0%; height: 100.0%;"><b>Alvarez</b><br>Media Type: Bulletin<br>Latitude: 32.707230<br>Longitude: -117.147130</div>`)[0];
+                popup_fcb5360d2833739de189b0508cbff63a.setContent(html_b9a2aadec64dc5c90ac2b4fcdeaeb03b);
+            
+        
+
+        marker_a1866c2824f554f53b2e3cc7ca418707.bindPopup(popup_fcb5360d2833739de189b0508cbff63a)
+        ;
+
+        
+    
+    
+            marker_a1866c2824f554f53b2e3cc7ca418707.bindTooltip(
+                `<div>
+                     Alvarez • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a1866c2824f554f53b2e3cc7ca418707.setIcon(div_icon_fb4b2c0926e7c18ba7ae392bc640b3b5);
+            
+    
+            var marker_1d8fb537ffe443fc3b2c424f961f5b75 = L.marker(
+                [32.6951, -117.12552],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_8e62e7df72ac7ae9880f90f21077f0d9 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eAlvarez\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_b03f9a7a0e543dfc8c94ee18181e7479 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_afe670efc20458ffd47343a02022dd20 = $(`<div id="html_afe670efc20458ffd47343a02022dd20" style="width: 100.0%; height: 100.0%;"><b>Alvarez</b><br>Media Type: Bulletin<br>Latitude: 32.695100<br>Longitude: -117.125520</div>`)[0];
+                popup_b03f9a7a0e543dfc8c94ee18181e7479.setContent(html_afe670efc20458ffd47343a02022dd20);
+            
+        
+
+        marker_1d8fb537ffe443fc3b2c424f961f5b75.bindPopup(popup_b03f9a7a0e543dfc8c94ee18181e7479)
+        ;
+
+        
+    
+    
+            marker_1d8fb537ffe443fc3b2c424f961f5b75.bindTooltip(
+                `<div>
+                     Alvarez • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1d8fb537ffe443fc3b2c424f961f5b75.setIcon(div_icon_8e62e7df72ac7ae9880f90f21077f0d9);
+            
+    
+            var marker_dda1ea54da28d1e24839434116a46aef = L.marker(
+                [32.69703, -117.14496],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_1502a6dc1235de1e153aab676cc7637c = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eAlvarez\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_34f71098a0dd6fd381a1431b72fc5777 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_a9cd8bfd8e8ec72c9cbb5263fd719d8e = $(`<div id="html_a9cd8bfd8e8ec72c9cbb5263fd719d8e" style="width: 100.0%; height: 100.0%;"><b>Alvarez</b><br>Media Type: Bulletin<br>Latitude: 32.697030<br>Longitude: -117.144960</div>`)[0];
+                popup_34f71098a0dd6fd381a1431b72fc5777.setContent(html_a9cd8bfd8e8ec72c9cbb5263fd719d8e);
+            
+        
+
+        marker_dda1ea54da28d1e24839434116a46aef.bindPopup(popup_34f71098a0dd6fd381a1431b72fc5777)
+        ;
+
+        
+    
+    
+            marker_dda1ea54da28d1e24839434116a46aef.bindTooltip(
+                `<div>
+                     Alvarez • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_dda1ea54da28d1e24839434116a46aef.setIcon(div_icon_1502a6dc1235de1e153aab676cc7637c);
+            
+    
+            var marker_45035d8b136524857c7de139794a46c3 = L.marker(
+                [32.67485, -117.1146],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_edfea03a68ee2fa9696a8769320b50d1 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eAlvarez\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_a9de4c4292aad8522ded5bbf9856891d = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_f7c0a915362a060a6b35299a81ac2202 = $(`<div id="html_f7c0a915362a060a6b35299a81ac2202" style="width: 100.0%; height: 100.0%;"><b>Alvarez</b><br>Media Type: Bulletin<br>Latitude: 32.674850<br>Longitude: -117.114600</div>`)[0];
+                popup_a9de4c4292aad8522ded5bbf9856891d.setContent(html_f7c0a915362a060a6b35299a81ac2202);
+            
+        
+
+        marker_45035d8b136524857c7de139794a46c3.bindPopup(popup_a9de4c4292aad8522ded5bbf9856891d)
+        ;
+
+        
+    
+    
+            marker_45035d8b136524857c7de139794a46c3.bindTooltip(
+                `<div>
+                     Alvarez • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_45035d8b136524857c7de139794a46c3.setIcon(div_icon_edfea03a68ee2fa9696a8769320b50d1);
+            
+    
+            var marker_195bc4b1c9997d82078e058065c91cca = L.marker(
+                [32.58394, -117.08455],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_a03384ae2bccd5b8c9b7bdf5d868965f = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eAlvarez\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_d9bc6844ab0166772456f5fa062d32cf = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_d8e42b0262ccb0b6d923f00dd3fabe0d = $(`<div id="html_d8e42b0262ccb0b6d923f00dd3fabe0d" style="width: 100.0%; height: 100.0%;"><b>Alvarez</b><br>Media Type: Bulletin<br>Latitude: 32.583940<br>Longitude: -117.084550</div>`)[0];
+                popup_d9bc6844ab0166772456f5fa062d32cf.setContent(html_d8e42b0262ccb0b6d923f00dd3fabe0d);
+            
+        
+
+        marker_195bc4b1c9997d82078e058065c91cca.bindPopup(popup_d9bc6844ab0166772456f5fa062d32cf)
+        ;
+
+        
+    
+    
+            marker_195bc4b1c9997d82078e058065c91cca.bindTooltip(
+                `<div>
+                     Alvarez • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_195bc4b1c9997d82078e058065c91cca.setIcon(div_icon_a03384ae2bccd5b8c9b7bdf5d868965f);
+            
+    
+            var marker_2a93d8980001cccbb4e32be888d66410 = L.marker(
+                [32.65863, -117.09136],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_46a821c6a7079ac5354d3c2ab94f358d = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eAlvarez\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_e39d6fcdcb3b27523a130abc513b1dce = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_00ca6fbf9cbef6f22afc50ea3a26d940 = $(`<div id="html_00ca6fbf9cbef6f22afc50ea3a26d940" style="width: 100.0%; height: 100.0%;"><b>Alvarez</b><br>Media Type: Bulletin<br>Latitude: 32.658630<br>Longitude: -117.091360</div>`)[0];
+                popup_e39d6fcdcb3b27523a130abc513b1dce.setContent(html_00ca6fbf9cbef6f22afc50ea3a26d940);
+            
+        
+
+        marker_2a93d8980001cccbb4e32be888d66410.bindPopup(popup_e39d6fcdcb3b27523a130abc513b1dce)
+        ;
+
+        
+    
+    
+            marker_2a93d8980001cccbb4e32be888d66410.bindTooltip(
+                `<div>
+                     Alvarez • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2a93d8980001cccbb4e32be888d66410.setIcon(div_icon_46a821c6a7079ac5354d3c2ab94f358d);
+            
+    
+            var marker_e17ef504c69dcc1ac1adea284bd61c84 = L.marker(
+                [32.68375, -117.10072],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_3f410a8b4922e4c520f57f3208e44819 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eAlvarez\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_e7dda81804f11f4a5ff01f1cac93d3da = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_bd47e8066ecd835dbcabddd1f2d181e4 = $(`<div id="html_bd47e8066ecd835dbcabddd1f2d181e4" style="width: 100.0%; height: 100.0%;"><b>Alvarez</b><br>Media Type: Bulletin<br>Latitude: 32.683750<br>Longitude: -117.100720</div>`)[0];
+                popup_e7dda81804f11f4a5ff01f1cac93d3da.setContent(html_bd47e8066ecd835dbcabddd1f2d181e4);
+            
+        
+
+        marker_e17ef504c69dcc1ac1adea284bd61c84.bindPopup(popup_e7dda81804f11f4a5ff01f1cac93d3da)
+        ;
+
+        
+    
+    
+            marker_e17ef504c69dcc1ac1adea284bd61c84.bindTooltip(
+                `<div>
+                     Alvarez • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e17ef504c69dcc1ac1adea284bd61c84.setIcon(div_icon_3f410a8b4922e4c520f57f3208e44819);
+            
+    
+            var marker_44654f515ba591ef0952ca85aa4f6e52 = L.marker(
+                [32.55224, -117.04569],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_f4073c06172420e4bbc502f1ea55baf4 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eAlvarez\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_56e42ec850e6c30947b7f76f9f04917d = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_c4307fb10f7372e5ec1ee94dd8be27e8 = $(`<div id="html_c4307fb10f7372e5ec1ee94dd8be27e8" style="width: 100.0%; height: 100.0%;"><b>Alvarez</b><br>Media Type: Bulletin<br>Latitude: 32.552240<br>Longitude: -117.045690</div>`)[0];
+                popup_56e42ec850e6c30947b7f76f9f04917d.setContent(html_c4307fb10f7372e5ec1ee94dd8be27e8);
+            
+        
+
+        marker_44654f515ba591ef0952ca85aa4f6e52.bindPopup(popup_56e42ec850e6c30947b7f76f9f04917d)
+        ;
+
+        
+    
+    
+            marker_44654f515ba591ef0952ca85aa4f6e52.bindTooltip(
+                `<div>
+                     Alvarez • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_44654f515ba591ef0952ca85aa4f6e52.setIcon(div_icon_f4073c06172420e4bbc502f1ea55baf4);
+            
+    
+            var marker_bc42b90a9b95c35061952d46f75b0b9d = L.marker(
+                [36.50391, -121.44217],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_afee61489b387fbf9aa72a446973f5af = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eRivas\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_5cfd10f02bb244355ac2d0a6ed7d5cbf = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_c733a4918f76d40f82a9a2904a6ccc93 = $(`<div id="html_c733a4918f76d40f82a9a2904a6ccc93" style="width: 100.0%; height: 100.0%;"><b>Rivas</b><br>Media Type: Bulletin<br>Latitude: 36.503910<br>Longitude: -121.442170</div>`)[0];
+                popup_5cfd10f02bb244355ac2d0a6ed7d5cbf.setContent(html_c733a4918f76d40f82a9a2904a6ccc93);
+            
+        
+
+        marker_bc42b90a9b95c35061952d46f75b0b9d.bindPopup(popup_5cfd10f02bb244355ac2d0a6ed7d5cbf)
+        ;
+
+        
+    
+    
+            marker_bc42b90a9b95c35061952d46f75b0b9d.bindTooltip(
+                `<div>
+                     Rivas • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bc42b90a9b95c35061952d46f75b0b9d.setIcon(div_icon_afee61489b387fbf9aa72a446973f5af);
+            
+    
+            var marker_68c6aa3cdb4ee821584d4b5cfad96012 = L.marker(
+                [36.32858, -121.24953],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_5d5c2c8c51d4a179f3d34735baa230a6 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eRivas\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_c05bb6003a88406890358f45f26850a1 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_246952b530fcbe6267b4baa1da1d054d = $(`<div id="html_246952b530fcbe6267b4baa1da1d054d" style="width: 100.0%; height: 100.0%;"><b>Rivas</b><br>Media Type: Bulletin<br>Latitude: 36.328580<br>Longitude: -121.249530</div>`)[0];
+                popup_c05bb6003a88406890358f45f26850a1.setContent(html_246952b530fcbe6267b4baa1da1d054d);
+            
+        
+
+        marker_68c6aa3cdb4ee821584d4b5cfad96012.bindPopup(popup_c05bb6003a88406890358f45f26850a1)
+        ;
+
+        
+    
+    
+            marker_68c6aa3cdb4ee821584d4b5cfad96012.bindTooltip(
+                `<div>
+                     Rivas • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_68c6aa3cdb4ee821584d4b5cfad96012.setIcon(div_icon_5d5c2c8c51d4a179f3d34735baa230a6);
+            
+    
+            var marker_01c97fbd8b7c5c28da934d5f51d50f7e = L.marker(
+                [36.87757, -121.40111],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_eb7522636a122ebdda96b2934e622f54 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eRivas\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_c4c06b5401c19c50e4979e32d8f3823e = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_e79073c1ac44b8f3301c92fad4310b35 = $(`<div id="html_e79073c1ac44b8f3301c92fad4310b35" style="width: 100.0%; height: 100.0%;"><b>Rivas</b><br>Media Type: Bulletin<br>Latitude: 36.877570<br>Longitude: -121.401110</div>`)[0];
+                popup_c4c06b5401c19c50e4979e32d8f3823e.setContent(html_e79073c1ac44b8f3301c92fad4310b35);
+            
+        
+
+        marker_01c97fbd8b7c5c28da934d5f51d50f7e.bindPopup(popup_c4c06b5401c19c50e4979e32d8f3823e)
+        ;
+
+        
+    
+    
+            marker_01c97fbd8b7c5c28da934d5f51d50f7e.bindTooltip(
+                `<div>
+                     Rivas • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_01c97fbd8b7c5c28da934d5f51d50f7e.setIcon(div_icon_eb7522636a122ebdda96b2934e622f54);
+            
+    
+            var marker_afb6ac66d886f6020755b5b178dc1b54 = L.marker(
+                [36.87797, -121.41288],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_cd0eb72526b08cb1c67e0cb967917a76 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eRivas\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_3bce2e7c95db6c7787d099a3560bfbe7 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_7ada6b60d042fa9abcd6ef08d2871e9b = $(`<div id="html_7ada6b60d042fa9abcd6ef08d2871e9b" style="width: 100.0%; height: 100.0%;"><b>Rivas</b><br>Media Type: Bulletin<br>Latitude: 36.877970<br>Longitude: -121.412880</div>`)[0];
+                popup_3bce2e7c95db6c7787d099a3560bfbe7.setContent(html_7ada6b60d042fa9abcd6ef08d2871e9b);
+            
+        
+
+        marker_afb6ac66d886f6020755b5b178dc1b54.bindPopup(popup_3bce2e7c95db6c7787d099a3560bfbe7)
+        ;
+
+        
+    
+    
+            marker_afb6ac66d886f6020755b5b178dc1b54.bindTooltip(
+                `<div>
+                     Rivas • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_afb6ac66d886f6020755b5b178dc1b54.setIcon(div_icon_cd0eb72526b08cb1c67e0cb967917a76);
+            
+    
+            var marker_28003e65e9c60ec5bcf4674830e4b13d = L.marker(
+                [36.86204, -121.6111],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_fe2f3c33810f828c5d2ec81523ccb67f = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eRivas\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_4d37adae278ce7b605aa839bc13334c0 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_995aa7300774e4caf79197840023136f = $(`<div id="html_995aa7300774e4caf79197840023136f" style="width: 100.0%; height: 100.0%;"><b>Rivas</b><br>Media Type: Bulletin<br>Latitude: 36.862040<br>Longitude: -121.611100</div>`)[0];
+                popup_4d37adae278ce7b605aa839bc13334c0.setContent(html_995aa7300774e4caf79197840023136f);
+            
+        
+
+        marker_28003e65e9c60ec5bcf4674830e4b13d.bindPopup(popup_4d37adae278ce7b605aa839bc13334c0)
+        ;
+
+        
+    
+    
+            marker_28003e65e9c60ec5bcf4674830e4b13d.bindTooltip(
+                `<div>
+                     Rivas • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_28003e65e9c60ec5bcf4674830e4b13d.setIcon(div_icon_fe2f3c33810f828c5d2ec81523ccb67f);
+            
+    
+            var marker_1ac21aa420a9b8b33c60e46991b48009 = L.marker(
+                [36.85265, -121.44363],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_12f7ef134c95d13fcfbae29de2cba853 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eRivas\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_8bfee40ae10a2d7220c31a9741f08692 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_e896adabc6d0226bab42a076c6313bd4 = $(`<div id="html_e896adabc6d0226bab42a076c6313bd4" style="width: 100.0%; height: 100.0%;"><b>Rivas</b><br>Media Type: Bulletin<br>Latitude: 36.852650<br>Longitude: -121.443630</div>`)[0];
+                popup_8bfee40ae10a2d7220c31a9741f08692.setContent(html_e896adabc6d0226bab42a076c6313bd4);
+            
+        
+
+        marker_1ac21aa420a9b8b33c60e46991b48009.bindPopup(popup_8bfee40ae10a2d7220c31a9741f08692)
+        ;
+
+        
+    
+    
+            marker_1ac21aa420a9b8b33c60e46991b48009.bindTooltip(
+                `<div>
+                     Rivas • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1ac21aa420a9b8b33c60e46991b48009.setIcon(div_icon_12f7ef134c95d13fcfbae29de2cba853);
+            
+    
+            var marker_c260bf770b7ae9545b534aeeadd4c225 = L.marker(
+                [37.20244, -121.72444],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_5fd1778670917e313c427f8db34d0cae = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eRivas\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_3e01ecbf855b64bed746e9a8a1360dfc = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_5b3aa9571e0b66e4bf6b6b9869bd60d3 = $(`<div id="html_5b3aa9571e0b66e4bf6b6b9869bd60d3" style="width: 100.0%; height: 100.0%;"><b>Rivas</b><br>Media Type: Bulletin<br>Latitude: 37.202440<br>Longitude: -121.724440</div>`)[0];
+                popup_3e01ecbf855b64bed746e9a8a1360dfc.setContent(html_5b3aa9571e0b66e4bf6b6b9869bd60d3);
+            
+        
+
+        marker_c260bf770b7ae9545b534aeeadd4c225.bindPopup(popup_3e01ecbf855b64bed746e9a8a1360dfc)
+        ;
+
+        
+    
+    
+            marker_c260bf770b7ae9545b534aeeadd4c225.bindTooltip(
+                `<div>
+                     Rivas • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c260bf770b7ae9545b534aeeadd4c225.setIcon(div_icon_5fd1778670917e313c427f8db34d0cae);
+            
+    
+            var marker_dafeba14d8da7ba412873e5e216163b5 = L.marker(
+                [33.94525, -118.3617],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_29604f8a04df1d3b51e023b21af425e4 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:156px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:10px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eCo Chairs Affordability\u003c/div\u003e",
+  "iconSize": [156, 34],
+  "iconAnchor": [78, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_50cb1087c8af280a06f6a12925328f5b = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_d613e4adca4e31ac00fba469af6f43f3 = $(`<div id="html_d613e4adca4e31ac00fba469af6f43f3" style="width: 100.0%; height: 100.0%;"><b>Co Chairs Affordability</b><br>Media Type: Bulletin<br>Latitude: 33.945250<br>Longitude: -118.361700</div>`)[0];
+                popup_50cb1087c8af280a06f6a12925328f5b.setContent(html_d613e4adca4e31ac00fba469af6f43f3);
+            
+        
+
+        marker_dafeba14d8da7ba412873e5e216163b5.bindPopup(popup_50cb1087c8af280a06f6a12925328f5b)
+        ;
+
+        
+    
+    
+            marker_dafeba14d8da7ba412873e5e216163b5.bindTooltip(
+                `<div>
+                     Co Chairs Affordability • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_dafeba14d8da7ba412873e5e216163b5.setIcon(div_icon_29604f8a04df1d3b51e023b21af425e4);
+            
+    
+            var marker_93f0193c2b457c80fe2a4fa24270bc73 = L.marker(
+                [34.17199, -118.3827],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_3874e3b9c89d49b664c00a294bc7c627 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:96px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eFull Caucus 4\u003c/div\u003e",
+  "iconSize": [96, 34],
+  "iconAnchor": [48, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_68f2fac01d96187f7d59b936bc0299af = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_1dab23c85581eb31a74744c849bc7d3d = $(`<div id="html_1dab23c85581eb31a74744c849bc7d3d" style="width: 100.0%; height: 100.0%;"><b>Full Caucus 4</b><br>Media Type: Bulletin<br>Latitude: 34.171990<br>Longitude: -118.382700</div>`)[0];
+                popup_68f2fac01d96187f7d59b936bc0299af.setContent(html_1dab23c85581eb31a74744c849bc7d3d);
+            
+        
+
+        marker_93f0193c2b457c80fe2a4fa24270bc73.bindPopup(popup_68f2fac01d96187f7d59b936bc0299af)
+        ;
+
+        
+    
+    
+            marker_93f0193c2b457c80fe2a4fa24270bc73.bindTooltip(
+                `<div>
+                     Full Caucus 4 • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_93f0193c2b457c80fe2a4fa24270bc73.setIcon(div_icon_3874e3b9c89d49b664c00a294bc7c627);
+            
+    
+            var marker_b85128ed54459b77e7221b19cb0bd488 = L.marker(
+                [34.17239, -118.35854],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_a5a85e7451139f80f6de1e968edeca30 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:96px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eFull Caucus 5\u003c/div\u003e",
+  "iconSize": [96, 34],
+  "iconAnchor": [48, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_bd2859a4804ef0ae83e052fd28d7702a = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_c9f5dc46a3fe18975e0fcdee253270e4 = $(`<div id="html_c9f5dc46a3fe18975e0fcdee253270e4" style="width: 100.0%; height: 100.0%;"><b>Full Caucus 5</b><br>Media Type: Bulletin<br>Latitude: 34.172390<br>Longitude: -118.358540</div>`)[0];
+                popup_bd2859a4804ef0ae83e052fd28d7702a.setContent(html_c9f5dc46a3fe18975e0fcdee253270e4);
+            
+        
+
+        marker_b85128ed54459b77e7221b19cb0bd488.bindPopup(popup_bd2859a4804ef0ae83e052fd28d7702a)
+        ;
+
+        
+    
+    
+            marker_b85128ed54459b77e7221b19cb0bd488.bindTooltip(
+                `<div>
+                     Full Caucus 5 • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b85128ed54459b77e7221b19cb0bd488.setIcon(div_icon_a5a85e7451139f80f6de1e968edeca30);
+            
+    
+            var marker_cf199b24f007d7ba83ccc3826e5733c2 = L.marker(
+                [34.19536, -118.37058],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_f65df779933201b180fe8460771bcea2 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:96px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eFull Caucus 1\u003c/div\u003e",
+  "iconSize": [96, 34],
+  "iconAnchor": [48, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_9df05c3c163b51fbf5108da77e10f6fe = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_ff451cf2ba17cb21a841e7c69000005c = $(`<div id="html_ff451cf2ba17cb21a841e7c69000005c" style="width: 100.0%; height: 100.0%;"><b>Full Caucus 1</b><br>Media Type: Bulletin<br>Latitude: 34.195360<br>Longitude: -118.370580</div>`)[0];
+                popup_9df05c3c163b51fbf5108da77e10f6fe.setContent(html_ff451cf2ba17cb21a841e7c69000005c);
+            
+        
+
+        marker_cf199b24f007d7ba83ccc3826e5733c2.bindPopup(popup_9df05c3c163b51fbf5108da77e10f6fe)
+        ;
+
+        
+    
+    
+            marker_cf199b24f007d7ba83ccc3826e5733c2.bindTooltip(
+                `<div>
+                     Full Caucus 1 • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cf199b24f007d7ba83ccc3826e5733c2.setIcon(div_icon_f65df779933201b180fe8460771bcea2);
+            
+    
+            var marker_b42be4db85e162f96292f0d23e946c5c = L.marker(
+                [34.2004, -118.39463],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_c991a77af69ad30597c858d7a4326fdc = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:138px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eTop 10 Affordability\u003c/div\u003e",
+  "iconSize": [138, 34],
+  "iconAnchor": [69, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_f744266dfa8c4df7c77c869c3704ade4 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_b10ea85e3bd300dc9b1d821c3778f512 = $(`<div id="html_b10ea85e3bd300dc9b1d821c3778f512" style="width: 100.0%; height: 100.0%;"><b>Top 10 Affordability</b><br>Media Type: Bulletin<br>Latitude: 34.200400<br>Longitude: -118.394630</div>`)[0];
+                popup_f744266dfa8c4df7c77c869c3704ade4.setContent(html_b10ea85e3bd300dc9b1d821c3778f512);
+            
+        
+
+        marker_b42be4db85e162f96292f0d23e946c5c.bindPopup(popup_f744266dfa8c4df7c77c869c3704ade4)
+        ;
+
+        
+    
+    
+            marker_b42be4db85e162f96292f0d23e946c5c.bindTooltip(
+                `<div>
+                     Top 10 Affordability • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b42be4db85e162f96292f0d23e946c5c.setIcon(div_icon_c991a77af69ad30597c858d7a4326fdc);
+            
+    
+            var marker_3e91572f7083353e8cc0f42672778e38 = L.marker(
+                [34.20108, -118.39405],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_3f64f21667abd4be893647700f3b68ce = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:144px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:10px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eCo Chairs Opportunity\u003c/div\u003e",
+  "iconSize": [144, 34],
+  "iconAnchor": [72, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_6d3a58f4ecc3376aad91f5ab35d8b167 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_5085c66222798bfeadf58c6719eaaa16 = $(`<div id="html_5085c66222798bfeadf58c6719eaaa16" style="width: 100.0%; height: 100.0%;"><b>Co Chairs Opportunity</b><br>Media Type: Bulletin<br>Latitude: 34.201080<br>Longitude: -118.394050</div>`)[0];
+                popup_6d3a58f4ecc3376aad91f5ab35d8b167.setContent(html_5085c66222798bfeadf58c6719eaaa16);
+            
+        
+
+        marker_3e91572f7083353e8cc0f42672778e38.bindPopup(popup_6d3a58f4ecc3376aad91f5ab35d8b167)
+        ;
+
+        
+    
+    
+            marker_3e91572f7083353e8cc0f42672778e38.bindTooltip(
+                `<div>
+                     Co Chairs Opportunity • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3e91572f7083353e8cc0f42672778e38.setIcon(div_icon_3f64f21667abd4be893647700f3b68ce);
+            
+    
+            var marker_a3f66c2ad575a925dac69d5c0cbfecdf = L.marker(
+                [34.19411, -118.37606],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_661d82359b53e538b39df5c222d23522 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:96px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eFull Caucus 2\u003c/div\u003e",
+  "iconSize": [96, 34],
+  "iconAnchor": [48, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_0ecc69ccc189903d80342163e23519d5 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_7681988780e1da133922190b66f00c77 = $(`<div id="html_7681988780e1da133922190b66f00c77" style="width: 100.0%; height: 100.0%;"><b>Full Caucus 2</b><br>Media Type: Bulletin<br>Latitude: 34.194110<br>Longitude: -118.376060</div>`)[0];
+                popup_0ecc69ccc189903d80342163e23519d5.setContent(html_7681988780e1da133922190b66f00c77);
+            
+        
+
+        marker_a3f66c2ad575a925dac69d5c0cbfecdf.bindPopup(popup_0ecc69ccc189903d80342163e23519d5)
+        ;
+
+        
+    
+    
+            marker_a3f66c2ad575a925dac69d5c0cbfecdf.bindTooltip(
+                `<div>
+                     Full Caucus 2 • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a3f66c2ad575a925dac69d5c0cbfecdf.setIcon(div_icon_661d82359b53e538b39df5c222d23522);
+            
+    
+            var marker_8acfefa58f2c3e05912715c0c1b7c880 = L.marker(
+                [34.19413, -118.38561],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_19f7784d191fb8a16424f88d6b2ef0ad = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:96px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eFull Caucus 3\u003c/div\u003e",
+  "iconSize": [96, 34],
+  "iconAnchor": [48, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_7955b70dd6a6ace396d9f36cf2689ab8 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_9c044c17626e19568ae5051870f802f0 = $(`<div id="html_9c044c17626e19568ae5051870f802f0" style="width: 100.0%; height: 100.0%;"><b>Full Caucus 3</b><br>Media Type: Bulletin<br>Latitude: 34.194130<br>Longitude: -118.385610</div>`)[0];
+                popup_7955b70dd6a6ace396d9f36cf2689ab8.setContent(html_9c044c17626e19568ae5051870f802f0);
+            
+        
+
+        marker_8acfefa58f2c3e05912715c0c1b7c880.bindPopup(popup_7955b70dd6a6ace396d9f36cf2689ab8)
+        ;
+
+        
+    
+    
+            marker_8acfefa58f2c3e05912715c0c1b7c880.bindTooltip(
+                `<div>
+                     Full Caucus 3 • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8acfefa58f2c3e05912715c0c1b7c880.setIcon(div_icon_19f7784d191fb8a16424f88d6b2ef0ad);
+            
+    
+            var marker_63716724d6f76d39008cd5e8112fac25 = L.marker(
+                [33.93111, -118.37311],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_91c9ae8cbc5dc10749d8dd5294202746 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:144px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:10px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eCo Chairs Opportunity\u003c/div\u003e",
+  "iconSize": [144, 34],
+  "iconAnchor": [72, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_6bf802b1d65d9a6dea7e96ad86663d79 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_b78bda6b10eb5386938489055e56d608 = $(`<div id="html_b78bda6b10eb5386938489055e56d608" style="width: 100.0%; height: 100.0%;"><b>Co Chairs Opportunity</b><br>Media Type: Bulletin<br>Latitude: 33.931110<br>Longitude: -118.373110</div>`)[0];
+                popup_6bf802b1d65d9a6dea7e96ad86663d79.setContent(html_b78bda6b10eb5386938489055e56d608);
+            
+        
+
+        marker_63716724d6f76d39008cd5e8112fac25.bindPopup(popup_6bf802b1d65d9a6dea7e96ad86663d79)
+        ;
+
+        
+    
+    
+            marker_63716724d6f76d39008cd5e8112fac25.bindTooltip(
+                `<div>
+                     Co Chairs Opportunity • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_63716724d6f76d39008cd5e8112fac25.setIcon(div_icon_91c9ae8cbc5dc10749d8dd5294202746);
+            
+    
+            var marker_3eade87ea15de4b6af2c25df5e5a2381 = L.marker(
+                [33.9577, -118.39441],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_a84b255088fe2ec716c7b88ac807dbb9 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:156px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:10px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eCo Chairs Affordability\u003c/div\u003e",
+  "iconSize": [156, 34],
+  "iconAnchor": [78, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_359428c6743ca206bd6f0a9d9342a09e = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_901bb396fb0fd5c54d58d5cc0ad11bf9 = $(`<div id="html_901bb396fb0fd5c54d58d5cc0ad11bf9" style="width: 100.0%; height: 100.0%;"><b>Co Chairs Affordability</b><br>Media Type: Bulletin<br>Latitude: 33.957700<br>Longitude: -118.394410</div>`)[0];
+                popup_359428c6743ca206bd6f0a9d9342a09e.setContent(html_901bb396fb0fd5c54d58d5cc0ad11bf9);
+            
+        
+
+        marker_3eade87ea15de4b6af2c25df5e5a2381.bindPopup(popup_359428c6743ca206bd6f0a9d9342a09e)
+        ;
+
+        
+    
+    
+            marker_3eade87ea15de4b6af2c25df5e5a2381.bindTooltip(
+                `<div>
+                     Co Chairs Affordability • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3eade87ea15de4b6af2c25df5e5a2381.setIcon(div_icon_a84b255088fe2ec716c7b88ac807dbb9);
+            
+    
+            var marker_f3a05afafbc66fcc8a373896abcb459f = L.marker(
+                [33.94564, -118.37797],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_d340444768eff9b32cf388dd2857aebb = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:114px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eTop 10 Investing\u003c/div\u003e",
+  "iconSize": [114, 34],
+  "iconAnchor": [57, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_07713154a64aab15bda493a1fea00f71 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_1af04b5cae726987aab745e7938b0ebd = $(`<div id="html_1af04b5cae726987aab745e7938b0ebd" style="width: 100.0%; height: 100.0%;"><b>Top 10 Investing</b><br>Media Type: Bulletin<br>Latitude: 33.945640<br>Longitude: -118.377970</div>`)[0];
+                popup_07713154a64aab15bda493a1fea00f71.setContent(html_1af04b5cae726987aab745e7938b0ebd);
+            
+        
+
+        marker_f3a05afafbc66fcc8a373896abcb459f.bindPopup(popup_07713154a64aab15bda493a1fea00f71)
+        ;
+
+        
+    
+    
+            marker_f3a05afafbc66fcc8a373896abcb459f.bindTooltip(
+                `<div>
+                     Top 10 Investing • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f3a05afafbc66fcc8a373896abcb459f.setIcon(div_icon_d340444768eff9b32cf388dd2857aebb);
+            
+    
+            var marker_ac0726fcb5a54fddcc10ff2b0646f023 = L.marker(
+                [33.94135, -118.37832],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_3fb68cad2a54f6a7320af59549be4747 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:156px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:10px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eCo Chairs Affordability\u003c/div\u003e",
+  "iconSize": [156, 34],
+  "iconAnchor": [78, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_9685322ba87a2f369ba95ef8cb32f0c0 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_415e507bd8bfd70d84e707210a5f2153 = $(`<div id="html_415e507bd8bfd70d84e707210a5f2153" style="width: 100.0%; height: 100.0%;"><b>Co Chairs Affordability</b><br>Media Type: Bulletin<br>Latitude: 33.941350<br>Longitude: -118.378320</div>`)[0];
+                popup_9685322ba87a2f369ba95ef8cb32f0c0.setContent(html_415e507bd8bfd70d84e707210a5f2153);
+            
+        
+
+        marker_ac0726fcb5a54fddcc10ff2b0646f023.bindPopup(popup_9685322ba87a2f369ba95ef8cb32f0c0)
+        ;
+
+        
+    
+    
+            marker_ac0726fcb5a54fddcc10ff2b0646f023.bindTooltip(
+                `<div>
+                     Co Chairs Affordability • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ac0726fcb5a54fddcc10ff2b0646f023.setIcon(div_icon_3fb68cad2a54f6a7320af59549be4747);
+            
+    
+            var marker_ec80a772485bf37dc6dda934097d3f45 = L.marker(
+                [33.93537, -118.36957],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_6a35d1888b0dba9def730d8f71533d28 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:114px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eTop 10 Investing\u003c/div\u003e",
+  "iconSize": [114, 34],
+  "iconAnchor": [57, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_afded707e13b8ed9182796609e7e64db = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_3e4229753542250e4843e4d568c27be5 = $(`<div id="html_3e4229753542250e4843e4d568c27be5" style="width: 100.0%; height: 100.0%;"><b>Top 10 Investing</b><br>Media Type: Bulletin<br>Latitude: 33.935370<br>Longitude: -118.369570</div>`)[0];
+                popup_afded707e13b8ed9182796609e7e64db.setContent(html_3e4229753542250e4843e4d568c27be5);
+            
+        
+
+        marker_ec80a772485bf37dc6dda934097d3f45.bindPopup(popup_afded707e13b8ed9182796609e7e64db)
+        ;
+
+        
+    
+    
+            marker_ec80a772485bf37dc6dda934097d3f45.bindTooltip(
+                `<div>
+                     Top 10 Investing • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ec80a772485bf37dc6dda934097d3f45.setIcon(div_icon_6a35d1888b0dba9def730d8f71533d28);
+            
+    
+            var marker_99fdfd7cd440782f29fb3b03a6d0c108 = L.marker(
+                [38.01471, -121.29436],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_2809b01b64395680f86cb5611d14e050 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eAlvarez\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_9f35d1402e9d6a8ee801ed879dcedab7 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_4176d971a053bb1954bfe81d8b2c50c9 = $(`<div id="html_4176d971a053bb1954bfe81d8b2c50c9" style="width: 100.0%; height: 100.0%;"><b>Alvarez</b><br>Media Type: Bulletin<br>Latitude: 38.014710<br>Longitude: -121.294360</div>`)[0];
+                popup_9f35d1402e9d6a8ee801ed879dcedab7.setContent(html_4176d971a053bb1954bfe81d8b2c50c9);
+            
+        
+
+        marker_99fdfd7cd440782f29fb3b03a6d0c108.bindPopup(popup_9f35d1402e9d6a8ee801ed879dcedab7)
+        ;
+
+        
+    
+    
+            marker_99fdfd7cd440782f29fb3b03a6d0c108.bindTooltip(
+                `<div>
+                     Alvarez • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_99fdfd7cd440782f29fb3b03a6d0c108.setIcon(div_icon_2809b01b64395680f86cb5611d14e050);
+            
+    
+            var marker_eb2b9cf286e642c99d10f1d95674070b = L.marker(
+                [37.969, -121.29917],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_cab0a8122b124e223600773299afd545 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eRansom\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_efe7b40dd62e7580c200128fa7f1c7ca = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_347476196a768a53829ba87e595abdfe = $(`<div id="html_347476196a768a53829ba87e595abdfe" style="width: 100.0%; height: 100.0%;"><b>Ransom</b><br>Media Type: Bulletin<br>Latitude: 37.969000<br>Longitude: -121.299170</div>`)[0];
+                popup_efe7b40dd62e7580c200128fa7f1c7ca.setContent(html_347476196a768a53829ba87e595abdfe);
+            
+        
+
+        marker_eb2b9cf286e642c99d10f1d95674070b.bindPopup(popup_efe7b40dd62e7580c200128fa7f1c7ca)
+        ;
+
+        
+    
+    
+            marker_eb2b9cf286e642c99d10f1d95674070b.bindTooltip(
+                `<div>
+                     Ransom • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_eb2b9cf286e642c99d10f1d95674070b.setIcon(div_icon_cab0a8122b124e223600773299afd545);
+            
+    
+            var marker_ca0f030530dd816cff782809cd9a00a8 = L.marker(
+                [37.97006, -121.28014],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_e79fbd1b5f52abc3a624c18ce117b82e = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eRansom\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_6b5c337b296a3afeb73188409e0dddb1 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_07aec2df3cb59343f1b81d15c2478f42 = $(`<div id="html_07aec2df3cb59343f1b81d15c2478f42" style="width: 100.0%; height: 100.0%;"><b>Ransom</b><br>Media Type: Bulletin<br>Latitude: 37.970060<br>Longitude: -121.280140</div>`)[0];
+                popup_6b5c337b296a3afeb73188409e0dddb1.setContent(html_07aec2df3cb59343f1b81d15c2478f42);
+            
+        
+
+        marker_ca0f030530dd816cff782809cd9a00a8.bindPopup(popup_6b5c337b296a3afeb73188409e0dddb1)
+        ;
+
+        
+    
+    
+            marker_ca0f030530dd816cff782809cd9a00a8.bindTooltip(
+                `<div>
+                     Ransom • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ca0f030530dd816cff782809cd9a00a8.setIcon(div_icon_e79fbd1b5f52abc3a624c18ce117b82e);
+            
+    
+            var marker_f54b9c00cb3f26ab19d10cb1e9b2c7a6 = L.marker(
+                [37.95715, -121.28094],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_985c253be2ef1150f81079a38e544880 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eRansom\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_f28c156a5b8cdeda4f78f38e40579476 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_b1e157ace94bc7ce754a7e9c2a375560 = $(`<div id="html_b1e157ace94bc7ce754a7e9c2a375560" style="width: 100.0%; height: 100.0%;"><b>Ransom</b><br>Media Type: Bulletin<br>Latitude: 37.957150<br>Longitude: -121.280940</div>`)[0];
+                popup_f28c156a5b8cdeda4f78f38e40579476.setContent(html_b1e157ace94bc7ce754a7e9c2a375560);
+            
+        
+
+        marker_f54b9c00cb3f26ab19d10cb1e9b2c7a6.bindPopup(popup_f28c156a5b8cdeda4f78f38e40579476)
+        ;
+
+        
+    
+    
+            marker_f54b9c00cb3f26ab19d10cb1e9b2c7a6.bindTooltip(
+                `<div>
+                     Ransom • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f54b9c00cb3f26ab19d10cb1e9b2c7a6.setIcon(div_icon_985c253be2ef1150f81079a38e544880);
+            
+    
+            var marker_2e85da52d6f431fdf0f83155fa904cba = L.marker(
+                [37.94834, -121.28833],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_87926364c878e46b235ccf91f1904ff5 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eRansom\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_c0b39f9ca9dfd45ccd3d8d0f33857868 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_a199e2966acdcf1222c7967ad21e1e03 = $(`<div id="html_a199e2966acdcf1222c7967ad21e1e03" style="width: 100.0%; height: 100.0%;"><b>Ransom</b><br>Media Type: Bulletin<br>Latitude: 37.948340<br>Longitude: -121.288330</div>`)[0];
+                popup_c0b39f9ca9dfd45ccd3d8d0f33857868.setContent(html_a199e2966acdcf1222c7967ad21e1e03);
+            
+        
+
+        marker_2e85da52d6f431fdf0f83155fa904cba.bindPopup(popup_c0b39f9ca9dfd45ccd3d8d0f33857868)
+        ;
+
+        
+    
+    
+            marker_2e85da52d6f431fdf0f83155fa904cba.bindTooltip(
+                `<div>
+                     Ransom • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2e85da52d6f431fdf0f83155fa904cba.setIcon(div_icon_87926364c878e46b235ccf91f1904ff5);
+            
+    
+            var marker_3d2003b123073cc720c1971673c23ffe = L.marker(
+                [37.93947, -121.28414],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_2ba2305687ae57d26ba14a5a0e0d81c1 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eRansom\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_10ff24dbf5f511550977dabe73ddf89f = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_95507610305bcf924ef895fc04fe8166 = $(`<div id="html_95507610305bcf924ef895fc04fe8166" style="width: 100.0%; height: 100.0%;"><b>Ransom</b><br>Media Type: Bulletin<br>Latitude: 37.939470<br>Longitude: -121.284140</div>`)[0];
+                popup_10ff24dbf5f511550977dabe73ddf89f.setContent(html_95507610305bcf924ef895fc04fe8166);
+            
+        
+
+        marker_3d2003b123073cc720c1971673c23ffe.bindPopup(popup_10ff24dbf5f511550977dabe73ddf89f)
+        ;
+
+        
+    
+    
+            marker_3d2003b123073cc720c1971673c23ffe.bindTooltip(
+                `<div>
+                     Ransom • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3d2003b123073cc720c1971673c23ffe.setIcon(div_icon_2ba2305687ae57d26ba14a5a0e0d81c1);
+            
+    
+            var marker_e591a7a52857b3942aa6f01e180f8ec6 = L.marker(
+                [37.84809, -121.21774],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_7889461d371ace9ef2be6bcdea81e588 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eRansom\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_d96923371ce008b759c4e93aa3b119ef = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_a0b004f25c1ddca0e30b589a3188ca08 = $(`<div id="html_a0b004f25c1ddca0e30b589a3188ca08" style="width: 100.0%; height: 100.0%;"><b>Ransom</b><br>Media Type: Bulletin<br>Latitude: 37.848090<br>Longitude: -121.217740</div>`)[0];
+                popup_d96923371ce008b759c4e93aa3b119ef.setContent(html_a0b004f25c1ddca0e30b589a3188ca08);
+            
+        
+
+        marker_e591a7a52857b3942aa6f01e180f8ec6.bindPopup(popup_d96923371ce008b759c4e93aa3b119ef)
+        ;
+
+        
+    
+    
+            marker_e591a7a52857b3942aa6f01e180f8ec6.bindTooltip(
+                `<div>
+                     Ransom • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e591a7a52857b3942aa6f01e180f8ec6.setIcon(div_icon_7889461d371ace9ef2be6bcdea81e588);
+            
+    
+            var marker_c65710fe3fdbd1994d4b2b497bca78c1 = L.marker(
+                [37.92802, -121.32978],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_1106309c258f936b1e1488ae6c9fe192 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eRansom\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_fd922e04ea9152b68448309cec977507 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_13413d3fed052d61a960c071fa806a2e = $(`<div id="html_13413d3fed052d61a960c071fa806a2e" style="width: 100.0%; height: 100.0%;"><b>Ransom</b><br>Media Type: Bulletin<br>Latitude: 37.928020<br>Longitude: -121.329780</div>`)[0];
+                popup_fd922e04ea9152b68448309cec977507.setContent(html_13413d3fed052d61a960c071fa806a2e);
+            
+        
+
+        marker_c65710fe3fdbd1994d4b2b497bca78c1.bindPopup(popup_fd922e04ea9152b68448309cec977507)
+        ;
+
+        
+    
+    
+            marker_c65710fe3fdbd1994d4b2b497bca78c1.bindTooltip(
+                `<div>
+                     Ransom • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c65710fe3fdbd1994d4b2b497bca78c1.setIcon(div_icon_1106309c258f936b1e1488ae6c9fe192);
+            
+    
+            var marker_7bcd42f2dba8f60acc7d8a318998021f = L.marker(
+                [38.0, -121.29025],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_1dd8cea2c19b01bf4183110fe9f6a033 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eRansom\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_ff6a23e0161a8dd39b16f2bfd307a30c = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_7d92005deb42d5a6076305cdd15efc62 = $(`<div id="html_7d92005deb42d5a6076305cdd15efc62" style="width: 100.0%; height: 100.0%;"><b>Ransom</b><br>Media Type: Bulletin<br>Latitude: 38.000000<br>Longitude: -121.290250</div>`)[0];
+                popup_ff6a23e0161a8dd39b16f2bfd307a30c.setContent(html_7d92005deb42d5a6076305cdd15efc62);
+            
+        
+
+        marker_7bcd42f2dba8f60acc7d8a318998021f.bindPopup(popup_ff6a23e0161a8dd39b16f2bfd307a30c)
+        ;
+
+        
+    
+    
+            marker_7bcd42f2dba8f60acc7d8a318998021f.bindTooltip(
+                `<div>
+                     Ransom • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7bcd42f2dba8f60acc7d8a318998021f.setIcon(div_icon_1dd8cea2c19b01bf4183110fe9f6a033);
+            
+    
+            var marker_5d8872f9de97377337887a18e645d5fd = L.marker(
+                [34.54669, -117.40079],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_92abecd099759dc07d5434e9f6b16eba = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eCarrillo\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_8cc6f4c4f1631a36c572dd5616fd78b8 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_758543faecd5859d1288bea03c62bd99 = $(`<div id="html_758543faecd5859d1288bea03c62bd99" style="width: 100.0%; height: 100.0%;"><b>Carrillo</b><br>Media Type: Bulletin<br>Latitude: 34.546690<br>Longitude: -117.400790</div>`)[0];
+                popup_8cc6f4c4f1631a36c572dd5616fd78b8.setContent(html_758543faecd5859d1288bea03c62bd99);
+            
+        
+
+        marker_5d8872f9de97377337887a18e645d5fd.bindPopup(popup_8cc6f4c4f1631a36c572dd5616fd78b8)
+        ;
+
+        
+    
+    
+            marker_5d8872f9de97377337887a18e645d5fd.bindTooltip(
+                `<div>
+                     Carrillo • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5d8872f9de97377337887a18e645d5fd.setIcon(div_icon_92abecd099759dc07d5434e9f6b16eba);
+            
+    
+            var marker_c85c36cf44cbdc8595b680ea6a4327c5 = L.marker(
+                [38.61128, -121.42239],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_5ce9dcc677a8afaf7e3256b101460ed2 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:156px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:10px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eCo Chairs Affordability\u003c/div\u003e",
+  "iconSize": [156, 34],
+  "iconAnchor": [78, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_1b4a564a915022d30efba49c41d361c6 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_a54bca64ae03fb976a6c187328a2d3a4 = $(`<div id="html_a54bca64ae03fb976a6c187328a2d3a4" style="width: 100.0%; height: 100.0%;"><b>Co Chairs Affordability</b><br>Media Type: Bulletin<br>Latitude: 38.611280<br>Longitude: -121.422390</div>`)[0];
+                popup_1b4a564a915022d30efba49c41d361c6.setContent(html_a54bca64ae03fb976a6c187328a2d3a4);
+            
+        
+
+        marker_c85c36cf44cbdc8595b680ea6a4327c5.bindPopup(popup_1b4a564a915022d30efba49c41d361c6)
+        ;
+
+        
+    
+    
+            marker_c85c36cf44cbdc8595b680ea6a4327c5.bindTooltip(
+                `<div>
+                     Co Chairs Affordability • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c85c36cf44cbdc8595b680ea6a4327c5.setIcon(div_icon_5ce9dcc677a8afaf7e3256b101460ed2);
+            
+    
+            var marker_59addbad11c09d55f5558603a2c08ed2 = L.marker(
+                [37.26677, -121.94131],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_30969dc8b9bd5504ffa4ef025ac6d51c = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eAhrens\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_bbcae9d3d852bc386ba800f92af7e79f = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_10c1bbf69ff424fde41530fbe9cc83b4 = $(`<div id="html_10c1bbf69ff424fde41530fbe9cc83b4" style="width: 100.0%; height: 100.0%;"><b>Ahrens</b><br>Media Type: Bulletin<br>Latitude: 37.266770<br>Longitude: -121.941310</div>`)[0];
+                popup_bbcae9d3d852bc386ba800f92af7e79f.setContent(html_10c1bbf69ff424fde41530fbe9cc83b4);
+            
+        
+
+        marker_59addbad11c09d55f5558603a2c08ed2.bindPopup(popup_bbcae9d3d852bc386ba800f92af7e79f)
+        ;
+
+        
+    
+    
+            marker_59addbad11c09d55f5558603a2c08ed2.bindTooltip(
+                `<div>
+                     Ahrens • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_59addbad11c09d55f5558603a2c08ed2.setIcon(div_icon_30969dc8b9bd5504ffa4ef025ac6d51c);
+            
+    
+            var marker_016704628d355a6033ecf97be3351fd4 = L.marker(
+                [37.35785, -121.86991],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_8b4de3815332224c5ef3118a242e29f3 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eAhrens\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_db53c89b8f4efec18b588022b708f5e9 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_6c419a97ee585f12124673be4edfd3aa = $(`<div id="html_6c419a97ee585f12124673be4edfd3aa" style="width: 100.0%; height: 100.0%;"><b>Ahrens</b><br>Media Type: Bulletin<br>Latitude: 37.357850<br>Longitude: -121.869910</div>`)[0];
+                popup_db53c89b8f4efec18b588022b708f5e9.setContent(html_6c419a97ee585f12124673be4edfd3aa);
+            
+        
+
+        marker_016704628d355a6033ecf97be3351fd4.bindPopup(popup_db53c89b8f4efec18b588022b708f5e9)
+        ;
+
+        
+    
+    
+            marker_016704628d355a6033ecf97be3351fd4.bindTooltip(
+                `<div>
+                     Ahrens • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_016704628d355a6033ecf97be3351fd4.setIcon(div_icon_8b4de3815332224c5ef3118a242e29f3);
+            
+    
+            var marker_4a285f7b1bcf3b248150172838b1c464 = L.marker(
+                [37.32505, -121.88255],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_da3770a21bf3ac4676987b63238a4841 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eAhrens\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_4ec572008525aad3fe146849da75771a = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_2a8d72743e7239440ea678fc1cb211d2 = $(`<div id="html_2a8d72743e7239440ea678fc1cb211d2" style="width: 100.0%; height: 100.0%;"><b>Ahrens</b><br>Media Type: Bulletin<br>Latitude: 37.325050<br>Longitude: -121.882550</div>`)[0];
+                popup_4ec572008525aad3fe146849da75771a.setContent(html_2a8d72743e7239440ea678fc1cb211d2);
+            
+        
+
+        marker_4a285f7b1bcf3b248150172838b1c464.bindPopup(popup_4ec572008525aad3fe146849da75771a)
+        ;
+
+        
+    
+    
+            marker_4a285f7b1bcf3b248150172838b1c464.bindTooltip(
+                `<div>
+                     Ahrens • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4a285f7b1bcf3b248150172838b1c464.setIcon(div_icon_da3770a21bf3ac4676987b63238a4841);
+            
+    
+            var marker_712bc8cd2447be53f12d4abc762f5230 = L.marker(
+                [37.34204, -121.91016],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_e0d3760b79272578977059373d2bba6b = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eAhrens\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_53273f59d66f586335b50365be0885c5 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_742e50c90c5e64961be0d82c6775bc3d = $(`<div id="html_742e50c90c5e64961be0d82c6775bc3d" style="width: 100.0%; height: 100.0%;"><b>Ahrens</b><br>Media Type: Bulletin<br>Latitude: 37.342040<br>Longitude: -121.910160</div>`)[0];
+                popup_53273f59d66f586335b50365be0885c5.setContent(html_742e50c90c5e64961be0d82c6775bc3d);
+            
+        
+
+        marker_712bc8cd2447be53f12d4abc762f5230.bindPopup(popup_53273f59d66f586335b50365be0885c5)
+        ;
+
+        
+    
+    
+            marker_712bc8cd2447be53f12d4abc762f5230.bindTooltip(
+                `<div>
+                     Ahrens • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_712bc8cd2447be53f12d4abc762f5230.setIcon(div_icon_e0d3760b79272578977059373d2bba6b);
+            
+    
+            var marker_c2e651d5b3e0b648e1328d1c6c8a58e1 = L.marker(
+                [37.31044, -121.883],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_4d3cfd943a5085f0e8c0bf768d5fe1ba = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eAhrens\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_16bdce300b615d80a7efb23460208637 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_e096ed9d9cc122f57eb9cd12c6ca512b = $(`<div id="html_e096ed9d9cc122f57eb9cd12c6ca512b" style="width: 100.0%; height: 100.0%;"><b>Ahrens</b><br>Media Type: Bulletin<br>Latitude: 37.310440<br>Longitude: -121.883000</div>`)[0];
+                popup_16bdce300b615d80a7efb23460208637.setContent(html_e096ed9d9cc122f57eb9cd12c6ca512b);
+            
+        
+
+        marker_c2e651d5b3e0b648e1328d1c6c8a58e1.bindPopup(popup_16bdce300b615d80a7efb23460208637)
+        ;
+
+        
+    
+    
+            marker_c2e651d5b3e0b648e1328d1c6c8a58e1.bindTooltip(
+                `<div>
+                     Ahrens • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c2e651d5b3e0b648e1328d1c6c8a58e1.setIcon(div_icon_4d3cfd943a5085f0e8c0bf768d5fe1ba);
+            
+    
+            var marker_f9ff0ef6806f8d758f9ef4ecf5afeba8 = L.marker(
+                [37.30766, -121.87827],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_d8029a020eeac41f01bf35c49838c410 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eAhrens\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_9cfdb0ce97891793d157a3e750a37f59 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_741034cccd68400d16aa6648cb870a75 = $(`<div id="html_741034cccd68400d16aa6648cb870a75" style="width: 100.0%; height: 100.0%;"><b>Ahrens</b><br>Media Type: Bulletin<br>Latitude: 37.307660<br>Longitude: -121.878270</div>`)[0];
+                popup_9cfdb0ce97891793d157a3e750a37f59.setContent(html_741034cccd68400d16aa6648cb870a75);
+            
+        
+
+        marker_f9ff0ef6806f8d758f9ef4ecf5afeba8.bindPopup(popup_9cfdb0ce97891793d157a3e750a37f59)
+        ;
+
+        
+    
+    
+            marker_f9ff0ef6806f8d758f9ef4ecf5afeba8.bindTooltip(
+                `<div>
+                     Ahrens • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f9ff0ef6806f8d758f9ef4ecf5afeba8.setIcon(div_icon_d8029a020eeac41f01bf35c49838c410);
+            
+    
+            var marker_1f88be884e076241e3c1ee2c30793543 = L.marker(
+                [37.31717, -121.90798],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_48b2a2b22dc933da44db269643bda3d9 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eAhrens\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_3e5d8a273c34c163ab978bd6a80231ff = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_9d5289bb700e2a27e86710d73b0611b1 = $(`<div id="html_9d5289bb700e2a27e86710d73b0611b1" style="width: 100.0%; height: 100.0%;"><b>Ahrens</b><br>Media Type: Bulletin<br>Latitude: 37.317170<br>Longitude: -121.907980</div>`)[0];
+                popup_3e5d8a273c34c163ab978bd6a80231ff.setContent(html_9d5289bb700e2a27e86710d73b0611b1);
+            
+        
+
+        marker_1f88be884e076241e3c1ee2c30793543.bindPopup(popup_3e5d8a273c34c163ab978bd6a80231ff)
+        ;
+
+        
+    
+    
+            marker_1f88be884e076241e3c1ee2c30793543.bindTooltip(
+                `<div>
+                     Ahrens • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1f88be884e076241e3c1ee2c30793543.setIcon(div_icon_48b2a2b22dc933da44db269643bda3d9);
+            
+    
+            var marker_0d41e9a00059acb6fd72b5f6693af60c = L.marker(
+                [37.32366, -121.93557],
+                {
+}
+            ).addTo(marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a);
+        
+    
+            var div_icon_b392b6f9ecaf523e4a4f2e82b50dcd5a = L.divIcon({
+  "html": "\u003cdiv style=\"background:#2563eb;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eAhrens\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_2249f578cae277bb181c44a03c165375 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_c0652d2c8cbd45d083756d6084cc5ab1 = $(`<div id="html_c0652d2c8cbd45d083756d6084cc5ab1" style="width: 100.0%; height: 100.0%;"><b>Ahrens</b><br>Media Type: Bulletin<br>Latitude: 37.323660<br>Longitude: -121.935570</div>`)[0];
+                popup_2249f578cae277bb181c44a03c165375.setContent(html_c0652d2c8cbd45d083756d6084cc5ab1);
+            
+        
+
+        marker_0d41e9a00059acb6fd72b5f6693af60c.bindPopup(popup_2249f578cae277bb181c44a03c165375)
+        ;
+
+        
+    
+    
+            marker_0d41e9a00059acb6fd72b5f6693af60c.bindTooltip(
+                `<div>
+                     Ahrens • Bulletin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0d41e9a00059acb6fd72b5f6693af60c.setIcon(div_icon_b392b6f9ecaf523e4a4f2e82b50dcd5a);
+            
+    
+            marker_cluster_7a3afc7c5172ebf903b85908d0f69e0a.addTo(feature_group_6f68a544b94fce6c34f862334ed023e2);
+        
+    
+            feature_group_6f68a544b94fce6c34f862334ed023e2.addTo(map_328a9fcd368407b7ae60165255adde1d);
+        
+    
+            var feature_group_0b87932d32091716c994722bb337b552 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_cluster_d1b3345589f6297f4914affeec735405 = L.markerClusterGroup(
+                {
+  "disableClusteringAtZoom": 12,
+  "spiderfyOnMaxZoom": true,
+  "showCoverageOnHover": false,
+}
+            );
+        
+    
+            var marker_5ebc3f09a6086bffb4f9e705ddcd6a94 = L.marker(
+                [33.9016, -118.37119],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_4c88211988c909c96170cf7cbb7b526f = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:96px;height:48px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eFull Caucus 1\u003cbr\u003eFull Caucus 2\u003c/div\u003e",
+  "iconSize": [96, 48],
+  "iconAnchor": [48, 24],
+  "className": "empty",
+});
+        
+    
+        var popup_5c2d49d76738476d158be43ba0ae96fd = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_8649f5c3dd5f9d1170e1c281a4a7fcca = $(`<div id="html_8649f5c3dd5f9d1170e1c281a4a7fcca" style="width: 100.0%; height: 100.0%;"><b>Full Caucus 1<br>Full Caucus 2</b><br>Media Type: Digital<br>Latitude: 33.901600<br>Longitude: -118.371190</div>`)[0];
+                popup_5c2d49d76738476d158be43ba0ae96fd.setContent(html_8649f5c3dd5f9d1170e1c281a4a7fcca);
+            
+        
+
+        marker_5ebc3f09a6086bffb4f9e705ddcd6a94.bindPopup(popup_5c2d49d76738476d158be43ba0ae96fd)
+        ;
+
+        
+    
+    
+            marker_5ebc3f09a6086bffb4f9e705ddcd6a94.bindTooltip(
+                `<div>
+                     Full Caucus 1 / Full Caucus 2 • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5ebc3f09a6086bffb4f9e705ddcd6a94.setIcon(div_icon_4c88211988c909c96170cf7cbb7b526f);
+            
+    
+            var marker_b416aed0a2ffb3c16f0b6224d37eedfc = L.marker(
+                [33.89748, -118.36924],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_069770dee7b73a361cb934a7012c6ce1 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:138px;height:48px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eFull Caucus 5\u003cbr\u003eTop 10 Affordability\u003c/div\u003e",
+  "iconSize": [138, 48],
+  "iconAnchor": [69, 24],
+  "className": "empty",
+});
+        
+    
+        var popup_a60e1146bfb909a269749e861dd79f89 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_b5c7672ae6539503cf8b1984082914b7 = $(`<div id="html_b5c7672ae6539503cf8b1984082914b7" style="width: 100.0%; height: 100.0%;"><b>Full Caucus 5<br>Top 10 Affordability</b><br>Media Type: Digital<br>Latitude: 33.897480<br>Longitude: -118.369240</div>`)[0];
+                popup_a60e1146bfb909a269749e861dd79f89.setContent(html_b5c7672ae6539503cf8b1984082914b7);
+            
+        
+
+        marker_b416aed0a2ffb3c16f0b6224d37eedfc.bindPopup(popup_a60e1146bfb909a269749e861dd79f89)
+        ;
+
+        
+    
+    
+            marker_b416aed0a2ffb3c16f0b6224d37eedfc.bindTooltip(
+                `<div>
+                     Full Caucus 5 / Top 10 Affordability • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b416aed0a2ffb3c16f0b6224d37eedfc.setIcon(div_icon_069770dee7b73a361cb934a7012c6ce1);
+            
+    
+            var marker_325d5b22ad0bed95f9822a8c01800a2c = L.marker(
+                [33.94556, -118.36893],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_4afc876e19a528775415fa06c87bf66d = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:156px;height:48px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:10px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eCo Chairs Affordability\u003cbr\u003eCo Chairs Opportunity\u003c/div\u003e",
+  "iconSize": [156, 48],
+  "iconAnchor": [78, 24],
+  "className": "empty",
+});
+        
+    
+        var popup_c255b00b1b463d65644826b7b5988d54 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_0f4880179898c1db3c213febdeb45add = $(`<div id="html_0f4880179898c1db3c213febdeb45add" style="width: 100.0%; height: 100.0%;"><b>Co Chairs Affordability<br>Co Chairs Opportunity</b><br>Media Type: Digital<br>Latitude: 33.945560<br>Longitude: -118.368930</div>`)[0];
+                popup_c255b00b1b463d65644826b7b5988d54.setContent(html_0f4880179898c1db3c213febdeb45add);
+            
+        
+
+        marker_325d5b22ad0bed95f9822a8c01800a2c.bindPopup(popup_c255b00b1b463d65644826b7b5988d54)
+        ;
+
+        
+    
+    
+            marker_325d5b22ad0bed95f9822a8c01800a2c.bindTooltip(
+                `<div>
+                     Co Chairs Affordability / Co Chairs Opportunity • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_325d5b22ad0bed95f9822a8c01800a2c.setIcon(div_icon_4afc876e19a528775415fa06c87bf66d);
+            
+    
+            var marker_44b67a758a6f0bca9661309b8c707cf7 = L.marker(
+                [33.97976, -118.36995],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_adfa687b13bfdc0aed2cdafd20062abb = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:96px;height:48px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eFull Caucus 3\u003cbr\u003eFull Caucus 4\u003c/div\u003e",
+  "iconSize": [96, 48],
+  "iconAnchor": [48, 24],
+  "className": "empty",
+});
+        
+    
+        var popup_e7cea9cc920391c547e99347b9c57c95 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_3acd5a9ef44a03f6e8377386c10e5662 = $(`<div id="html_3acd5a9ef44a03f6e8377386c10e5662" style="width: 100.0%; height: 100.0%;"><b>Full Caucus 3<br>Full Caucus 4</b><br>Media Type: Digital<br>Latitude: 33.979760<br>Longitude: -118.369950</div>`)[0];
+                popup_e7cea9cc920391c547e99347b9c57c95.setContent(html_3acd5a9ef44a03f6e8377386c10e5662);
+            
+        
+
+        marker_44b67a758a6f0bca9661309b8c707cf7.bindPopup(popup_e7cea9cc920391c547e99347b9c57c95)
+        ;
+
+        
+    
+    
+            marker_44b67a758a6f0bca9661309b8c707cf7.bindTooltip(
+                `<div>
+                     Full Caucus 3 / Full Caucus 4 • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_44b67a758a6f0bca9661309b8c707cf7.setIcon(div_icon_adfa687b13bfdc0aed2cdafd20062abb);
+            
+    
+            var marker_057fed81ed878c354b81abd9236c5a24 = L.marker(
+                [38.5856, -121.50196000000001],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_01b3119010d7a45f24970ddbc41786d3 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:96px;height:48px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eFull Caucus 1\u003cbr\u003eFull Caucus 2\u003c/div\u003e",
+  "iconSize": [96, 48],
+  "iconAnchor": [48, 24],
+  "className": "empty",
+});
+        
+    
+        var popup_366c490f8f49ee880e1742648d698b8a = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_6bcfede03baa46b87d402c98e5b2b5fb = $(`<div id="html_6bcfede03baa46b87d402c98e5b2b5fb" style="width: 100.0%; height: 100.0%;"><b>Full Caucus 1<br>Full Caucus 2</b><br>Media Type: Digital<br>Latitude: 38.585600<br>Longitude: -121.502300</div>`)[0];
+                popup_366c490f8f49ee880e1742648d698b8a.setContent(html_6bcfede03baa46b87d402c98e5b2b5fb);
+            
+        
+
+        marker_057fed81ed878c354b81abd9236c5a24.bindPopup(popup_366c490f8f49ee880e1742648d698b8a)
+        ;
+
+        
+    
+    
+            marker_057fed81ed878c354b81abd9236c5a24.bindTooltip(
+                `<div>
+                     Full Caucus 1 / Full Caucus 2 • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_057fed81ed878c354b81abd9236c5a24.setIcon(div_icon_01b3119010d7a45f24970ddbc41786d3);
+            
+    
+            var marker_3b43eadef11444d53ed2e6561633eb17 = L.marker(
+                [38.6704, -121.5499],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_d56ff54a60135778911a0cd2060e8025 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:96px;height:48px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eFull Caucus 3\u003cbr\u003eFull Caucus 4\u003c/div\u003e",
+  "iconSize": [96, 48],
+  "iconAnchor": [48, 24],
+  "className": "empty",
+});
+        
+    
+        var popup_4b9212039a60d7df5b1d2d5e40be13b3 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_fffe3f52a71b0a08a30a5f89a4064513 = $(`<div id="html_fffe3f52a71b0a08a30a5f89a4064513" style="width: 100.0%; height: 100.0%;"><b>Full Caucus 3<br>Full Caucus 4</b><br>Media Type: Digital<br>Latitude: 38.670400<br>Longitude: -121.549900</div>`)[0];
+                popup_4b9212039a60d7df5b1d2d5e40be13b3.setContent(html_fffe3f52a71b0a08a30a5f89a4064513);
+            
+        
+
+        marker_3b43eadef11444d53ed2e6561633eb17.bindPopup(popup_4b9212039a60d7df5b1d2d5e40be13b3)
+        ;
+
+        
+    
+    
+            marker_3b43eadef11444d53ed2e6561633eb17.bindTooltip(
+                `<div>
+                     Full Caucus 3 / Full Caucus 4 • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3b43eadef11444d53ed2e6561633eb17.setIcon(div_icon_d56ff54a60135778911a0cd2060e8025);
+            
+    
+            var marker_c3d55f20dccff926d32cbd570a597649 = L.marker(
+                [38.4555, -121.41036000000001],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_a5d7b42ab93ee9801da3fc9b5c0e0a96 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:156px;height:48px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:10px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eCo Chairs Affordability\u003cbr\u003eCo Chairs Opportunity\u003c/div\u003e",
+  "iconSize": [156, 48],
+  "iconAnchor": [78, 24],
+  "className": "empty",
+});
+        
+    
+        var popup_442623c785c0c4022fa0ebb1aeef6280 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_36f28c8b21051da333adf72692409e4f = $(`<div id="html_36f28c8b21051da333adf72692409e4f" style="width: 100.0%; height: 100.0%;"><b>Co Chairs Affordability<br>Co Chairs Opportunity</b><br>Media Type: Digital<br>Latitude: 38.455500<br>Longitude: -121.410700</div>`)[0];
+                popup_442623c785c0c4022fa0ebb1aeef6280.setContent(html_36f28c8b21051da333adf72692409e4f);
+            
+        
+
+        marker_c3d55f20dccff926d32cbd570a597649.bindPopup(popup_442623c785c0c4022fa0ebb1aeef6280)
+        ;
+
+        
+    
+    
+            marker_c3d55f20dccff926d32cbd570a597649.bindTooltip(
+                `<div>
+                     Co Chairs Affordability / Co Chairs Opportunity • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c3d55f20dccff926d32cbd570a597649.setIcon(div_icon_a5d7b42ab93ee9801da3fc9b5c0e0a96);
+            
+    
+            var marker_bc8a2d01c05a2ae3aa9932ad33dad935 = L.marker(
+                [38.6358, -121.20646],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_e2edcf2c70d65386e034613bbcf515b3 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:138px;height:48px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eTop 10 Affordability\u003cbr\u003eTop 10 Opportunity\u003c/div\u003e",
+  "iconSize": [138, 48],
+  "iconAnchor": [69, 24],
+  "className": "empty",
+});
+        
+    
+        var popup_f0dff48f94d464eee275cf908dee8d99 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_b0d846c7ca4840b4fb81f3dcb72a53e8 = $(`<div id="html_b0d846c7ca4840b4fb81f3dcb72a53e8" style="width: 100.0%; height: 100.0%;"><b>Top 10 Affordability<br>Top 10 Opportunity</b><br>Media Type: Digital<br>Latitude: 38.635800<br>Longitude: -121.206800</div>`)[0];
+                popup_f0dff48f94d464eee275cf908dee8d99.setContent(html_b0d846c7ca4840b4fb81f3dcb72a53e8);
+            
+        
+
+        marker_bc8a2d01c05a2ae3aa9932ad33dad935.bindPopup(popup_f0dff48f94d464eee275cf908dee8d99)
+        ;
+
+        
+    
+    
+            marker_bc8a2d01c05a2ae3aa9932ad33dad935.bindTooltip(
+                `<div>
+                     Top 10 Affordability / Top 10 Opportunity • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bc8a2d01c05a2ae3aa9932ad33dad935.setIcon(div_icon_e2edcf2c70d65386e034613bbcf515b3);
+            
+    
+            var marker_bb34b304d9a7ddc95dda06da8bce2a4b = L.marker(
+                [38.5856, -121.50264],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_3b0fa535bc8f5765cac29e1bca17b290 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:96px;height:48px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eFull Caucus 5\u003cbr\u003eRivas\u003c/div\u003e",
+  "iconSize": [96, 48],
+  "iconAnchor": [48, 24],
+  "className": "empty",
+});
+        
+    
+        var popup_4af59bff073e6d8df204254e1e8e0717 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_0716fd05e51e628ddd9ea6f645c204e9 = $(`<div id="html_0716fd05e51e628ddd9ea6f645c204e9" style="width: 100.0%; height: 100.0%;"><b>Full Caucus 5<br>Rivas</b><br>Media Type: Digital<br>Latitude: 38.585600<br>Longitude: -121.502300</div>`)[0];
+                popup_4af59bff073e6d8df204254e1e8e0717.setContent(html_0716fd05e51e628ddd9ea6f645c204e9);
+            
+        
+
+        marker_bb34b304d9a7ddc95dda06da8bce2a4b.bindPopup(popup_4af59bff073e6d8df204254e1e8e0717)
+        ;
+
+        
+    
+    
+            marker_bb34b304d9a7ddc95dda06da8bce2a4b.bindTooltip(
+                `<div>
+                     Full Caucus 5 / Rivas • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bb34b304d9a7ddc95dda06da8bce2a4b.setIcon(div_icon_3b0fa535bc8f5765cac29e1bca17b290);
+            
+    
+            var marker_d5ec7c11b0c8ec98201d9ad1241ee1d9 = L.marker(
+                [38.5703, -121.51366],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_5ab68ba9de560a77068d77f13797055a = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:156px;height:48px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:10px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eCo Chairs Affordability\u003cbr\u003eCo Chairs Opportunity\u003c/div\u003e",
+  "iconSize": [156, 48],
+  "iconAnchor": [78, 24],
+  "className": "empty",
+});
+        
+    
+        var popup_88970bc316e13444b17e509703bfbb0c = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_64e69786186bef2336561c933c111d47 = $(`<div id="html_64e69786186bef2336561c933c111d47" style="width: 100.0%; height: 100.0%;"><b>Co Chairs Affordability<br>Co Chairs Opportunity</b><br>Media Type: Digital<br>Latitude: 38.570300<br>Longitude: -121.514000</div>`)[0];
+                popup_88970bc316e13444b17e509703bfbb0c.setContent(html_64e69786186bef2336561c933c111d47);
+            
+        
+
+        marker_d5ec7c11b0c8ec98201d9ad1241ee1d9.bindPopup(popup_88970bc316e13444b17e509703bfbb0c)
+        ;
+
+        
+    
+    
+            marker_d5ec7c11b0c8ec98201d9ad1241ee1d9.bindTooltip(
+                `<div>
+                     Co Chairs Affordability / Co Chairs Opportunity • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d5ec7c11b0c8ec98201d9ad1241ee1d9.setIcon(div_icon_5ab68ba9de560a77068d77f13797055a);
+            
+    
+            var marker_98e1ff74e58968cb380b7ac10b0faf20 = L.marker(
+                [38.5703, -121.51433999999999],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_8415cb93f30c80fab9cb439f1aadbf94 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:138px;height:48px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eTop 10 Affordability\u003cbr\u003eTop 10 Opportunity\u003c/div\u003e",
+  "iconSize": [138, 48],
+  "iconAnchor": [69, 24],
+  "className": "empty",
+});
+        
+    
+        var popup_b677e73fa2d38875dff7a1fbdfaa3600 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_2f2a0f08210f615e8e87ee5de27da2eb = $(`<div id="html_2f2a0f08210f615e8e87ee5de27da2eb" style="width: 100.0%; height: 100.0%;"><b>Top 10 Affordability<br>Top 10 Opportunity</b><br>Media Type: Digital<br>Latitude: 38.570300<br>Longitude: -121.514000</div>`)[0];
+                popup_b677e73fa2d38875dff7a1fbdfaa3600.setContent(html_2f2a0f08210f615e8e87ee5de27da2eb);
+            
+        
+
+        marker_98e1ff74e58968cb380b7ac10b0faf20.bindPopup(popup_b677e73fa2d38875dff7a1fbdfaa3600)
+        ;
+
+        
+    
+    
+            marker_98e1ff74e58968cb380b7ac10b0faf20.bindTooltip(
+                `<div>
+                     Top 10 Affordability / Top 10 Opportunity • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_98e1ff74e58968cb380b7ac10b0faf20.setIcon(div_icon_8415cb93f30c80fab9cb439f1aadbf94);
+            
+    
+            var marker_fefd6ca827240f2705ee8275a4810589 = L.marker(
+                [38.4555, -121.41104],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_b2264df25c087d0dc06a108aa777bb57 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eNguyen\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_dfd11a77266ca01d143af5f78af37d9b = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_6269854829883c007f1d33c26efa5c1e = $(`<div id="html_6269854829883c007f1d33c26efa5c1e" style="width: 100.0%; height: 100.0%;"><b>Nguyen</b><br>Media Type: Digital<br>Latitude: 38.455500<br>Longitude: -121.410700</div>`)[0];
+                popup_dfd11a77266ca01d143af5f78af37d9b.setContent(html_6269854829883c007f1d33c26efa5c1e);
+            
+        
+
+        marker_fefd6ca827240f2705ee8275a4810589.bindPopup(popup_dfd11a77266ca01d143af5f78af37d9b)
+        ;
+
+        
+    
+    
+            marker_fefd6ca827240f2705ee8275a4810589.bindTooltip(
+                `<div>
+                     Nguyen • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fefd6ca827240f2705ee8275a4810589.setIcon(div_icon_b2264df25c087d0dc06a108aa777bb57);
+            
+    
+            var marker_3fe9dc01786d638f63e095572fc922d0 = L.marker(
+                [38.6262, -121.4127],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_086b3f768f5072d9399144258cd0386b = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:156px;height:48px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:10px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eCo Chairs Affordability\u003cbr\u003eCo Chairs Opportunity\u003c/div\u003e",
+  "iconSize": [156, 48],
+  "iconAnchor": [78, 24],
+  "className": "empty",
+});
+        
+    
+        var popup_3cca2444db2ea66df9d99e2f89ccbb99 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_86f2a7edcee4915a497b178ee8df650a = $(`<div id="html_86f2a7edcee4915a497b178ee8df650a" style="width: 100.0%; height: 100.0%;"><b>Co Chairs Affordability<br>Co Chairs Opportunity</b><br>Media Type: Digital<br>Latitude: 38.626200<br>Longitude: -121.412700</div>`)[0];
+                popup_3cca2444db2ea66df9d99e2f89ccbb99.setContent(html_86f2a7edcee4915a497b178ee8df650a);
+            
+        
+
+        marker_3fe9dc01786d638f63e095572fc922d0.bindPopup(popup_3cca2444db2ea66df9d99e2f89ccbb99)
+        ;
+
+        
+    
+    
+            marker_3fe9dc01786d638f63e095572fc922d0.bindTooltip(
+                `<div>
+                     Co Chairs Affordability / Co Chairs Opportunity • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3fe9dc01786d638f63e095572fc922d0.setIcon(div_icon_086b3f768f5072d9399144258cd0386b);
+            
+    
+            var marker_fd9211057c01efeb5377ca093be0046f = L.marker(
+                [38.6215, -121.23506],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_f7b66d7f8d762ca1fc610b54a1f58922 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eNguyen\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_da7b68e5f269bd457eb96ca5e9f35eab = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_61df87dd62233b636f0dd22e76684133 = $(`<div id="html_61df87dd62233b636f0dd22e76684133" style="width: 100.0%; height: 100.0%;"><b>Nguyen</b><br>Media Type: Digital<br>Latitude: 38.621500<br>Longitude: -121.235400</div>`)[0];
+                popup_da7b68e5f269bd457eb96ca5e9f35eab.setContent(html_61df87dd62233b636f0dd22e76684133);
+            
+        
+
+        marker_fd9211057c01efeb5377ca093be0046f.bindPopup(popup_da7b68e5f269bd457eb96ca5e9f35eab)
+        ;
+
+        
+    
+    
+            marker_fd9211057c01efeb5377ca093be0046f.bindTooltip(
+                `<div>
+                     Nguyen • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fd9211057c01efeb5377ca093be0046f.setIcon(div_icon_f7b66d7f8d762ca1fc610b54a1f58922);
+            
+    
+            var marker_4afcccf427f3aa2acce82fbb2451b44e = L.marker(
+                [38.6215, -121.23573999999999],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_acef9f0ab7511c2ca1066723d1a21662 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eNguyen\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_b3f32c87fc6633d5a2665d0eb7e62982 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_bd1431156ae63df9107bd3009c3cf47b = $(`<div id="html_bd1431156ae63df9107bd3009c3cf47b" style="width: 100.0%; height: 100.0%;"><b>Nguyen</b><br>Media Type: Digital<br>Latitude: 38.621500<br>Longitude: -121.235400</div>`)[0];
+                popup_b3f32c87fc6633d5a2665d0eb7e62982.setContent(html_bd1431156ae63df9107bd3009c3cf47b);
+            
+        
+
+        marker_4afcccf427f3aa2acce82fbb2451b44e.bindPopup(popup_b3f32c87fc6633d5a2665d0eb7e62982)
+        ;
+
+        
+    
+    
+            marker_4afcccf427f3aa2acce82fbb2451b44e.bindTooltip(
+                `<div>
+                     Nguyen • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4afcccf427f3aa2acce82fbb2451b44e.setIcon(div_icon_acef9f0ab7511c2ca1066723d1a21662);
+            
+    
+            var marker_30ffcbab110c89cfd2486045c7ffc50d = L.marker(
+                [38.6358, -121.20714],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_25f00982f0ce3782fd394f967d73af09 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eNguyen\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_73c16d57f31d552c9ab8d9177c3590a4 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_cbf78971e08d965270f81839d4ee4273 = $(`<div id="html_cbf78971e08d965270f81839d4ee4273" style="width: 100.0%; height: 100.0%;"><b>Nguyen</b><br>Media Type: Digital<br>Latitude: 38.635800<br>Longitude: -121.206800</div>`)[0];
+                popup_73c16d57f31d552c9ab8d9177c3590a4.setContent(html_cbf78971e08d965270f81839d4ee4273);
+            
+        
+
+        marker_30ffcbab110c89cfd2486045c7ffc50d.bindPopup(popup_73c16d57f31d552c9ab8d9177c3590a4)
+        ;
+
+        
+    
+    
+            marker_30ffcbab110c89cfd2486045c7ffc50d.bindTooltip(
+                `<div>
+                     Nguyen • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_30ffcbab110c89cfd2486045c7ffc50d.setIcon(div_icon_25f00982f0ce3782fd394f967d73af09);
+            
+    
+            var marker_899a42792c69f50874a728648c85f2ff = L.marker(
+                [37.85897, -121.28174],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_1f843a64061ecefef30209666c562e5d = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eRansom\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_1a09f7fb6c837530ee9204b72a5c1526 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_fecc3320f05a55bc85debc578eeb07db = $(`<div id="html_fecc3320f05a55bc85debc578eeb07db" style="width: 100.0%; height: 100.0%;"><b>Ransom</b><br>Media Type: Digital<br>Latitude: 37.858970<br>Longitude: -121.281740</div>`)[0];
+                popup_1a09f7fb6c837530ee9204b72a5c1526.setContent(html_fecc3320f05a55bc85debc578eeb07db);
+            
+        
+
+        marker_899a42792c69f50874a728648c85f2ff.bindPopup(popup_1a09f7fb6c837530ee9204b72a5c1526)
+        ;
+
+        
+    
+    
+            marker_899a42792c69f50874a728648c85f2ff.bindTooltip(
+                `<div>
+                     Ransom • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_899a42792c69f50874a728648c85f2ff.setIcon(div_icon_1f843a64061ecefef30209666c562e5d);
+            
+    
+            var marker_5374179a4cba0d9680c4d042ac24d49d = L.marker(
+                [37.913, -121.2256],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_c68d67d79237ed916d059f6f13b9362c = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eRansom\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_1554ae0a2c67ed6ddf9093c8ec182c50 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_10a33940d14f7f3c5aa5f55a5a5c2095 = $(`<div id="html_10a33940d14f7f3c5aa5f55a5a5c2095" style="width: 100.0%; height: 100.0%;"><b>Ransom</b><br>Media Type: Digital<br>Latitude: 37.913000<br>Longitude: -121.225600</div>`)[0];
+                popup_1554ae0a2c67ed6ddf9093c8ec182c50.setContent(html_10a33940d14f7f3c5aa5f55a5a5c2095);
+            
+        
+
+        marker_5374179a4cba0d9680c4d042ac24d49d.bindPopup(popup_1554ae0a2c67ed6ddf9093c8ec182c50)
+        ;
+
+        
+    
+    
+            marker_5374179a4cba0d9680c4d042ac24d49d.bindTooltip(
+                `<div>
+                     Ransom • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5374179a4cba0d9680c4d042ac24d49d.setIcon(div_icon_c68d67d79237ed916d059f6f13b9362c);
+            
+    
+            var marker_6eba79b23dd5bfee920a7b3665609844 = L.marker(
+                [38.04678, -121.25817],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_7b88d4201b73339bc934a574338d9fe8 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eRansom\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_368ac6982048016161cea76923069dfe = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_f0be5fae4eabb5baa269992ef81d220d = $(`<div id="html_f0be5fae4eabb5baa269992ef81d220d" style="width: 100.0%; height: 100.0%;"><b>Ransom</b><br>Media Type: Digital<br>Latitude: 38.046780<br>Longitude: -121.258170</div>`)[0];
+                popup_368ac6982048016161cea76923069dfe.setContent(html_f0be5fae4eabb5baa269992ef81d220d);
+            
+        
+
+        marker_6eba79b23dd5bfee920a7b3665609844.bindPopup(popup_368ac6982048016161cea76923069dfe)
+        ;
+
+        
+    
+    
+            marker_6eba79b23dd5bfee920a7b3665609844.bindTooltip(
+                `<div>
+                     Ransom • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6eba79b23dd5bfee920a7b3665609844.setIcon(div_icon_7b88d4201b73339bc934a574338d9fe8);
+            
+    
+            var marker_2ed685af70ada761a46ab4096f1bc5fb = L.marker(
+                [37.86857, -121.27765],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_c4f6775d2004ad499ddb8f706f826fb5 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eRansom\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_a69ff90f901da8598b8ae1dc564ac7ca = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_7730896328d788fd2b5c89fd5350fd4d = $(`<div id="html_7730896328d788fd2b5c89fd5350fd4d" style="width: 100.0%; height: 100.0%;"><b>Ransom</b><br>Media Type: Digital<br>Latitude: 37.868570<br>Longitude: -121.277650</div>`)[0];
+                popup_a69ff90f901da8598b8ae1dc564ac7ca.setContent(html_7730896328d788fd2b5c89fd5350fd4d);
+            
+        
+
+        marker_2ed685af70ada761a46ab4096f1bc5fb.bindPopup(popup_a69ff90f901da8598b8ae1dc564ac7ca)
+        ;
+
+        
+    
+    
+            marker_2ed685af70ada761a46ab4096f1bc5fb.bindTooltip(
+                `<div>
+                     Ransom • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2ed685af70ada761a46ab4096f1bc5fb.setIcon(div_icon_c4f6775d2004ad499ddb8f706f826fb5);
+            
+    
+            var marker_16e8666cbc5694342e86126a01ff4611 = L.marker(
+                [37.92658, -121.23117],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_6c11525cf472516ee91a96a97ce426f0 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eRansom\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_31b0cf06d4f7093a5f5026a22187420e = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_f75d935a88ad92df5375f3589f20544e = $(`<div id="html_f75d935a88ad92df5375f3589f20544e" style="width: 100.0%; height: 100.0%;"><b>Ransom</b><br>Media Type: Digital<br>Latitude: 37.926580<br>Longitude: -121.231170</div>`)[0];
+                popup_31b0cf06d4f7093a5f5026a22187420e.setContent(html_f75d935a88ad92df5375f3589f20544e);
+            
+        
+
+        marker_16e8666cbc5694342e86126a01ff4611.bindPopup(popup_31b0cf06d4f7093a5f5026a22187420e)
+        ;
+
+        
+    
+    
+            marker_16e8666cbc5694342e86126a01ff4611.bindTooltip(
+                `<div>
+                     Ransom • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_16e8666cbc5694342e86126a01ff4611.setIcon(div_icon_6c11525cf472516ee91a96a97ce426f0);
+            
+    
+            var marker_a507b37e81a3835aef101b66e4c10608 = L.marker(
+                [34.5782, -118.1331],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_f1a000700573facc3454e24afb1ecb68 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eCarrillo\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_cbfbecb054c055da32ddc913325459ea = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_3c0f89bf7270d79a641eae339860e2a4 = $(`<div id="html_3c0f89bf7270d79a641eae339860e2a4" style="width: 100.0%; height: 100.0%;"><b>Carrillo</b><br>Media Type: Digital<br>Latitude: 34.578200<br>Longitude: -118.133100</div>`)[0];
+                popup_cbfbecb054c055da32ddc913325459ea.setContent(html_3c0f89bf7270d79a641eae339860e2a4);
+            
+        
+
+        marker_a507b37e81a3835aef101b66e4c10608.bindPopup(popup_cbfbecb054c055da32ddc913325459ea)
+        ;
+
+        
+    
+    
+            marker_a507b37e81a3835aef101b66e4c10608.bindTooltip(
+                `<div>
+                     Carrillo • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a507b37e81a3835aef101b66e4c10608.setIcon(div_icon_f1a000700573facc3454e24afb1ecb68);
+            
+    
+            var marker_c12485eacbb189d5b88e2e2a8d1607bb = L.marker(
+                [34.6558, -118.1528],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_903486714a3fdcde913a6ee3ce99ef0c = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eCarrillo\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_c723254b60e251dd59931b9a52ed5bdc = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_bac28f6932566ea338e1147e2f0dbc56 = $(`<div id="html_bac28f6932566ea338e1147e2f0dbc56" style="width: 100.0%; height: 100.0%;"><b>Carrillo</b><br>Media Type: Digital<br>Latitude: 34.655800<br>Longitude: -118.152800</div>`)[0];
+                popup_c723254b60e251dd59931b9a52ed5bdc.setContent(html_bac28f6932566ea338e1147e2f0dbc56);
+            
+        
+
+        marker_c12485eacbb189d5b88e2e2a8d1607bb.bindPopup(popup_c723254b60e251dd59931b9a52ed5bdc)
+        ;
+
+        
+    
+    
+            marker_c12485eacbb189d5b88e2e2a8d1607bb.bindTooltip(
+                `<div>
+                     Carrillo • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c12485eacbb189d5b88e2e2a8d1607bb.setIcon(div_icon_903486714a3fdcde913a6ee3ce99ef0c);
+            
+    
+            var marker_e18e43bf5a3499c42835c44ccab46dfb = L.marker(
+                [34.6896, -118.1649],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_923adeb9ef50f140e092e7ac8d3abee7 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eCarrillo\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_b0616730a0e17dffcee09233054150da = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_61a340cc76dc5888e5c3be0e077b9a83 = $(`<div id="html_61a340cc76dc5888e5c3be0e077b9a83" style="width: 100.0%; height: 100.0%;"><b>Carrillo</b><br>Media Type: Digital<br>Latitude: 34.689600<br>Longitude: -118.164900</div>`)[0];
+                popup_b0616730a0e17dffcee09233054150da.setContent(html_61a340cc76dc5888e5c3be0e077b9a83);
+            
+        
+
+        marker_e18e43bf5a3499c42835c44ccab46dfb.bindPopup(popup_b0616730a0e17dffcee09233054150da)
+        ;
+
+        
+    
+    
+            marker_e18e43bf5a3499c42835c44ccab46dfb.bindTooltip(
+                `<div>
+                     Carrillo • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e18e43bf5a3499c42835c44ccab46dfb.setIcon(div_icon_923adeb9ef50f140e092e7ac8d3abee7);
+            
+    
+            var marker_99f573dcd03216b00ed77565364e4c64 = L.marker(
+                [34.456, -117.3581],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_f631cada3d23a916e6bed1baa8c3b17e = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eCarrillo\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_0424a6e7e7aeeac38cfc889dae49359d = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_0367c236e9ccf3035166ea9e874048c0 = $(`<div id="html_0367c236e9ccf3035166ea9e874048c0" style="width: 100.0%; height: 100.0%;"><b>Carrillo</b><br>Media Type: Digital<br>Latitude: 34.456000<br>Longitude: -117.358100</div>`)[0];
+                popup_0424a6e7e7aeeac38cfc889dae49359d.setContent(html_0367c236e9ccf3035166ea9e874048c0);
+            
+        
+
+        marker_99f573dcd03216b00ed77565364e4c64.bindPopup(popup_0424a6e7e7aeeac38cfc889dae49359d)
+        ;
+
+        
+    
+    
+            marker_99f573dcd03216b00ed77565364e4c64.bindTooltip(
+                `<div>
+                     Carrillo • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_99f573dcd03216b00ed77565364e4c64.setIcon(div_icon_f631cada3d23a916e6bed1baa8c3b17e);
+            
+    
+            var marker_41101422fd72f625ac70fac1a51852de = L.marker(
+                [34.4933, -117.3296],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_7bc4debe2a6cd4b5a16659d07dae7984 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eCarrillo\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_b0eb76cc54b48a48ed227eb1fc6f50f2 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_4012ee21c1a08c1c08c704e03b1d30ea = $(`<div id="html_4012ee21c1a08c1c08c704e03b1d30ea" style="width: 100.0%; height: 100.0%;"><b>Carrillo</b><br>Media Type: Digital<br>Latitude: 34.493300<br>Longitude: -117.329600</div>`)[0];
+                popup_b0eb76cc54b48a48ed227eb1fc6f50f2.setContent(html_4012ee21c1a08c1c08c704e03b1d30ea);
+            
+        
+
+        marker_41101422fd72f625ac70fac1a51852de.bindPopup(popup_b0eb76cc54b48a48ed227eb1fc6f50f2)
+        ;
+
+        
+    
+    
+            marker_41101422fd72f625ac70fac1a51852de.bindTooltip(
+                `<div>
+                     Carrillo • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_41101422fd72f625ac70fac1a51852de.setIcon(div_icon_7bc4debe2a6cd4b5a16659d07dae7984);
+            
+    
+            var marker_99bcce47223b1219bfe563a07ec3d7cc = L.marker(
+                [38.018313, -122.095123],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_9f19948393f28ee5d0440cd5e3807149 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eFarias\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_7b4b14eb1ff6b3e0444c7a34bf788cda = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_eff25d243f8dd152293c0cf7ebe210ed = $(`<div id="html_eff25d243f8dd152293c0cf7ebe210ed" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Media Type: Digital<br>Latitude: 38.018313<br>Longitude: -122.095123</div>`)[0];
+                popup_7b4b14eb1ff6b3e0444c7a34bf788cda.setContent(html_eff25d243f8dd152293c0cf7ebe210ed);
+            
+        
+
+        marker_99bcce47223b1219bfe563a07ec3d7cc.bindPopup(popup_7b4b14eb1ff6b3e0444c7a34bf788cda)
+        ;
+
+        
+    
+    
+            marker_99bcce47223b1219bfe563a07ec3d7cc.bindTooltip(
+                `<div>
+                     Farias • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_99bcce47223b1219bfe563a07ec3d7cc.setIcon(div_icon_9f19948393f28ee5d0440cd5e3807149);
+            
+    
+            var marker_4b54a56a3a4fe09c19f623dca76ce3bf = L.marker(
+                [37.69419, -122.05146],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_959cfa8607535832c7e66046b7cf1ee6 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eFarias\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_7391fcd56c8a0d2aeee47d387f92a29f = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_cf86548615773550feebc5906e37eb04 = $(`<div id="html_cf86548615773550feebc5906e37eb04" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Media Type: Digital<br>Latitude: 37.694190<br>Longitude: -122.051460</div>`)[0];
+                popup_7391fcd56c8a0d2aeee47d387f92a29f.setContent(html_cf86548615773550feebc5906e37eb04);
+            
+        
+
+        marker_4b54a56a3a4fe09c19f623dca76ce3bf.bindPopup(popup_7391fcd56c8a0d2aeee47d387f92a29f)
+        ;
+
+        
+    
+    
+            marker_4b54a56a3a4fe09c19f623dca76ce3bf.bindTooltip(
+                `<div>
+                     Farias • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4b54a56a3a4fe09c19f623dca76ce3bf.setIcon(div_icon_959cfa8607535832c7e66046b7cf1ee6);
+            
+    
+            var marker_0e549c0cd9663021dba586b898b33cac = L.marker(
+                [37.7075, -122.16129000000001],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_8ca0ca54754ee7535a46f8e8edd029a2 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eFarias\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_62dc0dcb990e43f85e1cbc0bf580784d = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_3bc184e95affec282807fff6649eb023 = $(`<div id="html_3bc184e95affec282807fff6649eb023" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Media Type: Digital<br>Latitude: 37.707500<br>Longitude: -122.161630</div>`)[0];
+                popup_62dc0dcb990e43f85e1cbc0bf580784d.setContent(html_3bc184e95affec282807fff6649eb023);
+            
+        
+
+        marker_0e549c0cd9663021dba586b898b33cac.bindPopup(popup_62dc0dcb990e43f85e1cbc0bf580784d)
+        ;
+
+        
+    
+    
+            marker_0e549c0cd9663021dba586b898b33cac.bindTooltip(
+                `<div>
+                     Farias • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0e549c0cd9663021dba586b898b33cac.setIcon(div_icon_8ca0ca54754ee7535a46f8e8edd029a2);
+            
+    
+            var marker_1ce916ba7b63c9c6a51923d327caf449 = L.marker(
+                [37.7075, -122.16197],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_098cc7092098b7cce73fa2e1463b98f5 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eFarias\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_0a304460e6dcc9c9b2ff8793d1fa6a81 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_c02d9478cf8c98253a34291912cc87c4 = $(`<div id="html_c02d9478cf8c98253a34291912cc87c4" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Media Type: Digital<br>Latitude: 37.707500<br>Longitude: -122.161630</div>`)[0];
+                popup_0a304460e6dcc9c9b2ff8793d1fa6a81.setContent(html_c02d9478cf8c98253a34291912cc87c4);
+            
+        
+
+        marker_1ce916ba7b63c9c6a51923d327caf449.bindPopup(popup_0a304460e6dcc9c9b2ff8793d1fa6a81)
+        ;
+
+        
+    
+    
+            marker_1ce916ba7b63c9c6a51923d327caf449.bindTooltip(
+                `<div>
+                     Farias • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1ce916ba7b63c9c6a51923d327caf449.setIcon(div_icon_098cc7092098b7cce73fa2e1463b98f5);
+            
+    
+            var marker_142f038fd71e4cc98f11c50c1ee0ecac = L.marker(
+                [37.70753, -122.16133],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_cdb62c5cdb60da859e986828dcdd7949 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eFarias\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_d6bb5284ca8d0501de2c44439abb6fcb = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_f8b244204bb07c6d91d1f7cb67a3ff82 = $(`<div id="html_f8b244204bb07c6d91d1f7cb67a3ff82" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Media Type: Digital<br>Latitude: 37.707530<br>Longitude: -122.161670</div>`)[0];
+                popup_d6bb5284ca8d0501de2c44439abb6fcb.setContent(html_f8b244204bb07c6d91d1f7cb67a3ff82);
+            
+        
+
+        marker_142f038fd71e4cc98f11c50c1ee0ecac.bindPopup(popup_d6bb5284ca8d0501de2c44439abb6fcb)
+        ;
+
+        
+    
+    
+            marker_142f038fd71e4cc98f11c50c1ee0ecac.bindTooltip(
+                `<div>
+                     Farias • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_142f038fd71e4cc98f11c50c1ee0ecac.setIcon(div_icon_cdb62c5cdb60da859e986828dcdd7949);
+            
+    
+            var marker_0adbfef4ff6d5177109b8a33b161835d = L.marker(
+                [37.70753, -122.16201],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_2e990d2d8f1d1f9de9481563afd12394 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eFarias\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_dacf2bb248448f9f01f71e072578438e = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_256cd6f73332a3a1b1a7990cdd3540b5 = $(`<div id="html_256cd6f73332a3a1b1a7990cdd3540b5" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Media Type: Digital<br>Latitude: 37.707530<br>Longitude: -122.161670</div>`)[0];
+                popup_dacf2bb248448f9f01f71e072578438e.setContent(html_256cd6f73332a3a1b1a7990cdd3540b5);
+            
+        
+
+        marker_0adbfef4ff6d5177109b8a33b161835d.bindPopup(popup_dacf2bb248448f9f01f71e072578438e)
+        ;
+
+        
+    
+    
+            marker_0adbfef4ff6d5177109b8a33b161835d.bindTooltip(
+                `<div>
+                     Farias • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0adbfef4ff6d5177109b8a33b161835d.setIcon(div_icon_2e990d2d8f1d1f9de9481563afd12394);
+            
+    
+            var marker_decb6b2bfd32d7165a15fa015005a57c = L.marker(
+                [37.6838, -122.12827],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_793b0e0f4fa2332692ad8a07a5f567ea = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eFarias\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_21b8c3debbd96a38e429c3372592b92e = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_b4690420693ae2323201425f289fc287 = $(`<div id="html_b4690420693ae2323201425f289fc287" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Media Type: Digital<br>Latitude: 37.683800<br>Longitude: -122.128610</div>`)[0];
+                popup_21b8c3debbd96a38e429c3372592b92e.setContent(html_b4690420693ae2323201425f289fc287);
+            
+        
+
+        marker_decb6b2bfd32d7165a15fa015005a57c.bindPopup(popup_21b8c3debbd96a38e429c3372592b92e)
+        ;
+
+        
+    
+    
+            marker_decb6b2bfd32d7165a15fa015005a57c.bindTooltip(
+                `<div>
+                     Farias • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_decb6b2bfd32d7165a15fa015005a57c.setIcon(div_icon_793b0e0f4fa2332692ad8a07a5f567ea);
+            
+    
+            var marker_b41ef520646064c3984c30f8457ccf05 = L.marker(
+                [37.6838, -122.12894999999999],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_3e50a6ff922fd51b6d25b47f53707b1f = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eFarias\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_ff0904843f62f88631cee7d3a4928e6c = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_43dc1b1f1ed59803017a3303d6f2fafa = $(`<div id="html_43dc1b1f1ed59803017a3303d6f2fafa" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Media Type: Digital<br>Latitude: 37.683800<br>Longitude: -122.128610</div>`)[0];
+                popup_ff0904843f62f88631cee7d3a4928e6c.setContent(html_43dc1b1f1ed59803017a3303d6f2fafa);
+            
+        
+
+        marker_b41ef520646064c3984c30f8457ccf05.bindPopup(popup_ff0904843f62f88631cee7d3a4928e6c)
+        ;
+
+        
+    
+    
+            marker_b41ef520646064c3984c30f8457ccf05.bindTooltip(
+                `<div>
+                     Farias • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b41ef520646064c3984c30f8457ccf05.setIcon(div_icon_3e50a6ff922fd51b6d25b47f53707b1f);
+            
+    
+            var marker_50815fcf2ef171a1b4126b34861d7279 = L.marker(
+                [38.0034, -121.83420000000001],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_cefc4bca47a0930c99cae89a1bcf5bc5 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eFarias\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_440de8095f9e61abd7019c8229f0e670 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_bfc1a175a91a4e2cd94b219124eb226e = $(`<div id="html_bfc1a175a91a4e2cd94b219124eb226e" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Media Type: Digital<br>Latitude: 38.003400<br>Longitude: -121.834540</div>`)[0];
+                popup_440de8095f9e61abd7019c8229f0e670.setContent(html_bfc1a175a91a4e2cd94b219124eb226e);
+            
+        
+
+        marker_50815fcf2ef171a1b4126b34861d7279.bindPopup(popup_440de8095f9e61abd7019c8229f0e670)
+        ;
+
+        
+    
+    
+            marker_50815fcf2ef171a1b4126b34861d7279.bindTooltip(
+                `<div>
+                     Farias • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_50815fcf2ef171a1b4126b34861d7279.setIcon(div_icon_cefc4bca47a0930c99cae89a1bcf5bc5);
+            
+    
+            var marker_7f923ce2b149d43c6125a943b612054c = L.marker(
+                [38.0034, -121.83488],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_d6d35d56a72c5bb169ecf9bc989f0fd0 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eFarias\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_ab2607cf8d58be18cd640749e4e2256c = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_5071b9a452e67ffd2312df064a0bd60b = $(`<div id="html_5071b9a452e67ffd2312df064a0bd60b" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Media Type: Digital<br>Latitude: 38.003400<br>Longitude: -121.834540</div>`)[0];
+                popup_ab2607cf8d58be18cd640749e4e2256c.setContent(html_5071b9a452e67ffd2312df064a0bd60b);
+            
+        
+
+        marker_7f923ce2b149d43c6125a943b612054c.bindPopup(popup_ab2607cf8d58be18cd640749e4e2256c)
+        ;
+
+        
+    
+    
+            marker_7f923ce2b149d43c6125a943b612054c.bindTooltip(
+                `<div>
+                     Farias • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7f923ce2b149d43c6125a943b612054c.setIcon(div_icon_d6d35d56a72c5bb169ecf9bc989f0fd0);
+            
+    
+            var marker_752ffffb707d6f49a8c8be4691fbdcde = L.marker(
+                [37.99734, -121.78967],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_3f68030f2aa883b9172397494c993de4 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eFarias\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_c13b4250acfacfb8098251cbe8808eea = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_208f5326c895b47ec38ccef7644bf12c = $(`<div id="html_208f5326c895b47ec38ccef7644bf12c" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Media Type: Digital<br>Latitude: 37.997340<br>Longitude: -121.790010</div>`)[0];
+                popup_c13b4250acfacfb8098251cbe8808eea.setContent(html_208f5326c895b47ec38ccef7644bf12c);
+            
+        
+
+        marker_752ffffb707d6f49a8c8be4691fbdcde.bindPopup(popup_c13b4250acfacfb8098251cbe8808eea)
+        ;
+
+        
+    
+    
+            marker_752ffffb707d6f49a8c8be4691fbdcde.bindTooltip(
+                `<div>
+                     Farias • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_752ffffb707d6f49a8c8be4691fbdcde.setIcon(div_icon_3f68030f2aa883b9172397494c993de4);
+            
+    
+            var marker_d1a3d77da82ac3365f00f54ec9c7d0cf = L.marker(
+                [37.99734, -121.79034999999999],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_dee75365c3214ea2a51e5a3d26f554cd = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eFarias\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_931146651b863c7905d6d7ce53a51f5e = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_e3ab4c74c8d8ddf7500a88f58c75fe8b = $(`<div id="html_e3ab4c74c8d8ddf7500a88f58c75fe8b" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Media Type: Digital<br>Latitude: 37.997340<br>Longitude: -121.790010</div>`)[0];
+                popup_931146651b863c7905d6d7ce53a51f5e.setContent(html_e3ab4c74c8d8ddf7500a88f58c75fe8b);
+            
+        
+
+        marker_d1a3d77da82ac3365f00f54ec9c7d0cf.bindPopup(popup_931146651b863c7905d6d7ce53a51f5e)
+        ;
+
+        
+    
+    
+            marker_d1a3d77da82ac3365f00f54ec9c7d0cf.bindTooltip(
+                `<div>
+                     Farias • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d1a3d77da82ac3365f00f54ec9c7d0cf.setIcon(div_icon_dee75365c3214ea2a51e5a3d26f554cd);
+            
+    
+            var marker_4213a6a95bcdc83ca2334bea4977e07b = L.marker(
+                [38.00418, -121.83994000000001],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_70cc744eb853f48e774c9e001cce52c8 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eFarias\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_a3e2a4d150f3d9e9a0a28cfd214f72bf = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_64c8c5f96ef8b2f0a968ff0f54b2f246 = $(`<div id="html_64c8c5f96ef8b2f0a968ff0f54b2f246" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Media Type: Digital<br>Latitude: 38.004180<br>Longitude: -121.840280</div>`)[0];
+                popup_a3e2a4d150f3d9e9a0a28cfd214f72bf.setContent(html_64c8c5f96ef8b2f0a968ff0f54b2f246);
+            
+        
+
+        marker_4213a6a95bcdc83ca2334bea4977e07b.bindPopup(popup_a3e2a4d150f3d9e9a0a28cfd214f72bf)
+        ;
+
+        
+    
+    
+            marker_4213a6a95bcdc83ca2334bea4977e07b.bindTooltip(
+                `<div>
+                     Farias • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4213a6a95bcdc83ca2334bea4977e07b.setIcon(div_icon_70cc744eb853f48e774c9e001cce52c8);
+            
+    
+            var marker_de90dc82b79f1e3571266d788f24273b = L.marker(
+                [38.00418, -121.84062],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_5fe7132014c76d865bdcb9419bb7184c = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eFarias\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_ff45b43e70801f5dc554a81990ba9a67 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_d3430ac490df95a30a0f5714b4a3f461 = $(`<div id="html_d3430ac490df95a30a0f5714b4a3f461" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Media Type: Digital<br>Latitude: 38.004180<br>Longitude: -121.840280</div>`)[0];
+                popup_ff45b43e70801f5dc554a81990ba9a67.setContent(html_d3430ac490df95a30a0f5714b4a3f461);
+            
+        
+
+        marker_de90dc82b79f1e3571266d788f24273b.bindPopup(popup_ff45b43e70801f5dc554a81990ba9a67)
+        ;
+
+        
+    
+    
+            marker_de90dc82b79f1e3571266d788f24273b.bindTooltip(
+                `<div>
+                     Farias • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_de90dc82b79f1e3571266d788f24273b.setIcon(div_icon_5fe7132014c76d865bdcb9419bb7184c);
+            
+    
+            var marker_570adba6e1c6cd7e0408d9aead0d0dfa = L.marker(
+                [37.98774, -122.06709000000001],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_5642813588f9933d4492215211b93e41 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eFarias\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_c9100a1340a34484328ffa4dee7d27bc = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_e973aacb5eb26430d739f76bbdac4511 = $(`<div id="html_e973aacb5eb26430d739f76bbdac4511" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Media Type: Digital<br>Latitude: 37.987740<br>Longitude: -122.067430</div>`)[0];
+                popup_c9100a1340a34484328ffa4dee7d27bc.setContent(html_e973aacb5eb26430d739f76bbdac4511);
+            
+        
+
+        marker_570adba6e1c6cd7e0408d9aead0d0dfa.bindPopup(popup_c9100a1340a34484328ffa4dee7d27bc)
+        ;
+
+        
+    
+    
+            marker_570adba6e1c6cd7e0408d9aead0d0dfa.bindTooltip(
+                `<div>
+                     Farias • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_570adba6e1c6cd7e0408d9aead0d0dfa.setIcon(div_icon_5642813588f9933d4492215211b93e41);
+            
+    
+            var marker_b8ac8f66505359bb0a1a93cc1f5e43c2 = L.marker(
+                [37.98774, -122.06777],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_9412ccdc5df06520e9645b2536b2c17e = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eFarias\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_ef8b6105ea79af23f4472f57b75c9669 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_e53cc8151b39808f5a1c8114cb3d75d3 = $(`<div id="html_e53cc8151b39808f5a1c8114cb3d75d3" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Media Type: Digital<br>Latitude: 37.987740<br>Longitude: -122.067430</div>`)[0];
+                popup_ef8b6105ea79af23f4472f57b75c9669.setContent(html_e53cc8151b39808f5a1c8114cb3d75d3);
+            
+        
+
+        marker_b8ac8f66505359bb0a1a93cc1f5e43c2.bindPopup(popup_ef8b6105ea79af23f4472f57b75c9669)
+        ;
+
+        
+    
+    
+            marker_b8ac8f66505359bb0a1a93cc1f5e43c2.bindTooltip(
+                `<div>
+                     Farias • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b8ac8f66505359bb0a1a93cc1f5e43c2.setIcon(div_icon_9412ccdc5df06520e9645b2536b2c17e);
+            
+    
+            var marker_9c84d857f33d91429a019dc0cd59071c = L.marker(
+                [38.03033, -122.11786],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_c90821bcc2b3a67c2d08e09c80ecc7ce = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eFarias\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_72350e5f6370dd7eb6bf80a7480e8e8a = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_89eda1cd6a7d2851e91f9bcd6c8fe57f = $(`<div id="html_89eda1cd6a7d2851e91f9bcd6c8fe57f" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Media Type: Digital<br>Latitude: 38.030330<br>Longitude: -122.117860</div>`)[0];
+                popup_72350e5f6370dd7eb6bf80a7480e8e8a.setContent(html_89eda1cd6a7d2851e91f9bcd6c8fe57f);
+            
+        
+
+        marker_9c84d857f33d91429a019dc0cd59071c.bindPopup(popup_72350e5f6370dd7eb6bf80a7480e8e8a)
+        ;
+
+        
+    
+    
+            marker_9c84d857f33d91429a019dc0cd59071c.bindTooltip(
+                `<div>
+                     Farias • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9c84d857f33d91429a019dc0cd59071c.setIcon(div_icon_c90821bcc2b3a67c2d08e09c80ecc7ce);
+            
+    
+            var marker_ecc5e270fadf8b7cd824cc6a851d3753 = L.marker(
+                [38.0304, -122.11787],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_852dc948e1c09fe6cc36e030988a3ecc = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eFarias\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_7aef783dd7ceb2d1c905f4248a065490 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_a7b66109ad81cf3c09253fd474a96cee = $(`<div id="html_a7b66109ad81cf3c09253fd474a96cee" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Media Type: Digital<br>Latitude: 38.030400<br>Longitude: -122.117870</div>`)[0];
+                popup_7aef783dd7ceb2d1c905f4248a065490.setContent(html_a7b66109ad81cf3c09253fd474a96cee);
+            
+        
+
+        marker_ecc5e270fadf8b7cd824cc6a851d3753.bindPopup(popup_7aef783dd7ceb2d1c905f4248a065490)
+        ;
+
+        
+    
+    
+            marker_ecc5e270fadf8b7cd824cc6a851d3753.bindTooltip(
+                `<div>
+                     Farias • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ecc5e270fadf8b7cd824cc6a851d3753.setIcon(div_icon_852dc948e1c09fe6cc36e030988a3ecc);
+            
+    
+            var marker_84136fc3aa6a47fc619063095afa52c1 = L.marker(
+                [38.00915, -121.85749000000001],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_a97c4d2266376f0a96fa252e9deb03b3 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eFarias\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_3818cd39c19f77aa44f194489943bf87 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_ff358fa70438a5913432253e016fae7a = $(`<div id="html_ff358fa70438a5913432253e016fae7a" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Media Type: Digital<br>Latitude: 38.009150<br>Longitude: -121.857830</div>`)[0];
+                popup_3818cd39c19f77aa44f194489943bf87.setContent(html_ff358fa70438a5913432253e016fae7a);
+            
+        
+
+        marker_84136fc3aa6a47fc619063095afa52c1.bindPopup(popup_3818cd39c19f77aa44f194489943bf87)
+        ;
+
+        
+    
+    
+            marker_84136fc3aa6a47fc619063095afa52c1.bindTooltip(
+                `<div>
+                     Farias • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_84136fc3aa6a47fc619063095afa52c1.setIcon(div_icon_a97c4d2266376f0a96fa252e9deb03b3);
+            
+    
+            var marker_e9c5a63cd2c6cf4b3bb62f00fbf6d4a4 = L.marker(
+                [38.00915, -121.85817],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_6483781823ecaffaf98a21a0185d1d10 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eFarias\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_0487b7e9811e11e06ddb7ba93fe8899b = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_4185a97ba68ae9403dcf898cbc1bca5a = $(`<div id="html_4185a97ba68ae9403dcf898cbc1bca5a" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Media Type: Digital<br>Latitude: 38.009150<br>Longitude: -121.857830</div>`)[0];
+                popup_0487b7e9811e11e06ddb7ba93fe8899b.setContent(html_4185a97ba68ae9403dcf898cbc1bca5a);
+            
+        
+
+        marker_e9c5a63cd2c6cf4b3bb62f00fbf6d4a4.bindPopup(popup_0487b7e9811e11e06ddb7ba93fe8899b)
+        ;
+
+        
+    
+    
+            marker_e9c5a63cd2c6cf4b3bb62f00fbf6d4a4.bindTooltip(
+                `<div>
+                     Farias • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e9c5a63cd2c6cf4b3bb62f00fbf6d4a4.setIcon(div_icon_6483781823ecaffaf98a21a0185d1d10);
+            
+    
+            var marker_725f199d8b08c10da3e5087dfdc16902 = L.marker(
+                [38.00786, -121.85449],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_fea281e16a376caf82e36ef6b4c07764 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eFarias\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_75bdfab2520ccd59b4c5af4d0b0ab094 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_eeebbb847f887e5f848d3a9d92af5f52 = $(`<div id="html_eeebbb847f887e5f848d3a9d92af5f52" style="width: 100.0%; height: 100.0%;"><b>Farias</b><br>Media Type: Digital<br>Latitude: 38.007860<br>Longitude: -121.854490</div>`)[0];
+                popup_75bdfab2520ccd59b4c5af4d0b0ab094.setContent(html_eeebbb847f887e5f848d3a9d92af5f52);
+            
+        
+
+        marker_725f199d8b08c10da3e5087dfdc16902.bindPopup(popup_75bdfab2520ccd59b4c5af4d0b0ab094)
+        ;
+
+        
+    
+    
+            marker_725f199d8b08c10da3e5087dfdc16902.bindTooltip(
+                `<div>
+                     Farias • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_725f199d8b08c10da3e5087dfdc16902.setIcon(div_icon_fea281e16a376caf82e36ef6b4c07764);
+            
+    
+            var marker_1a9992fb26de8d86177679c2bf3e3e8b = L.marker(
+                [38.5722, -121.3249],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_bd3eaa683185f7f00b1716cbe0b9d316 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eNguyen\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_28d75bdfbe96857b51562918b8cd5637 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_ebb5e8451bf966c4a7eb843c0b95a6a8 = $(`<div id="html_ebb5e8451bf966c4a7eb843c0b95a6a8" style="width: 100.0%; height: 100.0%;"><b>Nguyen</b><br>Media Type: Digital<br>Latitude: 38.572200<br>Longitude: -121.324900</div>`)[0];
+                popup_28d75bdfbe96857b51562918b8cd5637.setContent(html_ebb5e8451bf966c4a7eb843c0b95a6a8);
+            
+        
+
+        marker_1a9992fb26de8d86177679c2bf3e3e8b.bindPopup(popup_28d75bdfbe96857b51562918b8cd5637)
+        ;
+
+        
+    
+    
+            marker_1a9992fb26de8d86177679c2bf3e3e8b.bindTooltip(
+                `<div>
+                     Nguyen • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1a9992fb26de8d86177679c2bf3e3e8b.setIcon(div_icon_bd3eaa683185f7f00b1716cbe0b9d316);
+            
+    
+            var marker_ca2b25e9a11ca93d96e5ee2fb59a1142 = L.marker(
+                [37.37861, -121.9534],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_0a6d7503d1340f5ce2b1b5ba502c110b = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eAhrens\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_796597f0113e3ba4a985ae0ba7a40500 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_435532e5f37bef99a7b4a704e3d643db = $(`<div id="html_435532e5f37bef99a7b4a704e3d643db" style="width: 100.0%; height: 100.0%;"><b>Ahrens</b><br>Media Type: Digital<br>Latitude: 37.378610<br>Longitude: -121.953400</div>`)[0];
+                popup_796597f0113e3ba4a985ae0ba7a40500.setContent(html_435532e5f37bef99a7b4a704e3d643db);
+            
+        
+
+        marker_ca2b25e9a11ca93d96e5ee2fb59a1142.bindPopup(popup_796597f0113e3ba4a985ae0ba7a40500)
+        ;
+
+        
+    
+    
+            marker_ca2b25e9a11ca93d96e5ee2fb59a1142.bindTooltip(
+                `<div>
+                     Ahrens • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ca2b25e9a11ca93d96e5ee2fb59a1142.setIcon(div_icon_0a6d7503d1340f5ce2b1b5ba502c110b);
+            
+    
+            var marker_4464c8693645084a768e4e07772b68b2 = L.marker(
+                [37.37925, -121.95174],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_1ac789b50cd3c9156ba9ea20c9ab6735 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eAhrens\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_81336cd71b5fe5a8f586c585169a3676 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_c252dc64d6011686632522d02775afc3 = $(`<div id="html_c252dc64d6011686632522d02775afc3" style="width: 100.0%; height: 100.0%;"><b>Ahrens</b><br>Media Type: Digital<br>Latitude: 37.379250<br>Longitude: -121.951740</div>`)[0];
+                popup_81336cd71b5fe5a8f586c585169a3676.setContent(html_c252dc64d6011686632522d02775afc3);
+            
+        
+
+        marker_4464c8693645084a768e4e07772b68b2.bindPopup(popup_81336cd71b5fe5a8f586c585169a3676)
+        ;
+
+        
+    
+    
+            marker_4464c8693645084a768e4e07772b68b2.bindTooltip(
+                `<div>
+                     Ahrens • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4464c8693645084a768e4e07772b68b2.setIcon(div_icon_1ac789b50cd3c9156ba9ea20c9ab6735);
+            
+    
+            var marker_3c2599bdfd888e197a49238779d231bc = L.marker(
+                [37.38435, -121.97069],
+                {
+}
+            ).addTo(marker_cluster_d1b3345589f6297f4914affeec735405);
+        
+    
+            var div_icon_88622b5273231542d78fd0fa41d0ade4 = L.divIcon({
+  "html": "\u003cdiv style=\"background:#dc2626;color:white;border:2px solid white;border-radius:16px;min-width:74px;height:34px;padding:4px 9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;font-family:Arial,sans-serif;font-size:11px;font-weight:700;line-height:13px;box-shadow:0 1px 4px rgba(0,0,0,.45);\"\u003eAhrens\u003c/div\u003e",
+  "iconSize": [74, 34],
+  "iconAnchor": [37, 17],
+  "className": "empty",
+});
+        
+    
+        var popup_0b0d950e3b764dbeedf885dd31d1307f = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_6f4699ef85ba99bc4a4353f2a72df942 = $(`<div id="html_6f4699ef85ba99bc4a4353f2a72df942" style="width: 100.0%; height: 100.0%;"><b>Ahrens</b><br>Media Type: Digital<br>Latitude: 37.384350<br>Longitude: -121.970690</div>`)[0];
+                popup_0b0d950e3b764dbeedf885dd31d1307f.setContent(html_6f4699ef85ba99bc4a4353f2a72df942);
+            
+        
+
+        marker_3c2599bdfd888e197a49238779d231bc.bindPopup(popup_0b0d950e3b764dbeedf885dd31d1307f)
+        ;
+
+        
+    
+    
+            marker_3c2599bdfd888e197a49238779d231bc.bindTooltip(
+                `<div>
+                     Ahrens • Digital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3c2599bdfd888e197a49238779d231bc.setIcon(div_icon_88622b5273231542d78fd0fa41d0ade4);
+            
+    
+            marker_cluster_d1b3345589f6297f4914affeec735405.addTo(feature_group_0b87932d32091716c994722bb337b552);
+        
+    
+            feature_group_0b87932d32091716c994722bb337b552.addTo(map_328a9fcd368407b7ae60165255adde1d);
+        
+    
+            var layer_control_2a344a5afb3044449263932c3247ef4e_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_f086ef9094abf969cda7dc61f4c41f39,
+                },
+                overlays :  {
+                    "Bulletin" : feature_group_6f68a544b94fce6c34f862334ed023e2,
+                    "Digital" : feature_group_0b87932d32091716c994722bb337b552,
+                },
+            };
+            let layer_control_2a344a5afb3044449263932c3247ef4e = L.control.layers(
+                layer_control_2a344a5afb3044449263932c3247ef4e_layers.base_layers,
+                layer_control_2a344a5afb3044449263932c3247ef4e_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_328a9fcd368407b7ae60165255adde1d);
+
+        
+    
+            map_328a9fcd368407b7ae60165255adde1d.fitBounds(
+                [[32.55224, -122.16167], [38.6704, -117.04569]],
+                {"padding": [30, 30]}
+            );
+        
+</script>
+</html>
